@@ -13,9 +13,7 @@ import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.ui.PlatformUI;
 import org.palladiosimulator.editors.commons.dialogs.stoex.StochasticExpressionEditDialog;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
-import org.palladiosimulator.pcm.repository.OperationSignature;
-import org.palladiosimulator.pcm.repository.Parameter;
-import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
+
 import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.StoexPackage;
@@ -31,35 +29,35 @@ public class OpenStoExDialog extends OpenEditPolicy {
 
     /**
      * Gets the random variable.
-     * 
+     *
      * @param parent
      *            the parent
      * @return the random variable
      */
-    protected RandomVariable getRandomVariable(EObject parent) {
+    protected RandomVariable getRandomVariable(final EObject parent) {
         // Default Implementation. Override as necessary
         return (RandomVariable) parent;
     }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * org.eclipse.gmf.runtime.diagram.ui.editpolicies.OpenEditPolicy#getOpenCommand(org.eclipse
      * .gef.Request)
      */
     @Override
-    protected Command getOpenCommand(Request request) {
-        IGraphicalEditPart host = (IGraphicalEditPart) getHost();
-        RandomVariable rv = getRandomVariable(((View) host.getModel()).getElement());
-        StochasticExpressionEditDialog dialog = new StochasticExpressionEditDialog(PlatformUI.getWorkbench()
+    protected Command getOpenCommand(final Request request) {
+        final IGraphicalEditPart host = (IGraphicalEditPart) getHost();
+        final RandomVariable rv = getRandomVariable(((View) host.getModel()).getElement());
+        final StochasticExpressionEditDialog dialog = new StochasticExpressionEditDialog(PlatformUI.getWorkbench()
                 .getActiveWorkbenchWindow().getShell(), getExpectedType(rv));
         dialog.setInitialExpression(rv);
         dialog.open();
         if (dialog.getReturnCode() == Dialog.OK) {
-            SetRequest setRequest = new SetRequest(rv, StoexPackage.eINSTANCE.getRandomVariable_Specification(),
+            final SetRequest setRequest = new SetRequest(rv, StoexPackage.eINSTANCE.getRandomVariable_Specification(),
                     new PCMStoExPrettyPrintVisitor().prettyPrint(dialog.getResult()));
-            SetValueCommand cmd = new SetValueCommand(setRequest);
+            final SetValueCommand cmd = new SetValueCommand(setRequest);
             return new ICommandProxy(cmd);
         }
         return null;
@@ -67,59 +65,18 @@ public class OpenStoExDialog extends OpenEditPolicy {
 
     /**
      * Gets the expected type.
-     * 
+     *
      * @param rv
      *            the rv
      * @return the expected type
      */
-    protected TypeEnum getExpectedType(RandomVariable rv) {
+    protected TypeEnum getExpectedType(final RandomVariable rv) {
         TypeEnum expectedType = TypeEnum.ANY;
         if (rv instanceof VariableCharacterisation) {
             expectedType = StochasticExpressionEditDialog
                     .getTypeFromVariableCharacterisation((VariableCharacterisation) rv);
         }
         return expectedType;
-    }
-
-    /**
-     * Gets the context.
-     * 
-     * @param rv
-     *            the rv
-     * @return the context
-     */
-    private Parameter[] getContext(EObject rv) {
-        Parameter[] parameters = new Parameter[] {};
-
-        ResourceDemandingSEFF seff = getSEFF(rv);
-
-        if (seff != null && seff.getDescribedService__SEFF() != null) {
-            if (seff.getDescribedService__SEFF() instanceof OperationSignature
-                    && ((OperationSignature) seff.getDescribedService__SEFF()).getParameters__OperationSignature() != null) {
-                parameters = (Parameter[]) ((OperationSignature) seff.getDescribedService__SEFF())
-                        .getParameters__OperationSignature().toArray();
-            }
-        }
-        return parameters;
-    }
-
-    /**
-     * Gets the seff.
-     * 
-     * @param a
-     *            the a
-     * @return the seff
-     */
-    private ResourceDemandingSEFF getSEFF(EObject a) {
-        EObject container = a;
-        while (!(container instanceof ResourceDemandingSEFF)) {
-            container = container.eContainer();
-        }
-        if (!(container instanceof ResourceDemandingSEFF)) {
-            return null;
-        }
-        ResourceDemandingSEFF seff = (ResourceDemandingSEFF) container;
-        return seff;
     }
 
 }

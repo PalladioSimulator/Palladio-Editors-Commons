@@ -18,22 +18,22 @@ import org.palladiosimulator.pcm.seff.SeffPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.InternalAction}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class InternalActionItemProvider extends AbstractInternalControlFlowActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public InternalActionItemProvider(final AdapterFactory adapterFactory) {
@@ -43,13 +43,12 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -67,18 +66,17 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures
-            .add(SeffPackage.Literals.INTERNAL_ACTION__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_INTERNAL_ACTION);
+            this.childrenFeatures.add(
+                    SeffPackage.Literals.INTERNAL_ACTION__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_INTERNAL_ACTION);
         }
         return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,7 +89,7 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
 
     /**
      * This returns InternalAction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,8 +102,8 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
      * to produce a more informative label for display in non-PCM editors. In PCM editors, display
      * is not controlled by this method but through a more general mechanism (I'n not sure where
      * it's actually controlled, maybe the
-     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!-- end-user-doc
-     * -->
+     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!--
+     * end-user-doc -->
      *
      * @generated not
      */
@@ -117,17 +115,16 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(InternalAction.class))
-        {
+        switch (notification.getFeatureID(InternalAction.class)) {
         case SeffPackage.INTERNAL_ACTION__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_INTERNAL_ACTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -138,18 +135,16 @@ public class InternalActionItemProvider extends AbstractInternalControlFlowActio
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add
-        (this.createChildParameter
-                        (SeffPackage.Literals.INTERNAL_ACTION__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_INTERNAL_ACTION,
-                                ReliabilityFactory.eINSTANCE.createInternalFailureOccurrenceDescription()));
+        newChildDescriptors.add(this.createChildParameter(
+                SeffPackage.Literals.INTERNAL_ACTION__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_INTERNAL_ACTION,
+                ReliabilityFactory.eINSTANCE.createInternalFailureOccurrenceDescription()));
     }
 
 }

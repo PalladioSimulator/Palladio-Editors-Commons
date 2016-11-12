@@ -26,23 +26,23 @@ import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.usagemodel.UsageModel}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class UsageModelItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageModelItemProvider(final AdapterFactory adapterFactory) {
@@ -52,13 +52,12 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -76,8 +75,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(UsagemodelPackage.Literals.USAGE_MODEL__USAGE_SCENARIO_USAGE_MODEL);
             this.childrenFeatures.add(UsagemodelPackage.Literals.USAGE_MODEL__USER_DATA_USAGE_MODEL);
@@ -87,7 +85,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +98,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
     /**
      * This returns UsageModel.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -121,17 +119,16 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(UsageModel.class))
-        {
+        switch (notification.getFeatureID(UsageModel.class)) {
         case UsagemodelPackage.USAGE_MODEL__USAGE_SCENARIO_USAGE_MODEL:
         case UsagemodelPackage.USAGE_MODEL__USER_DATA_USAGE_MODEL:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -143,28 +140,25 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.USAGE_MODEL__USAGE_SCENARIO_USAGE_MODEL,
-                                UsagemodelFactory.eINSTANCE.createUsageScenario()));
+        newChildDescriptors
+                .add(this.createChildParameter(UsagemodelPackage.Literals.USAGE_MODEL__USAGE_SCENARIO_USAGE_MODEL,
+                        UsagemodelFactory.eINSTANCE.createUsageScenario()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.USAGE_MODEL__USER_DATA_USAGE_MODEL,
-                                UsagemodelFactory.eINSTANCE.createUserData()));
+        newChildDescriptors.add(this.createChildParameter(UsagemodelPackage.Literals.USAGE_MODEL__USER_DATA_USAGE_MODEL,
+                UsagemodelFactory.eINSTANCE.createUserData()));
     }
 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -27,23 +27,23 @@ import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.seff.ServiceEffectSpecification} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ServiceEffectSpecificationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ServiceEffectSpecificationItemProvider(final AdapterFactory adapterFactory) {
@@ -53,13 +53,12 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addSeffTypeIDPropertyDescriptor(object);
@@ -71,49 +70,49 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds a property descriptor for the Seff Type ID feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addSeffTypeIDPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_ServiceEffectSpecification_seffTypeID_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_ServiceEffectSpecification_seffTypeID_feature",
-                                        "_UI_ServiceEffectSpecification_type"),
-                                SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__SEFF_TYPE_ID,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ServiceEffectSpecification_seffTypeID_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_ServiceEffectSpecification_seffTypeID_feature",
+                                "_UI_ServiceEffectSpecification_type"),
+                        SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__SEFF_TYPE_ID,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Described Service SEFF feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addDescribedService__SEFFPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_ServiceEffectSpecification_describedService__SEFF_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_ServiceEffectSpecification_describedService__SEFF_feature",
-                                        "_UI_ServiceEffectSpecification_type"),
-                                SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__DESCRIBED_SERVICE_SEFF,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ServiceEffectSpecification_describedService__SEFF_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_ServiceEffectSpecification_describedService__SEFF_feature",
+                                "_UI_ServiceEffectSpecification_type"),
+                        SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__DESCRIBED_SERVICE_SEFF,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -125,24 +124,22 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     @Override
     public String getText(final Object object) {
         final String label = ((ServiceEffectSpecification) object).getSeffTypeID();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ServiceEffectSpecification_type") :
-                    this.getString("_UI_ServiceEffectSpecification_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ServiceEffectSpecification_type")
+                : this.getString("_UI_ServiceEffectSpecification_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ServiceEffectSpecification.class))
-        {
+        switch (notification.getFeatureID(ServiceEffectSpecification.class)) {
         case SeffPackage.SERVICE_EFFECT_SPECIFICATION__SEFF_TYPE_ID:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
@@ -153,7 +150,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,7 +161,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

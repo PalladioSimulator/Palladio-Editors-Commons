@@ -18,22 +18,22 @@ import org.palladiosimulator.pcm.repository.RepositoryPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.repository.EventGroup}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class EventGroupItemProvider extends InterfaceItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public EventGroupItemProvider(final AdapterFactory adapterFactory) {
@@ -43,13 +43,12 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -67,8 +66,7 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(RepositoryPackage.Literals.EVENT_GROUP__EVENT_TYPES_EVENT_GROUP);
         }
@@ -77,7 +75,7 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +88,7 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
 
     /**
      * This returns EventGroup.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -107,24 +105,22 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((EventGroup) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_EventGroup_type") :
-                    this.getString("_UI_EventGroup_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_EventGroup_type")
+                : this.getString("_UI_EventGroup_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(EventGroup.class))
-        {
+        switch (notification.getFeatureID(EventGroup.class)) {
         case RepositoryPackage.EVENT_GROUP__EVENT_TYPES_EVENT_GROUP:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -135,17 +131,16 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (RepositoryPackage.Literals.EVENT_GROUP__EVENT_TYPES_EVENT_GROUP,
-                                RepositoryFactory.eINSTANCE.createEventType()));
+        newChildDescriptors
+                .add(this.createChildParameter(RepositoryPackage.Literals.EVENT_GROUP__EVENT_TYPES_EVENT_GROUP,
+                        RepositoryFactory.eINSTANCE.createEventType()));
     }
 
 }

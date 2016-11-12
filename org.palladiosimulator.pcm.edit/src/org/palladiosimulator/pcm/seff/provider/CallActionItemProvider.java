@@ -19,22 +19,22 @@ import org.palladiosimulator.pcm.seff.SeffPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.CallAction} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class CallActionItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public CallActionItemProvider(final AdapterFactory adapterFactory) {
@@ -44,13 +44,12 @@ public class CallActionItemProvider extends EntityItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -68,8 +67,7 @@ public class CallActionItemProvider extends EntityItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION);
         }
@@ -78,7 +76,7 @@ public class CallActionItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -98,24 +96,22 @@ public class CallActionItemProvider extends EntityItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((CallAction) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_CallAction_type") :
-                    this.getString("_UI_CallAction_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_CallAction_type")
+                : this.getString("_UI_CallAction_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(CallAction.class))
-        {
+        switch (notification.getFeatureID(CallAction.class)) {
         case SeffPackage.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -126,17 +122,16 @@ public class CallActionItemProvider extends EntityItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION,
-                                ParameterFactory.eINSTANCE.createVariableUsage()));
+        newChildDescriptors
+                .add(this.createChildParameter(SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION,
+                        ParameterFactory.eINSTANCE.createVariableUsage()));
     }
 
 }

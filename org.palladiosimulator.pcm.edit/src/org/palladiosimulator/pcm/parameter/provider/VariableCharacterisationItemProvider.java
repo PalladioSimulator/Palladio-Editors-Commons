@@ -30,23 +30,23 @@ import org.palladiosimulator.pcm.parameter.VariableCharacterisationType;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.parameter.VariableCharacterisation} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariableCharacterisationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariableCharacterisationItemProvider(final AdapterFactory adapterFactory) {
@@ -56,13 +56,12 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addTypePropertyDescriptor(object);
@@ -73,25 +72,25 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds a property descriptor for the Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_VariableCharacterisation_type_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_VariableCharacterisation_type_feature",
-                                        "_UI_VariableCharacterisation_type"),
-                                ParameterPackage.Literals.VARIABLE_CHARACTERISATION__TYPE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_VariableCharacterisation_type_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_VariableCharacterisation_type_feature",
+                                "_UI_VariableCharacterisation_type"),
+                        ParameterPackage.Literals.VARIABLE_CHARACTERISATION__TYPE,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -105,18 +104,17 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(ParameterPackage.Literals.VARIABLE_CHARACTERISATION__SPECIFICATION_VARIABLE_CHARACTERISATION);
+                    .add(ParameterPackage.Literals.VARIABLE_CHARACTERISATION__SPECIFICATION_VARIABLE_CHARACTERISATION);
         }
         return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -129,7 +127,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
     /**
      * This returns VariableCharacterisation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -147,24 +145,22 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     public String getText(final Object object) {
         final VariableCharacterisationType labelValue = ((VariableCharacterisation) object).getType();
         final String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_VariableCharacterisation_type") :
-                    this.getString("_UI_VariableCharacterisation_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_VariableCharacterisation_type")
+                : this.getString("_UI_VariableCharacterisation_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(VariableCharacterisation.class))
-        {
+        switch (notification.getFeatureID(VariableCharacterisation.class)) {
         case ParameterPackage.VARIABLE_CHARACTERISATION__TYPE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
@@ -178,23 +174,22 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (ParameterPackage.Literals.VARIABLE_CHARACTERISATION__SPECIFICATION_VARIABLE_CHARACTERISATION,
-                                CoreFactory.eINSTANCE.createPCMRandomVariable()));
+        newChildDescriptors.add(this.createChildParameter(
+                ParameterPackage.Literals.VARIABLE_CHARACTERISATION__SPECIFICATION_VARIABLE_CHARACTERISATION,
+                CoreFactory.eINSTANCE.createPCMRandomVariable()));
     }
 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

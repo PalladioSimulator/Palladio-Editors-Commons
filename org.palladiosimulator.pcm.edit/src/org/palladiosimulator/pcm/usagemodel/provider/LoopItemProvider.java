@@ -19,22 +19,22 @@ import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.usagemodel.Loop} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class LoopItemProvider extends AbstractUserActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public LoopItemProvider(final AdapterFactory adapterFactory) {
@@ -44,13 +44,12 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -68,8 +67,7 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(UsagemodelPackage.Literals.LOOP__LOOP_ITERATION_LOOP);
             this.childrenFeatures.add(UsagemodelPackage.Literals.LOOP__BODY_BEHAVIOUR_LOOP);
@@ -79,7 +77,7 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,7 +90,7 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
 
     /**
      * This returns Loop.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -109,24 +107,22 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((Loop) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_Loop_type") :
-                    this.getString("_UI_Loop_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_Loop_type")
+                : this.getString("_UI_Loop_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Loop.class))
-        {
+        switch (notification.getFeatureID(Loop.class)) {
         case UsagemodelPackage.LOOP__LOOP_ITERATION_LOOP:
         case UsagemodelPackage.LOOP__BODY_BEHAVIOUR_LOOP:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -138,22 +134,18 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.LOOP__LOOP_ITERATION_LOOP,
-                                CoreFactory.eINSTANCE.createPCMRandomVariable()));
+        newChildDescriptors.add(this.createChildParameter(UsagemodelPackage.Literals.LOOP__LOOP_ITERATION_LOOP,
+                CoreFactory.eINSTANCE.createPCMRandomVariable()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.LOOP__BODY_BEHAVIOUR_LOOP,
-                                UsagemodelFactory.eINSTANCE.createScenarioBehaviour()));
+        newChildDescriptors.add(this.createChildParameter(UsagemodelPackage.Literals.LOOP__BODY_BEHAVIOUR_LOOP,
+                UsagemodelFactory.eINSTANCE.createScenarioBehaviour()));
     }
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.palladiosimulator.editors.commons.dialogs.stoex;
 
@@ -17,7 +17,7 @@ import org.eclipse.jface.text.rules.ITokenScanner;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ANTLRTokenScannerAdapter.
- * 
+ *
  * @author Steffen Becker
  */
 public class ANTLRTokenScannerAdapter implements ITokenScanner {
@@ -29,7 +29,7 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
     private int tokenOffset;
 
     /** The scanner class. */
-    private Class<?> scannerClass;
+    private final Class<?> scannerClass;
 
     /** The scanner. */
     private Lexer scanner;
@@ -37,27 +37,21 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
     /** The current input. */
     private String currentInput;
 
-    /** The current document. */
-    private IDocument currentDocument;
-
     /** The base offset. */
     private int baseOffset;
 
     /** The my mapper. */
-    private ITokenMapper myMapper;
-
-    /** The last token offset. */
-    private int lastTokenOffset;
+    private final ITokenMapper myMapper;
 
     /**
      * Instantiates a new aNTLR token scanner adapter.
-     * 
+     *
      * @param scannerClass
      *            the scanner class
      * @param mapper
      *            the mapper
      */
-    public ANTLRTokenScannerAdapter(Class<?> scannerClass, ITokenMapper mapper) {
+    public ANTLRTokenScannerAdapter(final Class<?> scannerClass, final ITokenMapper mapper) {
         this.scannerClass = scannerClass;
         this.myMapper = mapper;
     }
@@ -68,6 +62,7 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
      * @return the token length
      * @see org.eclipse.jface.text.rules.ITokenScanner#getTokenLength()
      */
+    @Override
     public int getTokenLength() {
         return lastTokenLength;
     }
@@ -78,6 +73,7 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
      * @return the token offset
      * @see org.eclipse.jface.text.rules.ITokenScanner#getTokenOffset()
      */
+    @Override
     public int getTokenOffset() {
         return tokenOffset;
     }
@@ -88,22 +84,23 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
      * @return the i token
      * @see org.eclipse.jface.text.rules.ITokenScanner#nextToken()
      */
+    @Override
     public IToken nextToken() {
         tokenOffset = baseOffset + scanner.getCharIndex(); // Token starts at point where lexer is
-        ANTLRTokenWrapper wrapper = new ANTLRTokenWrapper(scanner.nextToken(), myMapper);
+        final ANTLRTokenWrapper wrapper = new ANTLRTokenWrapper(scanner.nextToken(), myMapper);
         lastTokenLength = wrapper.getToken().getText() == null ? 0 : wrapper.getToken().getText().length();
         tokenOffset += (scanner.getCharIndex() + baseOffset) - tokenOffset - lastTokenLength; // Correct
-                                                                                              // the
-                                                                                              // position
-                                                                                              // in
-                                                                                              // case
-                                                                                              // of
-                                                                                              // recognition
-                                                                                              // exceptions
+        // the
+        // position
+        // in
+        // case
+        // of
+        // recognition
+        // exceptions
 
         wrapper.setIsWhitespace(wrapper.getToken().getChannel() == BaseRecognizer.HIDDEN); // Token
-                                                                                           // is a
-                                                                                           // Whitespace
+        // is a
+        // Whitespace
         return wrapper;
     }
 
@@ -116,37 +113,36 @@ public class ANTLRTokenScannerAdapter implements ITokenScanner {
      * @see org.eclipse.jface.text.rules.ITokenScanner#setRange(org.eclipse.jface.text.IDocument,
      * int, int)
      */
-    public void setRange(IDocument document, int offset, int length) {
+    @Override
+    public void setRange(final IDocument document, final int offset, final int length) {
         currentInput = "";
-        currentDocument = document;
         try {
             currentInput = document.get(offset, length);
-            lastTokenOffset = 0;
             tokenOffset = offset;
             baseOffset = offset;
-        } catch (BadLocationException e1) {
+        } catch (final BadLocationException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        ANTLRStringStream reader = new ANTLRStringStream(currentInput);
+        final ANTLRStringStream reader = new ANTLRStringStream(currentInput);
         try {
             scanner = (Lexer) scannerClass.getConstructor(CharStream.class).newInstance(new Object[] { reader });
-        } catch (IllegalArgumentException e) {
+        } catch (final IllegalArgumentException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (SecurityException e) {
+        } catch (final SecurityException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (final InstantiationException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (final IllegalAccessException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (final InvocationTargetException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (final NoSuchMethodException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

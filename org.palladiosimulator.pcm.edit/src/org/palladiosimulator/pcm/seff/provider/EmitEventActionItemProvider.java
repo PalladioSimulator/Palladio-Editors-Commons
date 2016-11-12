@@ -19,22 +19,22 @@ import org.palladiosimulator.pcm.seff.SeffPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.EmitEventAction}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class EmitEventActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public EmitEventActionItemProvider(final AdapterFactory adapterFactory) {
@@ -44,13 +44,12 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addEventType__EmitEventActionPropertyDescriptor(object);
@@ -66,21 +65,20 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addEventType__EmitEventActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_EmitEventAction_eventType__EmitEventAction_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_EmitEventAction_eventType__EmitEventAction_feature",
-                                        "_UI_EmitEventAction_type"),
-                                SeffPackage.Literals.EMIT_EVENT_ACTION__EVENT_TYPE_EMIT_EVENT_ACTION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EmitEventAction_eventType__EmitEventAction_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_EmitEventAction_eventType__EmitEventAction_feature", "_UI_EmitEventAction_type"),
+                        SeffPackage.Literals.EMIT_EVENT_ACTION__EVENT_TYPE_EMIT_EVENT_ACTION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -90,21 +88,20 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addSourceRole__EmitEventActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_EmitEventAction_sourceRole__EmitEventAction_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_EmitEventAction_sourceRole__EmitEventAction_feature",
-                                        "_UI_EmitEventAction_type"),
-                                SeffPackage.Literals.EMIT_EVENT_ACTION__SOURCE_ROLE_EMIT_EVENT_ACTION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EmitEventAction_sourceRole__EmitEventAction_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_EmitEventAction_sourceRole__EmitEventAction_feature", "_UI_EmitEventAction_type"),
+                        SeffPackage.Literals.EMIT_EVENT_ACTION__SOURCE_ROLE_EMIT_EVENT_ACTION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -118,8 +115,7 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION);
         }
@@ -128,7 +124,7 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,7 +137,7 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * This returns EmitEventAction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -158,24 +154,22 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((EmitEventAction) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_EmitEventAction_type") :
-                    this.getString("_UI_EmitEventAction_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_EmitEventAction_type")
+                : this.getString("_UI_EmitEventAction_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(EmitEventAction.class))
-        {
+        switch (notification.getFeatureID(EmitEventAction.class)) {
         case SeffPackage.EMIT_EVENT_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -186,17 +180,16 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION,
-                                ParameterFactory.eINSTANCE.createVariableUsage()));
+        newChildDescriptors
+                .add(this.createChildParameter(SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION,
+                        ParameterFactory.eINSTANCE.createVariableUsage()));
     }
 
 }

@@ -35,18 +35,18 @@ import org.palladiosimulator.pcm.parameter.util.ParameterAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
-implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -66,7 +66,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ParameterItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.parameter.VariableUsage} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariableUsageItemProvider variableUsageItemProvider;
@@ -110,8 +110,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createVariableUsageAdapter() {
-        if (this.variableUsageItemProvider == null)
-        {
+        if (this.variableUsageItemProvider == null) {
             this.variableUsageItemProvider = new VariableUsageItemProvider(this);
         }
 
@@ -131,13 +130,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.parameter.VariableCharacterisation}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createVariableCharacterisationAdapter() {
-        if (this.variableCharacterisationItemProvider == null)
-        {
+        if (this.variableCharacterisationItemProvider == null) {
             this.variableCharacterisationItemProvider = new VariableCharacterisationItemProvider(this);
         }
 
@@ -157,13 +155,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.parameter.CharacterisedVariable}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createCharacterisedVariableAdapter() {
-        if (this.characterisedVariableItemProvider == null)
-        {
+        if (this.characterisedVariableItemProvider == null) {
             this.characterisedVariableItemProvider = new CharacterisedVariableItemProvider(this);
         }
 
@@ -173,7 +170,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -184,7 +181,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -194,7 +191,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -215,16 +212,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -234,7 +229,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -243,7 +238,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -253,7 +248,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -263,7 +258,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -273,7 +268,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -291,8 +286,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
@@ -300,7 +294,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

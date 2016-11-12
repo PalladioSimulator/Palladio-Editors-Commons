@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.palladiosimulator.editors.commons.dialogs.stoex;
 
@@ -21,25 +21,24 @@ import org.eclipse.jface.text.source.IAnnotationHover;
 import org.eclipse.jface.text.source.IAnnotationModel;
 import org.eclipse.jface.text.source.ISourceViewer;
 import org.eclipse.jface.text.source.SourceViewerConfiguration;
-
 import org.palladiosimulator.pcm.repository.Parameter;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class AbstractGrammarBasedViewerConfiguration.
- * 
+ *
  * @author Snowball
  */
 public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfiguration {
 
     /** The annotation model. */
-    private IAnnotationModel annotationModel;
+    private final IAnnotationModel annotationModel;
 
     /** The my lexer class. */
-    private Class myLexerClass;
+    private final Class<?> myLexerClass;
 
     /** The my mapper. */
-    private ITokenMapper myMapper;
+    private final ITokenMapper myMapper;
 
     /** The context. */
     private Parameter[] context = null;
@@ -49,7 +48,7 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
 
     /**
      * Instantiates a new abstract grammar based viewer configuration.
-     * 
+     *
      * @param annotationModel
      *            the annotation model
      * @param context
@@ -59,8 +58,8 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
      * @param myMapper
      *            the my mapper
      */
-    public AbstractGrammarBasedViewerConfiguration(IAnnotationModel annotationModel, Parameter[] context,
-            Class lexerClass, ITokenMapper myMapper) {
+    public AbstractGrammarBasedViewerConfiguration(final IAnnotationModel annotationModel, final Parameter[] context,
+            final Class<?> lexerClass, final ITokenMapper myMapper) {
         this.annotationModel = annotationModel;
         this.myLexerClass = lexerClass;
         this.myMapper = myMapper;
@@ -69,16 +68,16 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * org.eclipse.jface.text.source.SourceViewerConfiguration#getPresentationReconciler(org.eclipse
      * .jface.text.source.ISourceViewer)
      */
     @Override
-    public IPresentationReconciler getPresentationReconciler(ISourceViewer sourceViewer) {
-        PresentationReconciler reconciler = new PresentationReconciler();
+    public IPresentationReconciler getPresentationReconciler(final ISourceViewer sourceViewer) {
+        final PresentationReconciler reconciler = new PresentationReconciler();
 
-        DefaultDamagerRepairer dr = new DefaultDamagerRepairer(getKeywordScanner());
+        final DefaultDamagerRepairer dr = new DefaultDamagerRepairer(getKeywordScanner());
         reconciler.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
         reconciler.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
 
@@ -87,19 +86,19 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * org.eclipse.jface.text.source.SourceViewerConfiguration#getAnnotationHover(org.eclipse.jface
      * .text.source.ISourceViewer)
      */
     @Override
-    public IAnnotationHover getAnnotationHover(ISourceViewer sourceViewer) {
+    public IAnnotationHover getAnnotationHover(final ISourceViewer sourceViewer) {
         return new AnnotationHover(annotationModel);
     }
 
     /**
      * Gets the keyword scanner.
-     * 
+     *
      * @return the keyword scanner
      */
     private ITokenScanner getKeywordScanner() {
@@ -108,17 +107,17 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * org.eclipse.jface.text.source.SourceViewerConfiguration#getContentAssistant(org.eclipse.jface
      * .text.source.ISourceViewer)
      */
     @Override
-    public IContentAssistant getContentAssistant(ISourceViewer sourceViewer) {
+    public IContentAssistant getContentAssistant(final ISourceViewer sourceViewer) {
         if (myAssistant == null) {
             myAssistant = new ContentAssistant();
             myAssistant
-                    .setContentAssistProcessor(new StoExCompletionProcessor(context), IDocument.DEFAULT_CONTENT_TYPE);
+            .setContentAssistProcessor(new StoExCompletionProcessor(context), IDocument.DEFAULT_CONTENT_TYPE);
             myAssistant.setAutoActivationDelay(1);
             myAssistant.enableAutoActivation(true);
         }
@@ -128,26 +127,26 @@ public class AbstractGrammarBasedViewerConfiguration extends SourceViewerConfigu
 
 /**
  * annotation hover manager.
- * 
+ *
  */
 class AnnotationHover implements IAnnotationHover, ITextHover {
 
     /** The annotation model. */
-    private IAnnotationModel fAnnotationModel;
+    private final IAnnotationModel fAnnotationModel;
 
     /**
      * Instantiates a new annotation hover.
-     * 
+     *
      * @param annotationModel
      *            the annotation model
      */
-    public AnnotationHover(IAnnotationModel annotationModel) {
+    public AnnotationHover(final IAnnotationModel annotationModel) {
         this.fAnnotationModel = annotationModel;
     }
 
     /**
      * Gets the hover info.
-     * 
+     *
      * @param sourceViewer
      *            the source viewer
      * @param lineNumber
@@ -156,21 +155,22 @@ class AnnotationHover implements IAnnotationHover, ITextHover {
      * @see org.eclipse.jface.text.source.IAnnotationHover#getHoverInfo(org.eclipse.jface.text.source.ISourceViewer,
      *      int)
      */
-    public String getHoverInfo(ISourceViewer sourceViewer, int lineNumber) {
-        Iterator ite = fAnnotationModel.getAnnotationIterator();
+    @Override
+    public String getHoverInfo(final ISourceViewer sourceViewer, final int lineNumber) {
+        final Iterator<Annotation> ite = fAnnotationModel.getAnnotationIterator();
 
-        ArrayList all = new ArrayList();
+        final ArrayList<String> all = new ArrayList<>();
 
         while (ite.hasNext()) {
-            Annotation a = (Annotation) ite.next();
+            final Annotation a = ite.next();
             if (a instanceof Annotation) {
                 all.add(a.getText());
             }
         }
 
-        StringBuffer total = new StringBuffer();
+        final StringBuffer total = new StringBuffer();
         for (int x = 0; x < all.size(); x++) {
-            String str = (String) all.get(x);
+            final String str = all.get(x);
             total.append(" " + str + (x == (all.size() - 1) ? "" : "\n"));
         }
 
@@ -179,7 +179,7 @@ class AnnotationHover implements IAnnotationHover, ITextHover {
 
     /**
      * Gets the hover info.
-     * 
+     *
      * @param textViewer
      *            the text viewer
      * @param hoverRegion
@@ -188,13 +188,14 @@ class AnnotationHover implements IAnnotationHover, ITextHover {
      * @see org.eclipse.jface.text.ITextHover#getHoverInfo(org.eclipse.jface.text.ITextViewer,
      *      org.eclipse.jface.text.IRegion)
      */
-    public String getHoverInfo(ITextViewer textViewer, IRegion hoverRegion) {
+    @Override
+    public String getHoverInfo(final ITextViewer textViewer, final IRegion hoverRegion) {
         return null;
     }
 
     /**
      * Gets the hover region.
-     * 
+     *
      * @param textViewer
      *            the text viewer
      * @param offset
@@ -203,7 +204,8 @@ class AnnotationHover implements IAnnotationHover, ITextHover {
      * @see org.eclipse.jface.text.ITextHover#getHoverRegion(org.eclipse.jface.text.ITextViewer,
      *      int)
      */
-    public IRegion getHoverRegion(ITextViewer textViewer, int offset) {
+    @Override
+    public IRegion getHoverRegion(final ITextViewer textViewer, final int offset) {
         return null;
     }
 }

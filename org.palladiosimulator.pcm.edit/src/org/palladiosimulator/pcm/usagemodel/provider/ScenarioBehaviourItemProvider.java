@@ -20,22 +20,22 @@ import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.usagemodel.ScenarioBehaviour} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ScenarioBehaviourItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ScenarioBehaviourItemProvider(final AdapterFactory adapterFactory) {
@@ -45,13 +45,12 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -69,8 +68,7 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR);
         }
@@ -79,7 +77,7 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,7 +90,7 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
 
     /**
      * This returns ScenarioBehaviour.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -109,24 +107,22 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((ScenarioBehaviour) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ScenarioBehaviour_type") :
-                    this.getString("_UI_ScenarioBehaviour_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ScenarioBehaviour_type")
+                : this.getString("_UI_ScenarioBehaviour_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ScenarioBehaviour.class))
-        {
+        switch (notification.getFeatureID(ScenarioBehaviour.class)) {
         case UsagemodelPackage.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -137,42 +133,42 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createEntryLevelSystemCall()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createEntryLevelSystemCall()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createBranch()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createBranch()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createLoop()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createLoop()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createStop()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createStop()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createStart()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createStart()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
-                                UsagemodelFactory.eINSTANCE.createDelay()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+                        UsagemodelFactory.eINSTANCE.createDelay()));
     }
 
 }

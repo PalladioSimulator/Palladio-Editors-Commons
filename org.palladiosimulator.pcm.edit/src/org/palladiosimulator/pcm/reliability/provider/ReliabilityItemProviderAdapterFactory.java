@@ -35,18 +35,18 @@ import org.palladiosimulator.pcm.reliability.util.ReliabilityAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ReliabilityItemProviderAdapterFactory extends ReliabilityAdapterFactory
-implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -66,7 +66,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ReliabilityItemProviderAdapterFactory() {
@@ -106,13 +106,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.reliability.HardwareInducedFailureType}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createHardwareInducedFailureTypeAdapter() {
-        if (this.hardwareInducedFailureTypeItemProvider == null)
-        {
+        if (this.hardwareInducedFailureTypeItemProvider == null) {
             this.hardwareInducedFailureTypeItemProvider = new HardwareInducedFailureTypeItemProvider(this);
         }
 
@@ -132,13 +131,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.reliability.SoftwareInducedFailureType}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSoftwareInducedFailureTypeAdapter() {
-        if (this.softwareInducedFailureTypeItemProvider == null)
-        {
+        if (this.softwareInducedFailureTypeItemProvider == null) {
             this.softwareInducedFailureTypeItemProvider = new SoftwareInducedFailureTypeItemProvider(this);
         }
 
@@ -149,7 +147,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.reliability.InternalFailureOccurrenceDescription} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InternalFailureOccurrenceDescriptionItemProvider internalFailureOccurrenceDescriptionItemProvider;
@@ -163,8 +161,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createInternalFailureOccurrenceDescriptionAdapter() {
-        if (this.internalFailureOccurrenceDescriptionItemProvider == null)
-        {
+        if (this.internalFailureOccurrenceDescriptionItemProvider == null) {
             this.internalFailureOccurrenceDescriptionItemProvider = new InternalFailureOccurrenceDescriptionItemProvider(
                     this);
         }
@@ -185,13 +182,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.reliability.NetworkInducedFailureType}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createNetworkInducedFailureTypeAdapter() {
-        if (this.networkInducedFailureTypeItemProvider == null)
-        {
+        if (this.networkInducedFailureTypeItemProvider == null) {
             this.networkInducedFailureTypeItemProvider = new NetworkInducedFailureTypeItemProvider(this);
         }
 
@@ -202,7 +198,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.reliability.ExternalFailureOccurrenceDescription} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExternalFailureOccurrenceDescriptionItemProvider externalFailureOccurrenceDescriptionItemProvider;
@@ -216,8 +212,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createExternalFailureOccurrenceDescriptionAdapter() {
-        if (this.externalFailureOccurrenceDescriptionItemProvider == null)
-        {
+        if (this.externalFailureOccurrenceDescriptionItemProvider == null) {
             this.externalFailureOccurrenceDescriptionItemProvider = new ExternalFailureOccurrenceDescriptionItemProvider(
                     this);
         }
@@ -238,13 +233,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.reliability.ResourceTimeoutFailureType}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createResourceTimeoutFailureTypeAdapter() {
-        if (this.resourceTimeoutFailureTypeItemProvider == null)
-        {
+        if (this.resourceTimeoutFailureTypeItemProvider == null) {
             this.resourceTimeoutFailureTypeItemProvider = new ResourceTimeoutFailureTypeItemProvider(this);
         }
 
@@ -254,7 +248,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -265,7 +259,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -275,7 +269,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -296,16 +290,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -315,7 +307,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -324,7 +316,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -334,7 +326,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -344,7 +336,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -354,7 +346,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -372,8 +364,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
@@ -381,7 +372,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

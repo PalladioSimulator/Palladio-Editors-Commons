@@ -35,18 +35,18 @@ import org.palladiosimulator.pcm.seff.util.SeffAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
-implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -66,7 +66,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SeffItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.StopAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StopActionItemProvider stopActionItemProvider;
@@ -110,8 +110,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createStopActionAdapter() {
-        if (this.stopActionItemProvider == null)
-        {
+        if (this.stopActionItemProvider == null) {
             this.stopActionItemProvider = new StopActionItemProvider(this);
         }
 
@@ -131,13 +130,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createResourceDemandingBehaviourAdapter() {
-        if (this.resourceDemandingBehaviourItemProvider == null)
-        {
+        if (this.resourceDemandingBehaviourItemProvider == null) {
             this.resourceDemandingBehaviourItemProvider = new ResourceDemandingBehaviourItemProvider(this);
         }
 
@@ -148,7 +146,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.BranchAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BranchActionItemProvider branchActionItemProvider;
@@ -161,8 +159,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createBranchActionAdapter() {
-        if (this.branchActionItemProvider == null)
-        {
+        if (this.branchActionItemProvider == null) {
             this.branchActionItemProvider = new BranchActionItemProvider(this);
         }
 
@@ -173,7 +170,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.StartAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StartActionItemProvider startActionItemProvider;
@@ -186,8 +183,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createStartActionAdapter() {
-        if (this.startActionItemProvider == null)
-        {
+        if (this.startActionItemProvider == null) {
             this.startActionItemProvider = new StartActionItemProvider(this);
         }
 
@@ -198,7 +194,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ResourceDemandingSEFF} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ResourceDemandingSEFFItemProvider resourceDemandingSEFFItemProvider;
@@ -206,13 +202,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.ResourceDemandingSEFF}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createResourceDemandingSEFFAdapter() {
-        if (this.resourceDemandingSEFFItemProvider == null)
-        {
+        if (this.resourceDemandingSEFFItemProvider == null) {
             this.resourceDemandingSEFFItemProvider = new ResourceDemandingSEFFItemProvider(this);
         }
 
@@ -237,8 +232,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createResourceDemandingInternalBehaviourAdapter() {
-        if (this.resourceDemandingInternalBehaviourItemProvider == null)
-        {
+        if (this.resourceDemandingInternalBehaviourItemProvider == null) {
             this.resourceDemandingInternalBehaviourItemProvider = new ResourceDemandingInternalBehaviourItemProvider(
                     this);
         }
@@ -250,7 +244,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ReleaseAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ReleaseActionItemProvider releaseActionItemProvider;
@@ -263,8 +257,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createReleaseActionAdapter() {
-        if (this.releaseActionItemProvider == null)
-        {
+        if (this.releaseActionItemProvider == null) {
             this.releaseActionItemProvider = new ReleaseActionItemProvider(this);
         }
 
@@ -275,7 +268,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.LoopAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LoopActionItemProvider loopActionItemProvider;
@@ -288,8 +281,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createLoopActionAdapter() {
-        if (this.loopActionItemProvider == null)
-        {
+        if (this.loopActionItemProvider == null) {
             this.loopActionItemProvider = new LoopActionItemProvider(this);
         }
 
@@ -300,7 +292,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ForkAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ForkActionItemProvider forkActionItemProvider;
@@ -313,8 +305,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createForkActionAdapter() {
-        if (this.forkActionItemProvider == null)
-        {
+        if (this.forkActionItemProvider == null) {
             this.forkActionItemProvider = new ForkActionItemProvider(this);
         }
 
@@ -325,7 +316,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ForkedBehaviour} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ForkedBehaviourItemProvider forkedBehaviourItemProvider;
@@ -338,8 +329,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createForkedBehaviourAdapter() {
-        if (this.forkedBehaviourItemProvider == null)
-        {
+        if (this.forkedBehaviourItemProvider == null) {
             this.forkedBehaviourItemProvider = new ForkedBehaviourItemProvider(this);
         }
 
@@ -350,7 +340,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.SynchronisationPoint} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SynchronisationPointItemProvider synchronisationPointItemProvider;
@@ -358,13 +348,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.SynchronisationPoint}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSynchronisationPointAdapter() {
-        if (this.synchronisationPointItemProvider == null)
-        {
+        if (this.synchronisationPointItemProvider == null) {
             this.synchronisationPointItemProvider = new SynchronisationPointItemProvider(this);
         }
 
@@ -375,7 +364,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ExternalCallAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExternalCallActionItemProvider externalCallActionItemProvider;
@@ -388,8 +377,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createExternalCallActionAdapter() {
-        if (this.externalCallActionItemProvider == null)
-        {
+        if (this.externalCallActionItemProvider == null) {
             this.externalCallActionItemProvider = new ExternalCallActionItemProvider(this);
         }
 
@@ -400,7 +388,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.CallReturnAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected CallReturnActionItemProvider callReturnActionItemProvider;
@@ -413,8 +401,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createCallReturnActionAdapter() {
-        if (this.callReturnActionItemProvider == null)
-        {
+        if (this.callReturnActionItemProvider == null) {
             this.callReturnActionItemProvider = new CallReturnActionItemProvider(this);
         }
 
@@ -434,13 +421,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.seff.ProbabilisticBranchTransition}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProbabilisticBranchTransitionAdapter() {
-        if (this.probabilisticBranchTransitionItemProvider == null)
-        {
+        if (this.probabilisticBranchTransitionItemProvider == null) {
             this.probabilisticBranchTransitionItemProvider = new ProbabilisticBranchTransitionItemProvider(this);
         }
 
@@ -451,7 +437,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.AcquireAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AcquireActionItemProvider acquireActionItemProvider;
@@ -464,8 +450,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createAcquireActionAdapter() {
-        if (this.acquireActionItemProvider == null)
-        {
+        if (this.acquireActionItemProvider == null) {
             this.acquireActionItemProvider = new AcquireActionItemProvider(this);
         }
 
@@ -482,15 +467,15 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     protected CollectionIteratorActionItemProvider collectionIteratorActionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.CollectionIteratorAction}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.pcm.seff.CollectionIteratorAction}. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
      * @generated
      */
     @Override
     public Adapter createCollectionIteratorActionAdapter() {
-        if (this.collectionIteratorActionItemProvider == null)
-        {
+        if (this.collectionIteratorActionItemProvider == null) {
             this.collectionIteratorActionItemProvider = new CollectionIteratorActionItemProvider(this);
         }
 
@@ -501,7 +486,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.GuardedBranchTransition} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected GuardedBranchTransitionItemProvider guardedBranchTransitionItemProvider;
@@ -509,13 +494,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.GuardedBranchTransition}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createGuardedBranchTransitionAdapter() {
-        if (this.guardedBranchTransitionItemProvider == null)
-        {
+        if (this.guardedBranchTransitionItemProvider == null) {
             this.guardedBranchTransitionItemProvider = new GuardedBranchTransitionItemProvider(this);
         }
 
@@ -526,7 +510,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.SetVariableAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SetVariableActionItemProvider setVariableActionItemProvider;
@@ -539,8 +523,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createSetVariableActionAdapter() {
-        if (this.setVariableActionItemProvider == null)
-        {
+        if (this.setVariableActionItemProvider == null) {
             this.setVariableActionItemProvider = new SetVariableActionItemProvider(this);
         }
 
@@ -551,7 +534,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.InternalCallAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InternalCallActionItemProvider internalCallActionItemProvider;
@@ -564,8 +547,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createInternalCallActionAdapter() {
-        if (this.internalCallActionItemProvider == null)
-        {
+        if (this.internalCallActionItemProvider == null) {
             this.internalCallActionItemProvider = new InternalCallActionItemProvider(this);
         }
 
@@ -576,7 +558,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.EmitEventAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected EmitEventActionItemProvider emitEventActionItemProvider;
@@ -589,8 +571,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createEmitEventActionAdapter() {
-        if (this.emitEventActionItemProvider == null)
-        {
+        if (this.emitEventActionItemProvider == null) {
             this.emitEventActionItemProvider = new EmitEventActionItemProvider(this);
         }
 
@@ -601,7 +582,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.InternalAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InternalActionItemProvider internalActionItemProvider;
@@ -614,8 +595,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createInternalActionAdapter() {
-        if (this.internalActionItemProvider == null)
-        {
+        if (this.internalActionItemProvider == null) {
             this.internalActionItemProvider = new InternalActionItemProvider(this);
         }
 
@@ -625,7 +605,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -636,7 +616,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -646,7 +626,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -667,16 +647,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -686,7 +664,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -695,7 +673,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -705,7 +683,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -715,7 +693,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -725,7 +703,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -743,8 +721,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
@@ -752,7 +729,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

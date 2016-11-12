@@ -24,15 +24,15 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SoftwareInducedFailureTypeItemProvider(final AdapterFactory adapterFactory) {
@@ -42,13 +42,12 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addInternalFailureOccurrenceDescriptions__SoftwareInducedFailureTypePropertyDescriptor(object);
@@ -59,33 +58,32 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
     /**
      * This adds a property descriptor for the Internal Failure Occurrence Descriptions Software
      * Induced Failure Type feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addInternalFailureOccurrenceDescriptions__SoftwareInducedFailureTypePropertyDescriptor(
             final Object object) {
         this.itemPropertyDescriptors
-        .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_SoftwareInducedFailureType_internalFailureOccurrenceDescriptions__SoftwareInducedFailureType_feature"),
-                                this.getString(
-                                        "_UI_PropertyDescriptor_description",
-                                        "_UI_SoftwareInducedFailureType_internalFailureOccurrenceDescriptions__SoftwareInducedFailureType_feature",
-                                        "_UI_SoftwareInducedFailureType_type"),
-                                ReliabilityPackage.Literals.SOFTWARE_INDUCED_FAILURE_TYPE__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_SOFTWARE_INDUCED_FAILURE_TYPE,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString(
+                                "_UI_SoftwareInducedFailureType_internalFailureOccurrenceDescriptions__SoftwareInducedFailureType_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SoftwareInducedFailureType_internalFailureOccurrenceDescriptions__SoftwareInducedFailureType_feature",
+                                "_UI_SoftwareInducedFailureType_type"),
+                        ReliabilityPackage.Literals.SOFTWARE_INDUCED_FAILURE_TYPE__INTERNAL_FAILURE_OCCURRENCE_DESCRIPTIONS_SOFTWARE_INDUCED_FAILURE_TYPE,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This returns SoftwareInducedFailureType.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -98,8 +96,8 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
      * to produce a more informative label for display in non-PCM editors. In PCM editors, display
      * is not controlled by this method but through a more general mechanism (I'n not sure where
      * it's actually controlled, maybe the
-     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!-- end-user-doc
-     * -->
+     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!--
+     * end-user-doc -->
      *
      * @generated not
      */
@@ -112,9 +110,9 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -126,7 +124,7 @@ public class SoftwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

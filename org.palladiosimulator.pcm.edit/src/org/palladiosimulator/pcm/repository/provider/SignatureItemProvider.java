@@ -20,22 +20,22 @@ import org.palladiosimulator.pcm.repository.Signature;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.repository.Signature}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class SignatureItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SignatureItemProvider(final AdapterFactory adapterFactory) {
@@ -45,13 +45,12 @@ public class SignatureItemProvider extends EntityItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addFailureTypePropertyDescriptor(object);
@@ -62,25 +61,24 @@ public class SignatureItemProvider extends EntityItemProvider {
     /**
      * This adds a property descriptor for the Failure Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addFailureTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_Signature_failureType_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_Signature_failureType_feature",
-                                        "_UI_Signature_type"),
-                                RepositoryPackage.Literals.SIGNATURE__FAILURE_TYPE,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Signature_failureType_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Signature_failureType_feature",
+                                "_UI_Signature_type"),
+                        RepositoryPackage.Literals.SIGNATURE__FAILURE_TYPE,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -94,8 +92,7 @@ public class SignatureItemProvider extends EntityItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(RepositoryPackage.Literals.SIGNATURE__EXCEPTIONS_SIGNATURE);
         }
@@ -104,7 +101,7 @@ public class SignatureItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -124,24 +121,22 @@ public class SignatureItemProvider extends EntityItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((Signature) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_Signature_type") :
-                    this.getString("_UI_Signature_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_Signature_type")
+                : this.getString("_UI_Signature_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Signature.class))
-        {
+        switch (notification.getFeatureID(Signature.class)) {
         case RepositoryPackage.SIGNATURE__EXCEPTIONS_SIGNATURE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -152,17 +147,15 @@ public class SignatureItemProvider extends EntityItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (RepositoryPackage.Literals.SIGNATURE__EXCEPTIONS_SIGNATURE,
-                                RepositoryFactory.eINSTANCE.createExceptionType()));
+        newChildDescriptors.add(this.createChildParameter(RepositoryPackage.Literals.SIGNATURE__EXCEPTIONS_SIGNATURE,
+                RepositoryFactory.eINSTANCE.createExceptionType()));
     }
 
 }

@@ -19,22 +19,22 @@ import org.palladiosimulator.pcm.repository.RepositoryPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.repository.InfrastructureSignature} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public InfrastructureSignatureItemProvider(final AdapterFactory adapterFactory) {
@@ -44,13 +44,12 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -68,18 +67,17 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(RepositoryPackage.Literals.INFRASTRUCTURE_SIGNATURE__PARAMETERS_INFRASTRUCTURE_SIGNATURE);
+                    .add(RepositoryPackage.Literals.INFRASTRUCTURE_SIGNATURE__PARAMETERS_INFRASTRUCTURE_SIGNATURE);
         }
         return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,7 +90,7 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
 
     /**
      * This returns InfrastructureSignature.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -109,24 +107,22 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((InfrastructureSignature) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_InfrastructureSignature_type") :
-                    this.getString("_UI_InfrastructureSignature_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureSignature_type")
+                : this.getString("_UI_InfrastructureSignature_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(InfrastructureSignature.class))
-        {
+        switch (notification.getFeatureID(InfrastructureSignature.class)) {
         case RepositoryPackage.INFRASTRUCTURE_SIGNATURE__PARAMETERS_INFRASTRUCTURE_SIGNATURE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -137,17 +133,16 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (RepositoryPackage.Literals.INFRASTRUCTURE_SIGNATURE__PARAMETERS_INFRASTRUCTURE_SIGNATURE,
-                                RepositoryFactory.eINSTANCE.createParameter()));
+        newChildDescriptors.add(this.createChildParameter(
+                RepositoryPackage.Literals.INFRASTRUCTURE_SIGNATURE__PARAMETERS_INFRASTRUCTURE_SIGNATURE,
+                RepositoryFactory.eINSTANCE.createParameter()));
     }
 
 }

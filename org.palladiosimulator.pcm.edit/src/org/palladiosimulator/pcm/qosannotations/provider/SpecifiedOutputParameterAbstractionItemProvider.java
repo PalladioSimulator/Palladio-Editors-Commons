@@ -32,20 +32,20 @@ import org.palladiosimulator.pcm.qosannotations.SpecifiedOutputParameterAbstract
  * @generated
  */
 public class SpecifiedOutputParameterAbstractionItemProvider extends ItemProviderAdapter
-implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-IItemLabelProvider, IItemPropertySource {
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+        IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SpecifiedOutputParameterAbstractionItemProvider(final AdapterFactory adapterFactory) {
@@ -55,13 +55,12 @@ IItemLabelProvider, IItemPropertySource {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addSignature_SpecifiedOutputParameterAbstractionPropertyDescriptor(object);
@@ -73,53 +72,51 @@ IItemLabelProvider, IItemPropertySource {
     /**
      * This adds a property descriptor for the Signature Specified Output Parameter Abstraction
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addSignature_SpecifiedOutputParameterAbstractionPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors
-        .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature"),
-                                this.getString(
-                                        "_UI_PropertyDescriptor_description",
-                                        "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature",
-                                        "_UI_SpecifiedOutputParameterAbstraction_type"),
-                                QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__SIGNATURE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString(
+                                "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature",
+                                "_UI_SpecifiedOutputParameterAbstraction_type"),
+                        QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__SIGNATURE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Role Specified Output Parameter Abstraction feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addRole_SpecifiedOutputParameterAbstractionPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors
-        .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature"),
-                                this.getString(
-                                        "_UI_PropertyDescriptor_description",
-                                        "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature",
-                                        "_UI_SpecifiedOutputParameterAbstraction_type"),
-                                QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__ROLE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString(
+                                "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature",
+                                "_UI_SpecifiedOutputParameterAbstraction_type"),
+                        QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__ROLE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -133,18 +130,17 @@ IItemLabelProvider, IItemPropertySource {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures
-            .add(QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__EXPECTED_EXTERNAL_OUTPUTS_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION);
+            this.childrenFeatures.add(
+                    QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__EXPECTED_EXTERNAL_OUTPUTS_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION);
         }
         return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,17 +164,16 @@ IItemLabelProvider, IItemPropertySource {
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(SpecifiedOutputParameterAbstraction.class))
-        {
+        switch (notification.getFeatureID(SpecifiedOutputParameterAbstraction.class)) {
         case QosannotationsPackage.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__EXPECTED_EXTERNAL_OUTPUTS_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -189,24 +184,22 @@ IItemLabelProvider, IItemPropertySource {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-        .add
-        (this.createChildParameter
-                        (QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__EXPECTED_EXTERNAL_OUTPUTS_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
-                                ParameterFactory.eINSTANCE.createVariableUsage()));
+        newChildDescriptors.add(this.createChildParameter(
+                QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__EXPECTED_EXTERNAL_OUTPUTS_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
+                ParameterFactory.eINSTANCE.createVariableUsage()));
     }
 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

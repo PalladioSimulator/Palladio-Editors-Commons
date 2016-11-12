@@ -45,10 +45,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.editors.text.EditorsPlugin;
 import org.eclipse.ui.texteditor.AnnotationPreference;
 import org.eclipse.ui.texteditor.SourceViewerDecorationSupport;
 import org.palladiosimulator.editors.commons.dialogs.DialogsImages;
+import org.palladiosimulator.editors.commons.dialogs.PCMDialogPluginActivator;
 import org.palladiosimulator.editors.commons.dialogs.SWTResourceManager;
 import org.palladiosimulator.pcm.repository.Parameter;
 import org.palladiosimulator.pcm.stochasticexpressions.parser.ErrorEntry;
@@ -315,7 +315,7 @@ public abstract class AbstractGrammerBasedEditDialog extends TitleAreaDialog {
         ap.setTextStylePreferenceKey(WARNING_TEXT_STYLE);
         fSourceViewerDecorationSupport.setAnnotationPreference(ap);
 
-        fSourceViewerDecorationSupport.install(EditorsPlugin.getDefault().getPreferenceStore());
+        fSourceViewerDecorationSupport.install(PCMDialogPluginActivator.getDefault().getPreferenceStore());
 
         // GridData layoutData = new GridData(GridData.FILL_BOTH);
         // new GridData(GridData.FILL_BOTH

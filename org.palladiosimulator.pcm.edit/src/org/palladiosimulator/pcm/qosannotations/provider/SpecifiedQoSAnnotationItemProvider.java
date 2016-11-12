@@ -28,19 +28,19 @@ import org.palladiosimulator.pcm.qosannotations.QosannotationsPackage;
  * @generated
  */
 public class SpecifiedQoSAnnotationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SpecifiedQoSAnnotationItemProvider(final AdapterFactory adapterFactory) {
@@ -50,13 +50,12 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addSignature_SpecifiedQoSAnnationPropertyDescriptor(object);
@@ -73,21 +72,20 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
      */
     protected void addSignature_SpecifiedQoSAnnationPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors
-                .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature",
-                                        "_UI_SpecifiedQoSAnnotation_type"),
-                                QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__SIGNATURE_SPECIFIED_QO_SANNATION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature",
+                                "_UI_SpecifiedQoSAnnotation_type"),
+                        QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__SIGNATURE_SPECIFIED_QO_SANNATION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -97,21 +95,21 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
      * @generated
      */
     protected void addRole_SpecifiedQoSAnnotationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature",
-                                        "_UI_SpecifiedQoSAnnotation_type"),
-                                QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__ROLE_SPECIFIED_QO_SANNOTATION,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature",
+                                "_UI_SpecifiedQoSAnnotation_type"),
+                        QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__ROLE_SPECIFIED_QO_SANNOTATION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -127,9 +125,9 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -141,7 +139,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -152,7 +150,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

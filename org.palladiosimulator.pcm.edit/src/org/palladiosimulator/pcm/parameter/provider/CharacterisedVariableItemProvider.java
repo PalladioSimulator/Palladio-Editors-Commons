@@ -24,22 +24,22 @@ import de.uka.ipd.sdq.stoex.provider.VariableItemProvider;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.parameter.CharacterisedVariable} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class CharacterisedVariableItemProvider extends VariableItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public CharacterisedVariableItemProvider(final AdapterFactory adapterFactory) {
@@ -49,13 +49,12 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addCharacterisationTypePropertyDescriptor(object);
@@ -66,30 +65,30 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
     /**
      * This adds a property descriptor for the Characterisation Type feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addCharacterisationTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_CharacterisedVariable_characterisationType_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_CharacterisedVariable_characterisationType_feature",
-                                        "_UI_CharacterisedVariable_type"),
-                                ParameterPackage.Literals.CHARACTERISED_VARIABLE__CHARACTERISATION_TYPE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_CharacterisedVariable_characterisationType_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_CharacterisedVariable_characterisationType_feature",
+                                "_UI_CharacterisedVariable_type"),
+                        ParameterPackage.Literals.CHARACTERISED_VARIABLE__CHARACTERISATION_TYPE,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
      * This returns CharacterisedVariable.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -107,24 +106,22 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
     public String getText(final Object object) {
         final VariableCharacterisationType labelValue = ((CharacterisedVariable) object).getCharacterisationType();
         final String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_CharacterisedVariable_type") :
-                    this.getString("_UI_CharacterisedVariable_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_CharacterisedVariable_type")
+                : this.getString("_UI_CharacterisedVariable_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(CharacterisedVariable.class))
-        {
+        switch (notification.getFeatureID(CharacterisedVariable.class)) {
         case ParameterPackage.CHARACTERISED_VARIABLE__CHARACTERISATION_TYPE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
@@ -135,7 +132,7 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +143,7 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

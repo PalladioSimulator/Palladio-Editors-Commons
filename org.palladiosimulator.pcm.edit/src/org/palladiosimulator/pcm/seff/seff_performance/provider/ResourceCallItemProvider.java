@@ -21,22 +21,22 @@ import org.palladiosimulator.pcm.seff.seff_performance.SeffPerformancePackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.seff.seff_performance.ResourceCall} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ResourceCallItemProvider extends CallActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ResourceCallItemProvider(final AdapterFactory adapterFactory) {
@@ -46,13 +46,12 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addResourceRequiredRole__ResourceCallPropertyDescriptor(object);
@@ -69,44 +68,42 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
      */
     protected void addResourceRequiredRole__ResourceCallPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors
-        .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_ResourceCall_resourceRequiredRole__ResourceCall_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_ResourceCall_resourceRequiredRole__ResourceCall_feature",
-                                        "_UI_ResourceCall_type"),
-                                SeffPerformancePackage.Literals.RESOURCE_CALL__RESOURCE_REQUIRED_ROLE_RESOURCE_CALL,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ResourceCall_resourceRequiredRole__ResourceCall_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_ResourceCall_resourceRequiredRole__ResourceCall_feature", "_UI_ResourceCall_type"),
+                        SeffPerformancePackage.Literals.RESOURCE_CALL__RESOURCE_REQUIRED_ROLE_RESOURCE_CALL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Signature Resource Call feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addSignature__ResourceCallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_ResourceCall_signature__ResourceCall_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_ResourceCall_signature__ResourceCall_feature", "_UI_ResourceCall_type"),
-                                SeffPerformancePackage.Literals.RESOURCE_CALL__SIGNATURE_RESOURCE_CALL,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ResourceCall_signature__ResourceCall_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_ResourceCall_signature__ResourceCall_feature", "_UI_ResourceCall_type"),
+                        SeffPerformancePackage.Literals.RESOURCE_CALL__SIGNATURE_RESOURCE_CALL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -120,8 +117,7 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(SeffPerformancePackage.Literals.RESOURCE_CALL__NUMBER_OF_CALLS_RESOURCE_CALL);
         }
@@ -130,7 +126,7 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -143,7 +139,7 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
 
     /**
      * This returns ResourceCall.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,24 +156,22 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((ResourceCall) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ResourceCall_type") :
-                    this.getString("_UI_ResourceCall_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ResourceCall_type")
+                : this.getString("_UI_ResourceCall_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ResourceCall.class))
-        {
+        switch (notification.getFeatureID(ResourceCall.class)) {
         case SeffPerformancePackage.RESOURCE_CALL__NUMBER_OF_CALLS_RESOURCE_CALL:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -188,17 +182,17 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPerformancePackage.Literals.RESOURCE_CALL__NUMBER_OF_CALLS_RESOURCE_CALL,
-                                CoreFactory.eINSTANCE.createPCMRandomVariable()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        SeffPerformancePackage.Literals.RESOURCE_CALL__NUMBER_OF_CALLS_RESOURCE_CALL,
+                        CoreFactory.eINSTANCE.createPCMRandomVariable()));
     }
 
 }

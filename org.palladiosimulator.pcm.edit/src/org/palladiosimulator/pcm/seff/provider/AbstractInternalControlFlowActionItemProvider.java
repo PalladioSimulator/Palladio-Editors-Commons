@@ -26,15 +26,15 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractInternalControlFlowActionItemProvider(final AdapterFactory adapterFactory) {
@@ -44,13 +44,12 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -68,13 +67,12 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
                     .add(SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION);
             this.childrenFeatures
-            .add(SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION);
+                    .add(SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION);
             this.childrenFeatures.add(SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION);
         }
         return this.childrenFeatures;
@@ -82,7 +80,7 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,24 +100,22 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
     @Override
     public String getText(final Object object) {
         final String label = ((AbstractInternalControlFlowAction) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_AbstractInternalControlFlowAction_type") :
-                    this.getString("_UI_AbstractInternalControlFlowAction_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_AbstractInternalControlFlowAction_type")
+                : this.getString("_UI_AbstractInternalControlFlowAction_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(AbstractInternalControlFlowAction.class))
-        {
+        switch (notification.getFeatureID(AbstractInternalControlFlowAction.class)) {
         case SeffPackage.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION:
         case SeffPackage.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION:
         case SeffPackage.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION:
@@ -132,27 +128,26 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION,
-                                SeffPerformanceFactory.eINSTANCE.createParametricResourceDemand()));
+        newChildDescriptors.add(
+                this.createChildParameter(
+                        SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION,
+                        SeffPerformanceFactory.eINSTANCE.createParametricResourceDemand()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION,
-                                SeffPerformanceFactory.eINSTANCE.createInfrastructureCall()));
+        newChildDescriptors.add(this.createChildParameter(
+                SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION,
+                SeffPerformanceFactory.eINSTANCE.createInfrastructureCall()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION,
-                                SeffPerformanceFactory.eINSTANCE.createResourceCall()));
+        newChildDescriptors.add(
+                this.createChildParameter(
+                        SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION,
+                        SeffPerformanceFactory.eINSTANCE.createResourceCall()));
     }
 
 }

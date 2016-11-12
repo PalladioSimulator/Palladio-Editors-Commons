@@ -27,23 +27,23 @@ import org.palladiosimulator.pcm.core.entity.NamedElement;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.entity.NamedElement} object. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class NamedElementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NamedElementItemProvider(final AdapterFactory adapterFactory) {
@@ -53,13 +53,12 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addEntityNamePropertyDescriptor(object);
@@ -70,25 +69,24 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds a property descriptor for the Entity Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addEntityNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_NamedElement_entityName_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_NamedElement_entityName_feature",
-                                        "_UI_NamedElement_type"),
-                                EntityPackage.Literals.NAMED_ELEMENT__ENTITY_NAME,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_NamedElement_entityName_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_entityName_feature",
+                                "_UI_NamedElement_type"),
+                        EntityPackage.Literals.NAMED_ELEMENT__ENTITY_NAME,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -100,24 +98,22 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     @Override
     public String getText(final Object object) {
         final String label = ((NamedElement) object).getEntityName();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_NamedElement_type") :
-                    this.getString("_UI_NamedElement_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_NamedElement_type")
+                : this.getString("_UI_NamedElement_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(NamedElement.class))
-        {
+        switch (notification.getFeatureID(NamedElement.class)) {
         case EntityPackage.NAMED_ELEMENT__ENTITY_NAME:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
@@ -128,7 +124,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,7 +135,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

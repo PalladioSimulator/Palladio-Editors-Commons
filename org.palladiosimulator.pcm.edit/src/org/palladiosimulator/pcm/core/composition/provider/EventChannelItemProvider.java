@@ -18,22 +18,22 @@ import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.composition.EventChannel} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class EventChannelItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public EventChannelItemProvider(final AdapterFactory adapterFactory) {
@@ -43,13 +43,12 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addEventGroup__EventChannelPropertyDescriptor(object);
@@ -66,74 +65,73 @@ public class EventChannelItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEventGroup__EventChannelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_EventChannel_eventGroup__EventChannel_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_EventChannel_eventGroup__EventChannel_feature", "_UI_EventChannel_type"),
-                                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_GROUP_EVENT_CHANNEL,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EventChannel_eventGroup__EventChannel_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_EventChannel_eventGroup__EventChannel_feature", "_UI_EventChannel_type"),
+                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_GROUP_EVENT_CHANNEL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Event Channel Source Connector Event Channel feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addEventChannelSourceConnector__EventChannelPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors
-                .add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature",
-                                        "_UI_EventChannel_type"),
-                                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature",
+                                "_UI_EventChannel_type"),
+                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This adds a property descriptor for the Event Channel Sink Connector Event Channel feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addEventChannelSinkConnector__EventChannelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-        (this.createItemPropertyDescriptor
-                        (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                                this.getResourceLocator(),
-                                this.getString("_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature"),
-                                this.getString("_UI_PropertyDescriptor_description",
-                                        "_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature",
-                                        "_UI_EventChannel_type"),
-                                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature",
+                                "_UI_EventChannel_type"),
+                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
      * This returns EventChannel.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,16 +148,15 @@ public class EventChannelItemProvider extends EntityItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((EventChannel) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_EventChannel_type") :
-                    this.getString("_UI_EventChannel_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_EventChannel_type")
+                : this.getString("_UI_EventChannel_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -171,7 +168,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

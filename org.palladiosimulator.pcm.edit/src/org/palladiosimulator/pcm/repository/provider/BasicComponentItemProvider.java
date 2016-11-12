@@ -20,22 +20,22 @@ import org.palladiosimulator.pcm.seff.SeffFactory;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.repository.BasicComponent} object. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class BasicComponentItemProvider extends ImplementationComponentTypeItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public BasicComponentItemProvider(final AdapterFactory adapterFactory) {
@@ -45,13 +45,12 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -69,11 +68,10 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(RepositoryPackage.Literals.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT);
+                    .add(RepositoryPackage.Literals.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT);
             this.childrenFeatures.add(RepositoryPackage.Literals.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT);
         }
         return this.childrenFeatures;
@@ -81,7 +79,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -94,7 +92,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
 
     /**
      * This returns BasicComponent.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -107,8 +105,8 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
      * to produce a more informative label for display in non-PCM editors. In PCM editors, display
      * is not controlled by this method but through a more general mechanism (I'n not sure where
      * it's actually controlled, maybe the
-     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!-- end-user-doc
-     * -->
+     * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!--
+     * end-user-doc -->
      *
      * @generated not
      */
@@ -120,17 +118,16 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(BasicComponent.class))
-        {
+        switch (notification.getFeatureID(BasicComponent.class)) {
         case RepositoryPackage.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT:
         case RepositoryPackage.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -142,22 +139,21 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (RepositoryPackage.Literals.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT,
-                                SeffFactory.eINSTANCE.createResourceDemandingSEFF()));
+        newChildDescriptors.add(this.createChildParameter(
+                RepositoryPackage.Literals.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT,
+                SeffFactory.eINSTANCE.createResourceDemandingSEFF()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (RepositoryPackage.Literals.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT,
-                                RepositoryFactory.eINSTANCE.createPassiveResource()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        RepositoryPackage.Literals.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT,
+                        RepositoryFactory.eINSTANCE.createPassiveResource()));
     }
 
 }

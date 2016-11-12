@@ -18,22 +18,22 @@ import org.palladiosimulator.pcm.seff.SeffPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.ForkAction} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ForkActionItemProvider extends AbstractInternalControlFlowActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ForkActionItemProvider(final AdapterFactory adapterFactory) {
@@ -43,13 +43,12 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -67,8 +66,7 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(SeffPackage.Literals.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION);
             this.childrenFeatures.add(SeffPackage.Literals.FORK_ACTION__SYNCHRONISING_BEHAVIOURS_FORK_ACTION);
@@ -78,7 +76,7 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,7 +89,7 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
 
     /**
      * This returns ForkAction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -108,24 +106,22 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
     @Override
     public String getText(final Object object) {
         final String label = ((ForkAction) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ForkAction_type") :
-                    this.getString("_UI_ForkAction_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ForkAction_type")
+                : this.getString("_UI_ForkAction_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ForkAction.class))
-        {
+        switch (notification.getFeatureID(ForkAction.class)) {
         case SeffPackage.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION:
         case SeffPackage.FORK_ACTION__SYNCHRONISING_BEHAVIOURS_FORK_ACTION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -137,22 +133,21 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION,
-                                SeffFactory.eINSTANCE.createForkedBehaviour()));
+        newChildDescriptors
+                .add(this.createChildParameter(
+                        SeffPackage.Literals.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION,
+                        SeffFactory.eINSTANCE.createForkedBehaviour()));
 
-        newChildDescriptors.add
-        (this.createChildParameter
-                        (SeffPackage.Literals.FORK_ACTION__SYNCHRONISING_BEHAVIOURS_FORK_ACTION,
-                                SeffFactory.eINSTANCE.createSynchronisationPoint()));
+        newChildDescriptors
+                .add(this.createChildParameter(SeffPackage.Literals.FORK_ACTION__SYNCHRONISING_BEHAVIOURS_FORK_ACTION,
+                        SeffFactory.eINSTANCE.createSynchronisationPoint()));
     }
 
 }

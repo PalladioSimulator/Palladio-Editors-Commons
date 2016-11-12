@@ -35,18 +35,18 @@ import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class CompositionItemProviderAdapterFactory extends CompositionAdapterFactory
-implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -66,7 +66,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public CompositionItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ResourceRequiredDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ResourceRequiredDelegationConnectorItemProvider resourceRequiredDelegationConnectorItemProvider;
@@ -111,8 +111,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createResourceRequiredDelegationConnectorAdapter() {
-        if (this.resourceRequiredDelegationConnectorItemProvider == null)
-        {
+        if (this.resourceRequiredDelegationConnectorItemProvider == null) {
             this.resourceRequiredDelegationConnectorItemProvider = new ResourceRequiredDelegationConnectorItemProvider(
                     this);
         }
@@ -130,15 +129,15 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     protected EventChannelItemProvider eventChannelItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.pcm.core.composition.EventChannel}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.pcm.core.composition.EventChannel}. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
      * @generated
      */
     @Override
     public Adapter createEventChannelAdapter() {
-        if (this.eventChannelItemProvider == null)
-        {
+        if (this.eventChannelItemProvider == null) {
             this.eventChannelItemProvider = new EventChannelItemProvider(this);
         }
 
@@ -149,7 +148,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.EventChannelSourceConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected EventChannelSourceConnectorItemProvider eventChannelSourceConnectorItemProvider;
@@ -163,8 +162,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createEventChannelSourceConnectorAdapter() {
-        if (this.eventChannelSourceConnectorItemProvider == null)
-        {
+        if (this.eventChannelSourceConnectorItemProvider == null) {
             this.eventChannelSourceConnectorItemProvider = new EventChannelSourceConnectorItemProvider(this);
         }
 
@@ -189,8 +187,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createEventChannelSinkConnectorAdapter() {
-        if (this.eventChannelSinkConnectorItemProvider == null)
-        {
+        if (this.eventChannelSinkConnectorItemProvider == null) {
             this.eventChannelSinkConnectorItemProvider = new EventChannelSinkConnectorItemProvider(this);
         }
 
@@ -201,7 +198,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedDelegationConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProvidedDelegationConnectorItemProvider providedDelegationConnectorItemProvider;
@@ -215,8 +212,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createProvidedDelegationConnectorAdapter() {
-        if (this.providedDelegationConnectorItemProvider == null)
-        {
+        if (this.providedDelegationConnectorItemProvider == null) {
             this.providedDelegationConnectorItemProvider = new ProvidedDelegationConnectorItemProvider(this);
         }
 
@@ -227,7 +223,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredDelegationConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RequiredDelegationConnectorItemProvider requiredDelegationConnectorItemProvider;
@@ -241,8 +237,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createRequiredDelegationConnectorAdapter() {
-        if (this.requiredDelegationConnectorItemProvider == null)
-        {
+        if (this.requiredDelegationConnectorItemProvider == null) {
             this.requiredDelegationConnectorItemProvider = new RequiredDelegationConnectorItemProvider(this);
         }
 
@@ -262,13 +257,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyConnector}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createAssemblyConnectorAdapter() {
-        if (this.assemblyConnectorItemProvider == null)
-        {
+        if (this.assemblyConnectorItemProvider == null) {
             this.assemblyConnectorItemProvider = new AssemblyConnectorItemProvider(this);
         }
 
@@ -293,8 +287,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createAssemblyEventConnectorAdapter() {
-        if (this.assemblyEventConnectorItemProvider == null)
-        {
+        if (this.assemblyEventConnectorItemProvider == null) {
             this.assemblyEventConnectorItemProvider = new AssemblyEventConnectorItemProvider(this);
         }
 
@@ -319,8 +312,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createSourceDelegationConnectorAdapter() {
-        if (this.sourceDelegationConnectorItemProvider == null)
-        {
+        if (this.sourceDelegationConnectorItemProvider == null) {
             this.sourceDelegationConnectorItemProvider = new SourceDelegationConnectorItemProvider(this);
         }
 
@@ -345,8 +337,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createSinkDelegationConnectorAdapter() {
-        if (this.sinkDelegationConnectorItemProvider == null)
-        {
+        if (this.sinkDelegationConnectorItemProvider == null) {
             this.sinkDelegationConnectorItemProvider = new SinkDelegationConnectorItemProvider(this);
         }
 
@@ -357,7 +348,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyInfrastructureConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AssemblyInfrastructureConnectorItemProvider assemblyInfrastructureConnectorItemProvider;
@@ -371,8 +362,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createAssemblyInfrastructureConnectorAdapter() {
-        if (this.assemblyInfrastructureConnectorItemProvider == null)
-        {
+        if (this.assemblyInfrastructureConnectorItemProvider == null) {
             this.assemblyInfrastructureConnectorItemProvider = new AssemblyInfrastructureConnectorItemProvider(this);
         }
 
@@ -383,7 +373,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProvidedInfrastructureDelegationConnectorItemProvider providedInfrastructureDelegationConnectorItemProvider;
@@ -392,13 +382,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegationConnector}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProvidedInfrastructureDelegationConnectorAdapter() {
-        if (this.providedInfrastructureDelegationConnectorItemProvider == null)
-        {
+        if (this.providedInfrastructureDelegationConnectorItemProvider == null) {
             this.providedInfrastructureDelegationConnectorItemProvider = new ProvidedInfrastructureDelegationConnectorItemProvider(
                     this);
         }
@@ -410,7 +399,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredInfrastructureDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RequiredInfrastructureDelegationConnectorItemProvider requiredInfrastructureDelegationConnectorItemProvider;
@@ -419,13 +408,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.RequiredInfrastructureDelegationConnector}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createRequiredInfrastructureDelegationConnectorAdapter() {
-        if (this.requiredInfrastructureDelegationConnectorItemProvider == null)
-        {
+        if (this.requiredInfrastructureDelegationConnectorItemProvider == null) {
             this.requiredInfrastructureDelegationConnectorItemProvider = new RequiredInfrastructureDelegationConnectorItemProvider(
                     this);
         }
@@ -437,7 +425,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredResourceDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RequiredResourceDelegationConnectorItemProvider requiredResourceDelegationConnectorItemProvider;
@@ -451,8 +439,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      */
     @Override
     public Adapter createRequiredResourceDelegationConnectorAdapter() {
-        if (this.requiredResourceDelegationConnectorItemProvider == null)
-        {
+        if (this.requiredResourceDelegationConnectorItemProvider == null) {
             this.requiredResourceDelegationConnectorItemProvider = new RequiredResourceDelegationConnectorItemProvider(
                     this);
         }
@@ -473,13 +460,12 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyContext}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createAssemblyContextAdapter() {
-        if (this.assemblyContextItemProvider == null)
-        {
+        if (this.assemblyContextItemProvider == null) {
             this.assemblyContextItemProvider = new AssemblyContextItemProvider(this);
         }
 
@@ -489,7 +475,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -500,7 +486,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -510,7 +496,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -531,16 +517,14 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -550,7 +534,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -559,7 +543,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -569,7 +553,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -579,7 +563,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -589,7 +573,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -607,8 +591,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
@@ -616,7 +599,7 @@ implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreati
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
