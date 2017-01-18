@@ -53,7 +53,7 @@ public class EventTypeAddActionListener extends SelectionAdapter {
 				EventType eventType = RepositoryFactory.eINSTANCE
 						.createEventType();
 				eventType
-						.setEntityName("EventTypeName"
+						.setEntityName("eventType"
 								+ (selectedEventGroup.getEventTypes__EventGroup()
 										.size() + 1));
 				

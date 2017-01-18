@@ -39,7 +39,7 @@ public class OperationAddActionListener extends SelectionAdapter {
 				OperationSignature signature = RepositoryFactory.eINSTANCE
 						.createOperationSignature();
 				signature
-						.setEntityName("ServiceName"
+						.setEntityName("method"
 								+ (selectedInterface.getSignatures__OperationInterface()
 										.size() + 1));
 				selectedInterface.getSignatures__OperationInterface().add(signature);

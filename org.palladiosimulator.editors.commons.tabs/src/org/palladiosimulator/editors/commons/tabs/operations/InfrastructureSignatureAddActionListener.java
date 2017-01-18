@@ -39,7 +39,7 @@ public class InfrastructureSignatureAddActionListener extends SelectionAdapter {
 				InfrastructureSignature signature = RepositoryFactory.eINSTANCE
 						.createInfrastructureSignature();
 				signature
-						.setEntityName("Signature"
+						.setEntityName("method"
 								+ (selectedInterface.getInfrastructureSignatures__InfrastructureInterface()
 										.size() + 1));
 				selectedInterface.getInfrastructureSignatures__InfrastructureInterface().add(signature);
