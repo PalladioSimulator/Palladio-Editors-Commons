@@ -27,9 +27,10 @@ public class InfrastructureSignaturesCellModifier extends ObservableCellModifier
 	protected TransactionalEditingDomain editingDomain = null;
 
 	/**Initializes a new instance.
+	 * @param columnNames 
 	 */
-	public InfrastructureSignaturesCellModifier() {
-		this.columnNames = Arrays.asList(InfrastructureSignaturesEditorSection.columnNames);
+	public InfrastructureSignaturesCellModifier(String[] columnNames) {
+		this.columnNames = Arrays.asList(columnNames);
 	}
 
 	/* (non-Javadoc)

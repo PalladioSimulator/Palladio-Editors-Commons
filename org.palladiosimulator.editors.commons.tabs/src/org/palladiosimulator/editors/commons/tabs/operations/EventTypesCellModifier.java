@@ -32,8 +32,8 @@ public class EventTypesCellModifier extends ObservableCellModifier {
 	 */
 	protected TransactionalEditingDomain editingDomain = null;
 
-	public EventTypesCellModifier() {
-		this.columnNames = Arrays.asList(EventTypesEditorSection.columnNames);
+	public EventTypesCellModifier(String[] columnNames) {
+		this.columnNames = Arrays.asList(columnNames);
 	}
 
 	/* (non-Javadoc)

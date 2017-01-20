@@ -104,7 +104,7 @@ public class EventTypesEditorSection extends EditorSection{
 	 */
 	@Override
 	protected ObservableCellModifier createViewerCellModifier() {
-		return new EventTypesCellModifier();
+		return new EventTypesCellModifier(columnNames);
 	}
 
 	/**

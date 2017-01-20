@@ -43,7 +43,7 @@ public class OperationsEditorSection extends EditorSection{
 	public final static String EXEPTIONTYPE_COLUM		= "ExeptionType";
 	
 	//	 Set column names of Tabele
-	public static String[] columnNames = new String[] { OPERATIONS_ICON_COLUMN,RETURNTYPE_COLUMN,
+	private static String[] columnNames = new String[] { OPERATIONS_ICON_COLUMN,RETURNTYPE_COLUMN,
 			SERVICENAME_COLUMN, OWNEDPARAMETER_COLUMN, EXEPTIONTYPE_COLUM };
 	
 	/** Define the Add-Button listener. Listener must by later initialized. */
@@ -115,7 +115,7 @@ public class OperationsEditorSection extends EditorSection{
 	 */
 	@Override
 	protected ObservableCellModifier createViewerCellModifier() {
-		return new OperationsCellModifier();
+		return new OperationsCellModifier(columnNames);
 	}
 
 	/* (non-Javadoc)
