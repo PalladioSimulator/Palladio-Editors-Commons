@@ -30,7 +30,7 @@ public class OperationsCellModifier extends ObservableCellModifier {
 	 */
 	protected TransactionalEditingDomain editingDomain = null;
 
-	public OperationsCellModifier(String[] columnNames) {
+	public OperationsCellModifier(final String[] columnNames) {
 		this.columnNames = Arrays.asList(columnNames);
 	}
 

@@ -29,7 +29,7 @@ public class InfrastructureSignaturesCellModifier extends ObservableCellModifier
 	/**Initializes a new instance.
 	 * @param columnNames 
 	 */
-	public InfrastructureSignaturesCellModifier(String[] columnNames) {
+	public InfrastructureSignaturesCellModifier(final String[] columnNames) {
 		this.columnNames = Arrays.asList(columnNames);
 	}
 

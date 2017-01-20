@@ -32,7 +32,7 @@ public class EventTypesCellModifier extends ObservableCellModifier {
 	 */
 	protected TransactionalEditingDomain editingDomain = null;
 
-	public EventTypesCellModifier(String[] columnNames) {
+	public EventTypesCellModifier(final String[] columnNames) {
 		this.columnNames = Arrays.asList(columnNames);
 	}
 
