@@ -74,22 +74,14 @@ public class ParametricResourceDemandItemProvider extends ItemProviderAdapter im
      * @generated
      */
     protected void addRequiredResource_ParametricResourceDemandPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ParametricResourceDemand_requiredResource_ParametricResourceDemand_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ParametricResourceDemand_requiredResource_ParametricResourceDemand_feature",
-                                "_UI_ParametricResourceDemand_type"),
-                        SeffPerformancePackage.Literals.PARAMETRIC_RESOURCE_DEMAND__REQUIRED_RESOURCE_PARAMETRIC_RESOURCE_DEMAND,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ParametricResourceDemand_requiredResource_ParametricResourceDemand_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ParametricResourceDemand_requiredResource_ParametricResourceDemand_feature",
+                        "_UI_ParametricResourceDemand_type"),
+                SeffPerformancePackage.Literals.PARAMETRIC_RESOURCE_DEMAND__REQUIRED_RESOURCE_PARAMETRIC_RESOURCE_DEMAND,
+                true, false, true, null, null, null));
     }
 
     /**

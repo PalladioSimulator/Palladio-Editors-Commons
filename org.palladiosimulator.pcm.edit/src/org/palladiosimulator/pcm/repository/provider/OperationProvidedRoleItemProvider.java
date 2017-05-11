@@ -62,21 +62,14 @@ public class OperationProvidedRoleItemProvider extends ProvidedRoleItemProvider 
      * @generated
      */
     protected void addProvidedInterface__OperationProvidedRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_OperationProvidedRole_providedInterface__OperationProvidedRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_OperationProvidedRole_providedInterface__OperationProvidedRole_feature",
-                                "_UI_OperationProvidedRole_type"),
-                        RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE__PROVIDED_INTERFACE_OPERATION_PROVIDED_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_OperationProvidedRole_providedInterface__OperationProvidedRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_OperationProvidedRole_providedInterface__OperationProvidedRole_feature",
+                        "_UI_OperationProvidedRole_type"),
+                RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE__PROVIDED_INTERFACE_OPERATION_PROVIDED_ROLE, true,
+                false, true, null, null, null));
     }
 
     /**

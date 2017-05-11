@@ -136,9 +136,8 @@ public class OpenWorkloadItemProvider extends WorkloadItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.OPEN_WORKLOAD__INTER_ARRIVAL_TIME_OPEN_WORKLOAD,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.OPEN_WORKLOAD__INTER_ARRIVAL_TIME_OPEN_WORKLOAD,
                         CoreFactory.eINSTANCE.createPCMRandomVariable()));
     }
 

@@ -65,21 +65,14 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addRequiringAssemblyContext_AssemblyConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyConnector_requiringAssemblyContext_AssemblyConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyConnector_requiringAssemblyContext_AssemblyConnector_feature",
-                                "_UI_AssemblyConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyConnector_requiringAssemblyContext_AssemblyConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyConnector_requiringAssemblyContext_AssemblyConnector_feature",
+                        "_UI_AssemblyConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -89,21 +82,14 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addProvidingAssemblyContext_AssemblyConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyConnector_providingAssemblyContext_AssemblyConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyConnector_providingAssemblyContext_AssemblyConnector_feature",
-                                "_UI_AssemblyConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyConnector_providingAssemblyContext_AssemblyConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyConnector_providingAssemblyContext_AssemblyConnector_feature",
+                        "_UI_AssemblyConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -113,21 +99,13 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addProvidedRole_AssemblyConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyConnector_providedRole_AssemblyConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyConnector_providedRole_AssemblyConnector_feature",
-                                "_UI_AssemblyConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyConnector_providedRole_AssemblyConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyConnector_providedRole_AssemblyConnector_feature", "_UI_AssemblyConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_CONNECTOR, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -137,21 +115,13 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addRequiredRole_AssemblyConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyConnector_requiredRole_AssemblyConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyConnector_requiredRole_AssemblyConnector_feature",
-                                "_UI_AssemblyConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyConnector_requiredRole_AssemblyConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyConnector_requiredRole_AssemblyConnector_feature", "_UI_AssemblyConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_CONNECTOR, true, false, true,
+                null, null, null));
     }
 
     /**

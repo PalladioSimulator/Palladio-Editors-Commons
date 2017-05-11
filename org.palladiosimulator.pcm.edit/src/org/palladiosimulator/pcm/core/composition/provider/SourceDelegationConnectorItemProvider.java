@@ -64,21 +64,14 @@ public class SourceDelegationConnectorItemProvider extends DelegationConnectorIt
      * @generated
      */
     protected void addInnerSourceRole__SourceRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SourceDelegationConnector_innerSourceRole__SourceRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SourceDelegationConnector_innerSourceRole__SourceRole_feature",
-                                "_UI_SourceDelegationConnector_type"),
-                        CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__INNER_SOURCE_ROLE_SOURCE_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SourceDelegationConnector_innerSourceRole__SourceRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SourceDelegationConnector_innerSourceRole__SourceRole_feature",
+                        "_UI_SourceDelegationConnector_type"),
+                CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__INNER_SOURCE_ROLE_SOURCE_ROLE, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -88,21 +81,14 @@ public class SourceDelegationConnectorItemProvider extends DelegationConnectorIt
      * @generated
      */
     protected void addOuterSourceRole__SourceRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SourceDelegationConnector_outerSourceRole__SourceRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SourceDelegationConnector_outerSourceRole__SourceRole_feature",
-                                "_UI_SourceDelegationConnector_type"),
-                        CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__OUTER_SOURCE_ROLE_SOURCE_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SourceDelegationConnector_outerSourceRole__SourceRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SourceDelegationConnector_outerSourceRole__SourceRole_feature",
+                        "_UI_SourceDelegationConnector_type"),
+                CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__OUTER_SOURCE_ROLE_SOURCE_ROLE, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -112,22 +98,14 @@ public class SourceDelegationConnectorItemProvider extends DelegationConnectorIt
      * @generated
      */
     protected void addAssemblyContext__SourceDelegationConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_SourceDelegationConnector_assemblyContext__SourceDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SourceDelegationConnector_assemblyContext__SourceDelegationConnector_feature",
-                                "_UI_SourceDelegationConnector_type"),
-                        CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_SOURCE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SourceDelegationConnector_assemblyContext__SourceDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SourceDelegationConnector_assemblyContext__SourceDelegationConnector_feature",
+                        "_UI_SourceDelegationConnector_type"),
+                CompositionPackage.Literals.SOURCE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_SOURCE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

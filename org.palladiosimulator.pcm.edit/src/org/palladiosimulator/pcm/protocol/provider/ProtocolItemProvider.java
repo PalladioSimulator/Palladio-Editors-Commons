@@ -72,20 +72,13 @@ public class ProtocolItemProvider extends ItemProviderAdapter implements IEditin
      * @generated
      */
     protected void addProtocolTypeIDPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Protocol_protocolTypeID_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_Protocol_protocolTypeID_feature",
-                                "_UI_Protocol_type"),
-                        ProtocolPackage.Literals.PROTOCOL__PROTOCOL_TYPE_ID,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Protocol_protocolTypeID_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Protocol_protocolTypeID_feature",
+                        "_UI_Protocol_type"),
+                ProtocolPackage.Literals.PROTOCOL__PROTOCOL_TYPE_ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

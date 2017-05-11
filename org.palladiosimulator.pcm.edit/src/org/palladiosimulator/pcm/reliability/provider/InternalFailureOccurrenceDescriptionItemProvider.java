@@ -63,22 +63,15 @@ public class InternalFailureOccurrenceDescriptionItemProvider extends FailureOcc
      */
     protected void addSoftwareInducedFailureType__InternalFailureOccurrenceDescriptionPropertyDescriptor(
             final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_InternalFailureOccurrenceDescription_softwareInducedFailureType__InternalFailureOccurrenceDescription_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InternalFailureOccurrenceDescription_softwareInducedFailureType__InternalFailureOccurrenceDescription_feature",
-                                "_UI_InternalFailureOccurrenceDescription_type"),
-                        ReliabilityPackage.Literals.INTERNAL_FAILURE_OCCURRENCE_DESCRIPTION__SOFTWARE_INDUCED_FAILURE_TYPE_INTERNAL_FAILURE_OCCURRENCE_DESCRIPTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_InternalFailureOccurrenceDescription_softwareInducedFailureType__InternalFailureOccurrenceDescription_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InternalFailureOccurrenceDescription_softwareInducedFailureType__InternalFailureOccurrenceDescription_feature",
+                        "_UI_InternalFailureOccurrenceDescription_type"),
+                ReliabilityPackage.Literals.INTERNAL_FAILURE_OCCURRENCE_DESCRIPTION__SOFTWARE_INDUCED_FAILURE_TYPE_INTERNAL_FAILURE_OCCURRENCE_DESCRIPTION,
+                true, false, true, null, null, null));
     }
 
     /**

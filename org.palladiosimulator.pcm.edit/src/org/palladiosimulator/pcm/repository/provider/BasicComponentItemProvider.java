@@ -150,9 +150,8 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
                 RepositoryPackage.Literals.BASIC_COMPONENT__SERVICE_EFFECT_SPECIFICATIONS_BASIC_COMPONENT,
                 SeffFactory.eINSTANCE.createResourceDemandingSEFF()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        RepositoryPackage.Literals.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT,
+        newChildDescriptors.add(
+                this.createChildParameter(RepositoryPackage.Literals.BASIC_COMPONENT__PASSIVE_RESOURCE_BASIC_COMPONENT,
                         RepositoryFactory.eINSTANCE.createPassiveResource()));
     }
 

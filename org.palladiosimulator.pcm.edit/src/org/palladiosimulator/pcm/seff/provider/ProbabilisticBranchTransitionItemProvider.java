@@ -64,21 +64,14 @@ public class ProbabilisticBranchTransitionItemProvider extends AbstractBranchTra
      * @generated
      */
     protected void addBranchProbabilityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProbabilisticBranchTransition_branchProbability_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProbabilisticBranchTransition_branchProbability_feature",
-                                "_UI_ProbabilisticBranchTransition_type"),
-                        SeffPackage.Literals.PROBABILISTIC_BRANCH_TRANSITION__BRANCH_PROBABILITY,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProbabilisticBranchTransition_branchProbability_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProbabilisticBranchTransition_branchProbability_feature",
+                        "_UI_ProbabilisticBranchTransition_type"),
+                SeffPackage.Literals.PROBABILISTIC_BRANCH_TRANSITION__BRANCH_PROBABILITY, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**

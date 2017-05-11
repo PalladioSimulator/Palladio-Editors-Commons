@@ -62,22 +62,15 @@ public class HardwareInducedFailureTypeItemProvider extends FailureTypeItemProvi
      * @generated
      */
     protected void addProcessingResourceType__HardwareInducedFailureTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_HardwareInducedFailureType_processingResourceType__HardwareInducedFailureType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_HardwareInducedFailureType_processingResourceType__HardwareInducedFailureType_feature",
-                                "_UI_HardwareInducedFailureType_type"),
-                        ReliabilityPackage.Literals.HARDWARE_INDUCED_FAILURE_TYPE__PROCESSING_RESOURCE_TYPE_HARDWARE_INDUCED_FAILURE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_HardwareInducedFailureType_processingResourceType__HardwareInducedFailureType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_HardwareInducedFailureType_processingResourceType__HardwareInducedFailureType_feature",
+                        "_UI_HardwareInducedFailureType_type"),
+                ReliabilityPackage.Literals.HARDWARE_INDUCED_FAILURE_TYPE__PROCESSING_RESOURCE_TYPE_HARDWARE_INDUCED_FAILURE_TYPE,
+                true, false, true, null, null, null));
     }
 
     /**

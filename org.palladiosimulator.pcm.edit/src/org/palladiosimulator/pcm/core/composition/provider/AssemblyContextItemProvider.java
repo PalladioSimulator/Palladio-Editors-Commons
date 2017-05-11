@@ -66,21 +66,14 @@ public class AssemblyContextItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEncapsulatedComponent__AssemblyContextPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyContext_encapsulatedComponent__AssemblyContext_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyContext_encapsulatedComponent__AssemblyContext_feature",
-                                "_UI_AssemblyContext_type"),
-                        CompositionPackage.Literals.ASSEMBLY_CONTEXT__ENCAPSULATED_COMPONENT_ASSEMBLY_CONTEXT,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyContext_encapsulatedComponent__AssemblyContext_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyContext_encapsulatedComponent__AssemblyContext_feature",
+                        "_UI_AssemblyContext_type"),
+                CompositionPackage.Literals.ASSEMBLY_CONTEXT__ENCAPSULATED_COMPONENT_ASSEMBLY_CONTEXT, true, false,
+                true, null, null, null));
     }
 
     /**

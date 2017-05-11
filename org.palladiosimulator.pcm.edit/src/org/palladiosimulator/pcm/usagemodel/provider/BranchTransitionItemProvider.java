@@ -75,20 +75,13 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
      * @generated
      */
     protected void addBranchProbabilityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_BranchTransition_branchProbability_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_BranchTransition_branchProbability_feature", "_UI_BranchTransition_type"),
-                        UsagemodelPackage.Literals.BRANCH_TRANSITION__BRANCH_PROBABILITY,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_BranchTransition_branchProbability_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_BranchTransition_branchProbability_feature",
+                        "_UI_BranchTransition_type"),
+                UsagemodelPackage.Literals.BRANCH_TRANSITION__BRANCH_PROBABILITY, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -177,10 +170,9 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        UsagemodelPackage.Literals.BRANCH_TRANSITION__BRANCHED_BEHAVIOUR_BRANCH_TRANSITION,
-                        UsagemodelFactory.eINSTANCE.createScenarioBehaviour()));
+        newChildDescriptors.add(this.createChildParameter(
+                UsagemodelPackage.Literals.BRANCH_TRANSITION__BRANCHED_BEHAVIOUR_BRANCH_TRANSITION,
+                UsagemodelFactory.eINSTANCE.createScenarioBehaviour()));
     }
 
     /**

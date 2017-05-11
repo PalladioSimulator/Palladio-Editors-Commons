@@ -150,10 +150,9 @@ public class VariableUsageItemProvider extends ItemProviderAdapter implements IE
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        ParameterPackage.Literals.VARIABLE_USAGE__VARIABLE_CHARACTERISATION_VARIABLE_USAGE,
-                        ParameterFactory.eINSTANCE.createVariableCharacterisation()));
+        newChildDescriptors.add(this.createChildParameter(
+                ParameterPackage.Literals.VARIABLE_USAGE__VARIABLE_CHARACTERISATION_VARIABLE_USAGE,
+                ParameterFactory.eINSTANCE.createVariableCharacterisation()));
 
         newChildDescriptors
                 .add(this.createChildParameter(ParameterPackage.Literals.VARIABLE_USAGE__NAMED_REFERENCE_VARIABLE_USAGE,

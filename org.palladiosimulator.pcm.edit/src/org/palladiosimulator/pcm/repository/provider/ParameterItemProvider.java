@@ -74,21 +74,12 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addDataType__ParameterPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Parameter_dataType__Parameter_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_Parameter_dataType__Parameter_feature",
-                                "_UI_Parameter_type"),
-                        RepositoryPackage.Literals.PARAMETER__DATA_TYPE_PARAMETER,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Parameter_dataType__Parameter_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Parameter_dataType__Parameter_feature",
+                        "_UI_Parameter_type"),
+                RepositoryPackage.Literals.PARAMETER__DATA_TYPE_PARAMETER, true, false, true, null, null, null));
     }
 
     /**
@@ -98,20 +89,13 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addParameterNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Parameter_parameterName_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_Parameter_parameterName_feature",
-                                "_UI_Parameter_type"),
-                        RepositoryPackage.Literals.PARAMETER__PARAMETER_NAME,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Parameter_parameterName_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Parameter_parameterName_feature",
+                        "_UI_Parameter_type"),
+                RepositoryPackage.Literals.PARAMETER__PARAMETER_NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -121,21 +105,13 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addModifier__ParameterPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Parameter_modifier__Parameter_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_Parameter_modifier__Parameter_feature",
-                                "_UI_Parameter_type"),
-                        RepositoryPackage.Literals.PARAMETER__MODIFIER_PARAMETER,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Parameter_modifier__Parameter_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Parameter_modifier__Parameter_feature",
+                        "_UI_Parameter_type"),
+                RepositoryPackage.Literals.PARAMETER__MODIFIER_PARAMETER, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

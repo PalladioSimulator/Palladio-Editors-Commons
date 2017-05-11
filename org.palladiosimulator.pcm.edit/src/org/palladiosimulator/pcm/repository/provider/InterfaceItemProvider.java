@@ -65,20 +65,13 @@ public class InterfaceItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addParentInterfaces__InterfacePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Interface_parentInterfaces__Interface_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_Interface_parentInterfaces__Interface_feature", "_UI_Interface_type"),
-                        RepositoryPackage.Literals.INTERFACE__PARENT_INTERFACES_INTERFACE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Interface_parentInterfaces__Interface_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_Interface_parentInterfaces__Interface_feature", "_UI_Interface_type"),
+                RepositoryPackage.Literals.INTERFACE__PARENT_INTERFACES_INTERFACE, true, false, true, null, null,
+                null));
     }
 
     /**

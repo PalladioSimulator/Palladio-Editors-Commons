@@ -65,22 +65,15 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
      */
     protected void addInnerProvidedRole__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
             final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ProvidedInfrastructureDelegationConnector_innerProvidedRole__ProvidedInfrastructureDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProvidedInfrastructureDelegationConnector_innerProvidedRole__ProvidedInfrastructureDelegationConnector_feature",
-                                "_UI_ProvidedInfrastructureDelegationConnector_type"),
-                        CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__INNER_PROVIDED_ROLE_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ProvidedInfrastructureDelegationConnector_innerProvidedRole__ProvidedInfrastructureDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProvidedInfrastructureDelegationConnector_innerProvidedRole__ProvidedInfrastructureDelegationConnector_feature",
+                        "_UI_ProvidedInfrastructureDelegationConnector_type"),
+                CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__INNER_PROVIDED_ROLE_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -91,22 +84,15 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
      */
     protected void addOuterProvidedRole__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
             final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ProvidedInfrastructureDelegationConnector_outerProvidedRole__ProvidedInfrastructureDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProvidedInfrastructureDelegationConnector_outerProvidedRole__ProvidedInfrastructureDelegationConnector_feature",
-                                "_UI_ProvidedInfrastructureDelegationConnector_type"),
-                        CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__OUTER_PROVIDED_ROLE_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ProvidedInfrastructureDelegationConnector_outerProvidedRole__ProvidedInfrastructureDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProvidedInfrastructureDelegationConnector_outerProvidedRole__ProvidedInfrastructureDelegationConnector_feature",
+                        "_UI_ProvidedInfrastructureDelegationConnector_type"),
+                CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__OUTER_PROVIDED_ROLE_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -117,22 +103,15 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
      */
     protected void addAssemblyContext__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
             final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ProvidedInfrastructureDelegationConnector_assemblyContext__ProvidedInfrastructureDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProvidedInfrastructureDelegationConnector_assemblyContext__ProvidedInfrastructureDelegationConnector_feature",
-                                "_UI_ProvidedInfrastructureDelegationConnector_type"),
-                        CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ProvidedInfrastructureDelegationConnector_assemblyContext__ProvidedInfrastructureDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProvidedInfrastructureDelegationConnector_assemblyContext__ProvidedInfrastructureDelegationConnector_feature",
+                        "_UI_ProvidedInfrastructureDelegationConnector_type"),
+                CompositionPackage.Literals.PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_PROVIDED_INFRASTRUCTURE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

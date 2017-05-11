@@ -62,21 +62,14 @@ public class CompleteComponentTypeItemProvider extends RepositoryComponentItemPr
      * @generated
      */
     protected void addParentProvidesComponentTypesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CompleteComponentType_parentProvidesComponentTypes_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CompleteComponentType_parentProvidesComponentTypes_feature",
-                                "_UI_CompleteComponentType_type"),
-                        RepositoryPackage.Literals.COMPLETE_COMPONENT_TYPE__PARENT_PROVIDES_COMPONENT_TYPES,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CompleteComponentType_parentProvidesComponentTypes_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompleteComponentType_parentProvidesComponentTypes_feature",
+                        "_UI_CompleteComponentType_type"),
+                RepositoryPackage.Literals.COMPLETE_COMPONENT_TYPE__PARENT_PROVIDES_COMPONENT_TYPES, true, false, true,
+                null, null, null));
     }
 
     /**

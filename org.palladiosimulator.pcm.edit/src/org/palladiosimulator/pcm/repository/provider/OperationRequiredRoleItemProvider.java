@@ -62,21 +62,14 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
      * @generated
      */
     protected void addRequiredInterface__OperationRequiredRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_OperationRequiredRole_requiredInterface__OperationRequiredRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_OperationRequiredRole_requiredInterface__OperationRequiredRole_feature",
-                                "_UI_OperationRequiredRole_type"),
-                        RepositoryPackage.Literals.OPERATION_REQUIRED_ROLE__REQUIRED_INTERFACE_OPERATION_REQUIRED_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_OperationRequiredRole_requiredInterface__OperationRequiredRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_OperationRequiredRole_requiredInterface__OperationRequiredRole_feature",
+                        "_UI_OperationRequiredRole_type"),
+                RepositoryPackage.Literals.OPERATION_REQUIRED_ROLE__REQUIRED_INTERFACE_OPERATION_REQUIRED_ROLE, true,
+                false, true, null, null, null));
     }
 
     /**

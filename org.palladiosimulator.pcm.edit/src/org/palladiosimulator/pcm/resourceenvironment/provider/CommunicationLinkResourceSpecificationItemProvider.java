@@ -71,21 +71,14 @@ public class CommunicationLinkResourceSpecificationItemProvider extends Identifi
      * @generated
      */
     protected void addFailureProbabilityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CommunicationLinkResourceSpecification_failureProbability_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CommunicationLinkResourceSpecification_failureProbability_feature",
-                                "_UI_CommunicationLinkResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__FAILURE_PROBABILITY,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CommunicationLinkResourceSpecification_failureProbability_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CommunicationLinkResourceSpecification_failureProbability_feature",
+                        "_UI_CommunicationLinkResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__FAILURE_PROBABILITY,
+                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,22 +89,15 @@ public class CommunicationLinkResourceSpecificationItemProvider extends Identifi
      */
     protected void addCommunicationLinkResourceType_CommunicationLinkResourceSpecificationPropertyDescriptor(
             final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_CommunicationLinkResourceSpecification_communicationLinkResourceType_CommunicationLinkResourceSpecification_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CommunicationLinkResourceSpecification_communicationLinkResourceType_CommunicationLinkResourceSpecification_feature",
-                                "_UI_CommunicationLinkResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__COMMUNICATION_LINK_RESOURCE_TYPE_COMMUNICATION_LINK_RESOURCE_SPECIFICATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_CommunicationLinkResourceSpecification_communicationLinkResourceType_CommunicationLinkResourceSpecification_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CommunicationLinkResourceSpecification_communicationLinkResourceType_CommunicationLinkResourceSpecification_feature",
+                        "_UI_CommunicationLinkResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__COMMUNICATION_LINK_RESOURCE_TYPE_COMMUNICATION_LINK_RESOURCE_SPECIFICATION,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -238,13 +224,11 @@ public class CommunicationLinkResourceSpecificationItemProvider extends Identifi
         final Object childObject = child;
 
         final boolean qualify = childFeature == ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__LATENCY_COMMUNICATION_LINK_RESOURCE_SPECIFICATION
-                ||
-                childFeature == ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__THROUGHPUT_COMMUNICATION_LINK_RESOURCE_SPECIFICATION;
+                || childFeature == ResourceenvironmentPackage.Literals.COMMUNICATION_LINK_RESOURCE_SPECIFICATION__THROUGHPUT_COMMUNICATION_LINK_RESOURCE_SPECIFICATION;
 
         if (qualify) {
-            return this.getString("_UI_CreateChild_text2",
-                    new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
-                            this.getTypeText(owner) });
+            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
+                    this.getFeatureText(childFeature), this.getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

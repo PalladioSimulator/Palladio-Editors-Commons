@@ -63,22 +63,14 @@ public class ResourceProvidedRoleItemProvider extends RoleItemProvider {
      * @generated
      */
     protected void addProvidedResourceInterface__ResourceProvidedRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ResourceProvidedRole_providedResourceInterface__ResourceProvidedRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ResourceProvidedRole_providedResourceInterface__ResourceProvidedRole_feature",
-                                "_UI_ResourceProvidedRole_type"),
-                        EntityPackage.Literals.RESOURCE_PROVIDED_ROLE__PROVIDED_RESOURCE_INTERFACE_RESOURCE_PROVIDED_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ResourceProvidedRole_providedResourceInterface__ResourceProvidedRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ResourceProvidedRole_providedResourceInterface__ResourceProvidedRole_feature",
+                        "_UI_ResourceProvidedRole_type"),
+                EntityPackage.Literals.RESOURCE_PROVIDED_ROLE__PROVIDED_RESOURCE_INTERFACE_RESOURCE_PROVIDED_ROLE, true,
+                false, true, null, null, null));
     }
 
     /**

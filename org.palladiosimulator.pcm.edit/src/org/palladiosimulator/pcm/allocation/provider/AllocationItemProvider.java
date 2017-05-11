@@ -66,20 +66,13 @@ public class AllocationItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addTargetResourceEnvironment_AllocationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Allocation_targetResourceEnvironment_Allocation_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_Allocation_targetResourceEnvironment_Allocation_feature", "_UI_Allocation_type"),
-                        AllocationPackage.Literals.ALLOCATION__TARGET_RESOURCE_ENVIRONMENT_ALLOCATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Allocation_targetResourceEnvironment_Allocation_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_Allocation_targetResourceEnvironment_Allocation_feature", "_UI_Allocation_type"),
+                AllocationPackage.Literals.ALLOCATION__TARGET_RESOURCE_ENVIRONMENT_ALLOCATION, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -89,20 +82,12 @@ public class AllocationItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addSystem_AllocationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Allocation_system_Allocation_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_Allocation_system_Allocation_feature",
-                                "_UI_Allocation_type"),
-                        AllocationPackage.Literals.ALLOCATION__SYSTEM_ALLOCATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Allocation_system_Allocation_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Allocation_system_Allocation_feature",
+                        "_UI_Allocation_type"),
+                AllocationPackage.Literals.ALLOCATION__SYSTEM_ALLOCATION, true, false, true, null, null, null));
     }
 
     /**

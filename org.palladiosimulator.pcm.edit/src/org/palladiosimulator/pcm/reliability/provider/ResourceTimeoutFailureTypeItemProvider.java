@@ -62,22 +62,14 @@ public class ResourceTimeoutFailureTypeItemProvider extends SoftwareInducedFailu
      * @generated
      */
     protected void addPassiveResource__ResourceTimeoutFailureTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ResourceTimeoutFailureType_passiveResource__ResourceTimeoutFailureType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ResourceTimeoutFailureType_passiveResource__ResourceTimeoutFailureType_feature",
-                                "_UI_ResourceTimeoutFailureType_type"),
-                        ReliabilityPackage.Literals.RESOURCE_TIMEOUT_FAILURE_TYPE__PASSIVE_RESOURCE_RESOURCE_TIMEOUT_FAILURE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ResourceTimeoutFailureType_passiveResource__ResourceTimeoutFailureType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ResourceTimeoutFailureType_passiveResource__ResourceTimeoutFailureType_feature",
+                        "_UI_ResourceTimeoutFailureType_type"),
+                ReliabilityPackage.Literals.RESOURCE_TIMEOUT_FAILURE_TYPE__PASSIVE_RESOURCE_RESOURCE_TIMEOUT_FAILURE_TYPE,
+                true, false, true, null, null, null));
     }
 
     /**

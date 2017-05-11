@@ -61,22 +61,15 @@ public class ComponentSpecifiedExecutionTimeItemProvider extends SpecifiedExecut
      * @generated
      */
     protected void addAssemblyContext_ComponentSpecifiedExecutionTimePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ComponentSpecifiedExecutionTime_assemblyContext_ComponentSpecifiedExecutionTime_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ComponentSpecifiedExecutionTime_assemblyContext_ComponentSpecifiedExecutionTime_feature",
-                                "_UI_ComponentSpecifiedExecutionTime_type"),
-                        QosPerformancePackage.Literals.COMPONENT_SPECIFIED_EXECUTION_TIME__ASSEMBLY_CONTEXT_COMPONENT_SPECIFIED_EXECUTION_TIME,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ComponentSpecifiedExecutionTime_assemblyContext_ComponentSpecifiedExecutionTime_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ComponentSpecifiedExecutionTime_assemblyContext_ComponentSpecifiedExecutionTime_feature",
+                        "_UI_ComponentSpecifiedExecutionTime_type"),
+                QosPerformancePackage.Literals.COMPONENT_SPECIFIED_EXECUTION_TIME__ASSEMBLY_CONTEXT_COMPONENT_SPECIFIED_EXECUTION_TIME,
+                true, false, true, null, null, null));
     }
 
     /**

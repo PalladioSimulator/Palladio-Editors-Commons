@@ -140,34 +140,28 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createEntryLevelSystemCall()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createBranch()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createLoop()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createStop()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createStart()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.SCENARIO_BEHAVIOUR__ACTIONS_SCENARIO_BEHAVIOUR,
                         UsagemodelFactory.eINSTANCE.createDelay()));
     }
 

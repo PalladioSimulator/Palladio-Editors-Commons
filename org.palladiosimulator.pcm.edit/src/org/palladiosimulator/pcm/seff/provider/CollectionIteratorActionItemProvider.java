@@ -62,21 +62,14 @@ public class CollectionIteratorActionItemProvider extends AbstractLoopActionItem
      * @generated
      */
     protected void addParameter_CollectionIteratorActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CollectionIteratorAction_parameter_CollectionIteratorAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CollectionIteratorAction_parameter_CollectionIteratorAction_feature",
-                                "_UI_CollectionIteratorAction_type"),
-                        SeffPackage.Literals.COLLECTION_ITERATOR_ACTION__PARAMETER_COLLECTION_ITERATOR_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CollectionIteratorAction_parameter_CollectionIteratorAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CollectionIteratorAction_parameter_CollectionIteratorAction_feature",
+                        "_UI_CollectionIteratorAction_type"),
+                SeffPackage.Literals.COLLECTION_ITERATOR_ACTION__PARAMETER_COLLECTION_ITERATOR_ACTION, true, false,
+                true, null, null, null));
     }
 
     /**

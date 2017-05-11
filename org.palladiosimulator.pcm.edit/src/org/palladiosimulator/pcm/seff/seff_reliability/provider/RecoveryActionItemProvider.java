@@ -66,21 +66,13 @@ public class RecoveryActionItemProvider extends AbstractInternalControlFlowActio
      * @generated
      */
     protected void addPrimaryBehaviour__RecoveryActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_RecoveryAction_primaryBehaviour__RecoveryAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RecoveryAction_primaryBehaviour__RecoveryAction_feature",
-                                "_UI_RecoveryAction_type"),
-                        SeffReliabilityPackage.Literals.RECOVERY_ACTION__PRIMARY_BEHAVIOUR_RECOVERY_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RecoveryAction_primaryBehaviour__RecoveryAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_RecoveryAction_primaryBehaviour__RecoveryAction_feature", "_UI_RecoveryAction_type"),
+                SeffReliabilityPackage.Literals.RECOVERY_ACTION__PRIMARY_BEHAVIOUR_RECOVERY_ACTION, true, false, true,
+                null, null, null));
     }
 
     /**

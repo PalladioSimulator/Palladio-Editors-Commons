@@ -66,21 +66,14 @@ public class LinkingResourceItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addConnectedResourceContainers_LinkingResourcePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_LinkingResource_connectedResourceContainers_LinkingResource_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_LinkingResource_connectedResourceContainers_LinkingResource_feature",
-                                "_UI_LinkingResource_type"),
-                        ResourceenvironmentPackage.Literals.LINKING_RESOURCE__CONNECTED_RESOURCE_CONTAINERS_LINKING_RESOURCE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_LinkingResource_connectedResourceContainers_LinkingResource_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_LinkingResource_connectedResourceContainers_LinkingResource_feature",
+                        "_UI_LinkingResource_type"),
+                ResourceenvironmentPackage.Literals.LINKING_RESOURCE__CONNECTED_RESOURCE_CONTAINERS_LINKING_RESOURCE,
+                true, false, true, null, null, null));
     }
 
     /**

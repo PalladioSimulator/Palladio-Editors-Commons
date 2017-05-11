@@ -64,22 +64,15 @@ public class RequiredResourceDelegationConnectorItemProvider extends DelegationC
      * @generated
      */
     protected void addAssemblyContext__RequiredResourceDelegationConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_RequiredResourceDelegationConnector_assemblyContext__RequiredResourceDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RequiredResourceDelegationConnector_assemblyContext__RequiredResourceDelegationConnector_feature",
-                                "_UI_RequiredResourceDelegationConnector_type"),
-                        CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_RequiredResourceDelegationConnector_assemblyContext__RequiredResourceDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_RequiredResourceDelegationConnector_assemblyContext__RequiredResourceDelegationConnector_feature",
+                        "_UI_RequiredResourceDelegationConnector_type"),
+                CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__ASSEMBLY_CONTEXT_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -89,22 +82,15 @@ public class RequiredResourceDelegationConnectorItemProvider extends DelegationC
      * @generated
      */
     protected void addInnerRequiredRole__RequiredResourceDelegationConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_RequiredResourceDelegationConnector_innerRequiredRole__RequiredResourceDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RequiredResourceDelegationConnector_innerRequiredRole__RequiredResourceDelegationConnector_feature",
-                                "_UI_RequiredResourceDelegationConnector_type"),
-                        CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__INNER_REQUIRED_ROLE_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_RequiredResourceDelegationConnector_innerRequiredRole__RequiredResourceDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_RequiredResourceDelegationConnector_innerRequiredRole__RequiredResourceDelegationConnector_feature",
+                        "_UI_RequiredResourceDelegationConnector_type"),
+                CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__INNER_REQUIRED_ROLE_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -114,22 +100,15 @@ public class RequiredResourceDelegationConnectorItemProvider extends DelegationC
      * @generated
      */
     protected void addOuterRequiredRole__RequiredResourceDelegationConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_RequiredResourceDelegationConnector_outerRequiredRole__RequiredResourceDelegationConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RequiredResourceDelegationConnector_outerRequiredRole__RequiredResourceDelegationConnector_feature",
-                                "_UI_RequiredResourceDelegationConnector_type"),
-                        CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__OUTER_REQUIRED_ROLE_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_RequiredResourceDelegationConnector_outerRequiredRole__RequiredResourceDelegationConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_RequiredResourceDelegationConnector_outerRequiredRole__RequiredResourceDelegationConnector_feature",
+                        "_UI_RequiredResourceDelegationConnector_type"),
+                CompositionPackage.Literals.REQUIRED_RESOURCE_DELEGATION_CONNECTOR__OUTER_REQUIRED_ROLE_REQUIRED_RESOURCE_DELEGATION_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

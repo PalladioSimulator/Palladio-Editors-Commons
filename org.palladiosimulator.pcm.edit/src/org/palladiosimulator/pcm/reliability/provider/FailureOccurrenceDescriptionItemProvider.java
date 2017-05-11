@@ -30,8 +30,7 @@ import org.palladiosimulator.pcm.reliability.ReliabilityPackage;
  *
  * @generated
  */
-public class FailureOccurrenceDescriptionItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider,
+public class FailureOccurrenceDescriptionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
@@ -74,21 +73,14 @@ public class FailureOccurrenceDescriptionItemProvider extends ItemProviderAdapte
      * @generated
      */
     protected void addFailureProbabilityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_FailureOccurrenceDescription_failureProbability_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_FailureOccurrenceDescription_failureProbability_feature",
-                                "_UI_FailureOccurrenceDescription_type"),
-                        ReliabilityPackage.Literals.FAILURE_OCCURRENCE_DESCRIPTION__FAILURE_PROBABILITY,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_FailureOccurrenceDescription_failureProbability_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_FailureOccurrenceDescription_failureProbability_feature",
+                        "_UI_FailureOccurrenceDescription_type"),
+                ReliabilityPackage.Literals.FAILURE_OCCURRENCE_DESCRIPTION__FAILURE_PROBABILITY, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**

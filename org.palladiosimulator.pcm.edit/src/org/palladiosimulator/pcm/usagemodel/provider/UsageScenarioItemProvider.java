@@ -142,9 +142,8 @@ public class UsageScenarioItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.USAGE_SCENARIO__SCENARIO_BEHAVIOUR_USAGE_SCENARIO,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.USAGE_SCENARIO__SCENARIO_BEHAVIOUR_USAGE_SCENARIO,
                         UsagemodelFactory.eINSTANCE.createScenarioBehaviour()));
 
         newChildDescriptors

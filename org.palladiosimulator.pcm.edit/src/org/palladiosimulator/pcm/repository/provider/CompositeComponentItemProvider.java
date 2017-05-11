@@ -68,21 +68,14 @@ public class CompositeComponentItemProvider extends ComposedProvidingRequiringEn
      * @generated
      */
     protected void addParentCompleteComponentTypesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ImplementationComponentType_parentCompleteComponentTypes_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ImplementationComponentType_parentCompleteComponentTypes_feature",
-                                "_UI_ImplementationComponentType_type"),
-                        RepositoryPackage.Literals.IMPLEMENTATION_COMPONENT_TYPE__PARENT_COMPLETE_COMPONENT_TYPES,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ImplementationComponentType_parentCompleteComponentTypes_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ImplementationComponentType_parentCompleteComponentTypes_feature",
+                        "_UI_ImplementationComponentType_type"),
+                RepositoryPackage.Literals.IMPLEMENTATION_COMPONENT_TYPE__PARENT_COMPLETE_COMPONENT_TYPES, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -92,21 +85,14 @@ public class CompositeComponentItemProvider extends ComposedProvidingRequiringEn
      * @generated
      */
     protected void addComponentTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ImplementationComponentType_componentType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ImplementationComponentType_componentType_feature",
-                                "_UI_ImplementationComponentType_type"),
-                        RepositoryPackage.Literals.IMPLEMENTATION_COMPONENT_TYPE__COMPONENT_TYPE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ImplementationComponentType_componentType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ImplementationComponentType_componentType_feature",
+                        "_UI_ImplementationComponentType_type"),
+                RepositoryPackage.Literals.IMPLEMENTATION_COMPONENT_TYPE__COMPONENT_TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

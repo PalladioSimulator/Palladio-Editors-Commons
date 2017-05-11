@@ -71,21 +71,14 @@ public class SpecifiedQoSAnnotationItemProvider extends ItemProviderAdapter impl
      * @generated
      */
     protected void addSignature_SpecifiedQoSAnnationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature",
-                                "_UI_SpecifiedQoSAnnotation_type"),
-                        QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__SIGNATURE_SPECIFIED_QO_SANNATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SpecifiedQoSAnnotation_signature_SpecifiedQoSAnnation_feature",
+                        "_UI_SpecifiedQoSAnnotation_type"),
+                QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__SIGNATURE_SPECIFIED_QO_SANNATION, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -95,21 +88,14 @@ public class SpecifiedQoSAnnotationItemProvider extends ItemProviderAdapter impl
      * @generated
      */
     protected void addRole_SpecifiedQoSAnnotationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature",
-                                "_UI_SpecifiedQoSAnnotation_type"),
-                        QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__ROLE_SPECIFIED_QO_SANNOTATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SpecifiedQoSAnnotation_role_SpecifiedQoSAnnotation_feature",
+                        "_UI_SpecifiedQoSAnnotation_type"),
+                QosannotationsPackage.Literals.SPECIFIED_QO_SANNOTATION__ROLE_SPECIFIED_QO_SANNOTATION, true, false,
+                true, null, null, null));
     }
 
     /**

@@ -64,21 +64,14 @@ public class HDDProcessingResourceSpecificationItemProvider extends ProcessingRe
      * @generated
      */
     protected void addResourceContainerPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_HDDProcessingResourceSpecification_resourceContainer_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_HDDProcessingResourceSpecification_resourceContainer_feature",
-                                "_UI_HDDProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__RESOURCE_CONTAINER,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_HDDProcessingResourceSpecification_resourceContainer_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_HDDProcessingResourceSpecification_resourceContainer_feature",
+                        "_UI_HDDProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__RESOURCE_CONTAINER, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -192,15 +185,12 @@ public class HDDProcessingResourceSpecificationItemProvider extends ProcessingRe
         final Object childObject = child;
 
         final boolean qualify = childFeature == ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__PROCESSING_RATE_PROCESSING_RESOURCE_SPECIFICATION
-                ||
-                childFeature == ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__WRITE_PROCESSING_RATE
-                ||
-                childFeature == ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__READ_PROCESSING_RATE;
+                || childFeature == ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__WRITE_PROCESSING_RATE
+                || childFeature == ResourceenvironmentPackage.Literals.HDD_PROCESSING_RESOURCE_SPECIFICATION__READ_PROCESSING_RATE;
 
         if (qualify) {
-            return this.getString("_UI_CreateChild_text2",
-                    new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
-                            this.getTypeText(owner) });
+            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
+                    this.getFeatureText(childFeature), this.getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

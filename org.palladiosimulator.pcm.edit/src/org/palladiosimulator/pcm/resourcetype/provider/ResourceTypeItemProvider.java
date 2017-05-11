@@ -69,20 +69,12 @@ public class ResourceTypeItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addUnitPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_UnitCarryingElement_unit_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_UnitCarryingElement_unit_feature",
-                                "_UI_UnitCarryingElement_type"),
-                        UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_UnitCarryingElement_unit_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_UnitCarryingElement_unit_feature",
+                        "_UI_UnitCarryingElement_type"),
+                UnitsPackage.Literals.UNIT_CARRYING_ELEMENT__UNIT, true, false, true, null, null, null));
     }
 
     /**

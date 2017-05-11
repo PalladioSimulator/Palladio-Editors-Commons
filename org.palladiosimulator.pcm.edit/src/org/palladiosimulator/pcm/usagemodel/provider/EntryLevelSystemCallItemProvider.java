@@ -68,21 +68,14 @@ public class EntryLevelSystemCallItemProvider extends AbstractUserActionItemProv
      * @generated
      */
     protected void addProvidedRole_EntryLevelSystemCallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EntryLevelSystemCall_providedRole_EntryLevelSystemCall_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EntryLevelSystemCall_providedRole_EntryLevelSystemCall_feature",
-                                "_UI_EntryLevelSystemCall_type"),
-                        UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__PROVIDED_ROLE_ENTRY_LEVEL_SYSTEM_CALL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EntryLevelSystemCall_providedRole_EntryLevelSystemCall_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EntryLevelSystemCall_providedRole_EntryLevelSystemCall_feature",
+                        "_UI_EntryLevelSystemCall_type"),
+                UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__PROVIDED_ROLE_ENTRY_LEVEL_SYSTEM_CALL, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -92,21 +85,14 @@ public class EntryLevelSystemCallItemProvider extends AbstractUserActionItemProv
      * @generated
      */
     protected void addOperationSignature__EntryLevelSystemCallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EntryLevelSystemCall_operationSignature__EntryLevelSystemCall_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EntryLevelSystemCall_operationSignature__EntryLevelSystemCall_feature",
-                                "_UI_EntryLevelSystemCall_type"),
-                        UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__OPERATION_SIGNATURE_ENTRY_LEVEL_SYSTEM_CALL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EntryLevelSystemCall_operationSignature__EntryLevelSystemCall_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EntryLevelSystemCall_operationSignature__EntryLevelSystemCall_feature",
+                        "_UI_EntryLevelSystemCall_type"),
+                UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__OPERATION_SIGNATURE_ENTRY_LEVEL_SYSTEM_CALL, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -116,21 +102,13 @@ public class EntryLevelSystemCallItemProvider extends AbstractUserActionItemProv
      * @generated
      */
     protected void addPriorityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EntryLevelSystemCall_priority_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EntryLevelSystemCall_priority_feature",
-                                "_UI_EntryLevelSystemCall_type"),
-                        UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__PRIORITY,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EntryLevelSystemCall_priority_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_EntryLevelSystemCall_priority_feature",
+                        "_UI_EntryLevelSystemCall_type"),
+                UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__PRIORITY, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -248,13 +226,11 @@ public class EntryLevelSystemCallItemProvider extends AbstractUserActionItemProv
         final Object childObject = child;
 
         final boolean qualify = childFeature == UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__OUTPUT_PARAMETER_USAGES_ENTRY_LEVEL_SYSTEM_CALL
-                ||
-                childFeature == UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__INPUT_PARAMETER_USAGES_ENTRY_LEVEL_SYSTEM_CALL;
+                || childFeature == UsagemodelPackage.Literals.ENTRY_LEVEL_SYSTEM_CALL__INPUT_PARAMETER_USAGES_ENTRY_LEVEL_SYSTEM_CALL;
 
         if (qualify) {
-            return this.getString("_UI_CreateChild_text2",
-                    new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
-                            this.getTypeText(owner) });
+            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
+                    this.getFeatureText(childFeature), this.getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

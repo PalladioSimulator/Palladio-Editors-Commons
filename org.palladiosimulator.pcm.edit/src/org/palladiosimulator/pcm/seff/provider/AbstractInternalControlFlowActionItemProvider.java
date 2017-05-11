@@ -135,19 +135,17 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION,
-                        SeffPerformanceFactory.eINSTANCE.createParametricResourceDemand()));
+        newChildDescriptors.add(this.createChildParameter(
+                SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_DEMAND_ACTION,
+                SeffPerformanceFactory.eINSTANCE.createParametricResourceDemand()));
 
         newChildDescriptors.add(this.createChildParameter(
                 SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__INFRASTRUCTURE_CALL_ACTION,
                 SeffPerformanceFactory.eINSTANCE.createInfrastructureCall()));
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION,
-                        SeffPerformanceFactory.eINSTANCE.createResourceCall()));
+        newChildDescriptors.add(this.createChildParameter(
+                SeffPackage.Literals.ABSTRACT_INTERNAL_CONTROL_FLOW_ACTION__RESOURCE_CALL_ACTION,
+                SeffPerformanceFactory.eINSTANCE.createResourceCall()));
     }
 
 }

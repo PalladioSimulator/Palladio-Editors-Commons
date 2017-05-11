@@ -62,22 +62,14 @@ public class InfrastructureRequiredRoleItemProvider extends RequiredRoleItemProv
      * @generated
      */
     protected void addRequiredInterface__InfrastructureRequiredRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_InfrastructureRequiredRole_requiredInterface__InfrastructureRequiredRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InfrastructureRequiredRole_requiredInterface__InfrastructureRequiredRole_feature",
-                                "_UI_InfrastructureRequiredRole_type"),
-                        RepositoryPackage.Literals.INFRASTRUCTURE_REQUIRED_ROLE__REQUIRED_INTERFACE_INFRASTRUCTURE_REQUIRED_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InfrastructureRequiredRole_requiredInterface__InfrastructureRequiredRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InfrastructureRequiredRole_requiredInterface__InfrastructureRequiredRole_feature",
+                        "_UI_InfrastructureRequiredRole_type"),
+                RepositoryPackage.Literals.INFRASTRUCTURE_REQUIRED_ROLE__REQUIRED_INTERFACE_INFRASTRUCTURE_REQUIRED_ROLE,
+                true, false, true, null, null, null));
     }
 
     /**

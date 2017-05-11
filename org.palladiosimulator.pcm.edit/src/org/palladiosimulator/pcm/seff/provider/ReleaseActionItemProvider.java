@@ -61,20 +61,13 @@ public class ReleaseActionItemProvider extends AbstractInternalControlFlowAction
      * @generated
      */
     protected void addPassiveResource_ReleaseActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ReleaseAction_passiveResource_ReleaseAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ReleaseAction_passiveResource_ReleaseAction_feature", "_UI_ReleaseAction_type"),
-                        SeffPackage.Literals.RELEASE_ACTION__PASSIVE_RESOURCE_RELEASE_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ReleaseAction_passiveResource_ReleaseAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ReleaseAction_passiveResource_ReleaseAction_feature", "_UI_ReleaseAction_type"),
+                SeffPackage.Literals.RELEASE_ACTION__PASSIVE_RESOURCE_RELEASE_ACTION, true, false, true, null, null,
+                null));
     }
 
     /**

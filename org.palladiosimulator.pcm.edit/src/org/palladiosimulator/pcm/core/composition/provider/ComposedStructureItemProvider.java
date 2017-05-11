@@ -146,69 +146,56 @@ public class ComposedStructureItemProvider extends EntityItemProvider {
                 CompositionPackage.Literals.COMPOSED_STRUCTURE__RESOURCE_REQUIRED_DELEGATION_CONNECTORS_COMPOSED_STRUCTURE,
                 CompositionFactory.eINSTANCE.createResourceRequiredDelegationConnector()));
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__EVENT_CHANNEL_COMPOSED_STRUCTURE,
-                        CompositionFactory.eINSTANCE.createEventChannel()));
+        newChildDescriptors.add(this.createChildParameter(
+                CompositionPackage.Literals.COMPOSED_STRUCTURE__EVENT_CHANNEL_COMPOSED_STRUCTURE,
+                CompositionFactory.eINSTANCE.createEventChannel()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createEventChannelSourceConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createEventChannelSinkConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createProvidedDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createRequiredDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createAssemblyConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createAssemblyEventConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createSourceDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createSinkDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createAssemblyInfrastructureConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createProvidedInfrastructureDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createRequiredInfrastructureDelegationConnector()));
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
+        newChildDescriptors.add(
+                this.createChildParameter(CompositionPackage.Literals.COMPOSED_STRUCTURE__CONNECTORS_COMPOSED_STRUCTURE,
                         CompositionFactory.eINSTANCE.createRequiredResourceDelegationConnector()));
     }
 

@@ -65,21 +65,13 @@ public class OperationSignatureItemProvider extends SignatureItemProvider {
      * @generated
      */
     protected void addReturnType__OperationSignaturePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_OperationSignature_returnType__OperationSignature_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_OperationSignature_returnType__OperationSignature_feature",
-                                "_UI_OperationSignature_type"),
-                        RepositoryPackage.Literals.OPERATION_SIGNATURE__RETURN_TYPE_OPERATION_SIGNATURE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_OperationSignature_returnType__OperationSignature_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_OperationSignature_returnType__OperationSignature_feature", "_UI_OperationSignature_type"),
+                RepositoryPackage.Literals.OPERATION_SIGNATURE__RETURN_TYPE_OPERATION_SIGNATURE, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -165,10 +157,9 @@ public class OperationSignatureItemProvider extends SignatureItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        RepositoryPackage.Literals.OPERATION_SIGNATURE__PARAMETERS_OPERATION_SIGNATURE,
-                        RepositoryFactory.eINSTANCE.createParameter()));
+        newChildDescriptors.add(this.createChildParameter(
+                RepositoryPackage.Literals.OPERATION_SIGNATURE__PARAMETERS_OPERATION_SIGNATURE,
+                RepositoryFactory.eINSTANCE.createParameter()));
     }
 
 }

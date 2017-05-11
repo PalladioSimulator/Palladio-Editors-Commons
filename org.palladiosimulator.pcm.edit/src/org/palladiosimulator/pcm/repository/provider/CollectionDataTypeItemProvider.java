@@ -63,21 +63,13 @@ public class CollectionDataTypeItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addInnerType_CollectionDataTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CollectionDataType_innerType_CollectionDataType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CollectionDataType_innerType_CollectionDataType_feature",
-                                "_UI_CollectionDataType_type"),
-                        RepositoryPackage.Literals.COLLECTION_DATA_TYPE__INNER_TYPE_COLLECTION_DATA_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CollectionDataType_innerType_CollectionDataType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CollectionDataType_innerType_CollectionDataType_feature", "_UI_CollectionDataType_type"),
+                RepositoryPackage.Literals.COLLECTION_DATA_TYPE__INNER_TYPE_COLLECTION_DATA_TYPE, true, false, true,
+                null, null, null));
     }
 
     /**

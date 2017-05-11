@@ -67,20 +67,13 @@ public class ResourceSignatureItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addResourceServiceIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ResourceSignature_resourceServiceId_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ResourceSignature_resourceServiceId_feature", "_UI_ResourceSignature_type"),
-                        ResourcetypePackage.Literals.RESOURCE_SIGNATURE__RESOURCE_SERVICE_ID,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ResourceSignature_resourceServiceId_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ResourceSignature_resourceServiceId_feature",
+                        "_UI_ResourceSignature_type"),
+                ResourcetypePackage.Literals.RESOURCE_SIGNATURE__RESOURCE_SERVICE_ID, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -169,9 +162,8 @@ public class ResourceSignatureItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        ResourcetypePackage.Literals.RESOURCE_SIGNATURE__PARAMETER_RESOURCE_SIGNATURE,
+        newChildDescriptors.add(
+                this.createChildParameter(ResourcetypePackage.Literals.RESOURCE_SIGNATURE__PARAMETER_RESOURCE_SIGNATURE,
                         RepositoryFactory.eINSTANCE.createParameter()));
     }
 

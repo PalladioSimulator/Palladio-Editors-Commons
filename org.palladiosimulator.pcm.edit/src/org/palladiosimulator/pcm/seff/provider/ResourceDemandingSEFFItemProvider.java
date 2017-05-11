@@ -72,21 +72,13 @@ public class ResourceDemandingSEFFItemProvider extends IdentifierItemProvider {
      * @generated
      */
     protected void addSeffTypeIDPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ServiceEffectSpecification_seffTypeID_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ServiceEffectSpecification_seffTypeID_feature",
-                                "_UI_ServiceEffectSpecification_type"),
-                        SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__SEFF_TYPE_ID,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ServiceEffectSpecification_seffTypeID_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ServiceEffectSpecification_seffTypeID_feature", "_UI_ServiceEffectSpecification_type"),
+                SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__SEFF_TYPE_ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,21 +88,14 @@ public class ResourceDemandingSEFFItemProvider extends IdentifierItemProvider {
      * @generated
      */
     protected void addDescribedService__SEFFPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ServiceEffectSpecification_describedService__SEFF_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ServiceEffectSpecification_describedService__SEFF_feature",
-                                "_UI_ServiceEffectSpecification_type"),
-                        SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__DESCRIBED_SERVICE_SEFF,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ServiceEffectSpecification_describedService__SEFF_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ServiceEffectSpecification_describedService__SEFF_feature",
+                        "_UI_ServiceEffectSpecification_type"),
+                SeffPackage.Literals.SERVICE_EFFECT_SPECIFICATION__DESCRIBED_SERVICE_SEFF, true, false, true, null,
+                null, null));
     }
 
     /**

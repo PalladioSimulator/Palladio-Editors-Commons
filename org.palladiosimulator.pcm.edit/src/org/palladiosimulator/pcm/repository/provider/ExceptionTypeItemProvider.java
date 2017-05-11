@@ -74,20 +74,13 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
      * @generated
      */
     protected void addExceptionNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ExceptionType_exceptionName_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_ExceptionType_exceptionName_feature",
-                                "_UI_ExceptionType_type"),
-                        RepositoryPackage.Literals.EXCEPTION_TYPE__EXCEPTION_NAME,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ExceptionType_exceptionName_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ExceptionType_exceptionName_feature",
+                        "_UI_ExceptionType_type"),
+                RepositoryPackage.Literals.EXCEPTION_TYPE__EXCEPTION_NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -97,21 +90,13 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
      * @generated
      */
     protected void addExceptionMessagePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ExceptionType_exceptionMessage_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ExceptionType_exceptionMessage_feature",
-                                "_UI_ExceptionType_type"),
-                        RepositoryPackage.Literals.EXCEPTION_TYPE__EXCEPTION_MESSAGE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ExceptionType_exceptionMessage_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ExceptionType_exceptionMessage_feature",
+                        "_UI_ExceptionType_type"),
+                RepositoryPackage.Literals.EXCEPTION_TYPE__EXCEPTION_MESSAGE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

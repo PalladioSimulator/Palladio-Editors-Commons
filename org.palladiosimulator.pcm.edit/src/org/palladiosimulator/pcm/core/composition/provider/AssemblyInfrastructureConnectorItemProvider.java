@@ -65,22 +65,15 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      * @generated
      */
     protected void addProvidedRole__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyInfrastructureConnector_providedRole__AssemblyInfrastructureConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyInfrastructureConnector_providedRole__AssemblyInfrastructureConnector_feature",
-                                "_UI_AssemblyInfrastructureConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_AssemblyInfrastructureConnector_providedRole__AssemblyInfrastructureConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyInfrastructureConnector_providedRole__AssemblyInfrastructureConnector_feature",
+                        "_UI_AssemblyInfrastructureConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -90,22 +83,15 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      * @generated
      */
     protected void addRequiredRole__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyInfrastructureConnector_requiredRole__AssemblyInfrastructureConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyInfrastructureConnector_requiredRole__AssemblyInfrastructureConnector_feature",
-                                "_UI_AssemblyInfrastructureConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_AssemblyInfrastructureConnector_requiredRole__AssemblyInfrastructureConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyInfrastructureConnector_requiredRole__AssemblyInfrastructureConnector_feature",
+                        "_UI_AssemblyInfrastructureConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -115,22 +101,15 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      * @generated
      */
     protected void addProvidingAssemblyContext__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyInfrastructureConnector_providingAssemblyContext__AssemblyInfrastructureConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyInfrastructureConnector_providingAssemblyContext__AssemblyInfrastructureConnector_feature",
-                                "_UI_AssemblyInfrastructureConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_AssemblyInfrastructureConnector_providingAssemblyContext__AssemblyInfrastructureConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyInfrastructureConnector_providingAssemblyContext__AssemblyInfrastructureConnector_feature",
+                        "_UI_AssemblyInfrastructureConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -140,22 +119,15 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      * @generated
      */
     protected void addRequiringAssemblyContext__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyInfrastructureConnector_requiringAssemblyContext__AssemblyInfrastructureConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyInfrastructureConnector_requiringAssemblyContext__AssemblyInfrastructureConnector_feature",
-                                "_UI_AssemblyInfrastructureConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_AssemblyInfrastructureConnector_requiringAssemblyContext__AssemblyInfrastructureConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyInfrastructureConnector_requiringAssemblyContext__AssemblyInfrastructureConnector_feature",
+                        "_UI_AssemblyInfrastructureConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_INFRASTRUCTURE_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_INFRASTRUCTURE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

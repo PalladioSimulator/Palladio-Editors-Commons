@@ -62,22 +62,15 @@ public class NetworkInducedFailureTypeItemProvider extends FailureTypeItemProvid
      * @generated
      */
     protected void addCommunicationLinkResourceType__NetworkInducedFailureTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_NetworkInducedFailureType_communicationLinkResourceType__NetworkInducedFailureType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_NetworkInducedFailureType_communicationLinkResourceType__NetworkInducedFailureType_feature",
-                                "_UI_NetworkInducedFailureType_type"),
-                        ReliabilityPackage.Literals.NETWORK_INDUCED_FAILURE_TYPE__COMMUNICATION_LINK_RESOURCE_TYPE_NETWORK_INDUCED_FAILURE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_NetworkInducedFailureType_communicationLinkResourceType__NetworkInducedFailureType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_NetworkInducedFailureType_communicationLinkResourceType__NetworkInducedFailureType_feature",
+                        "_UI_NetworkInducedFailureType_type"),
+                ReliabilityPackage.Literals.NETWORK_INDUCED_FAILURE_TYPE__COMMUNICATION_LINK_RESOURCE_TYPE_NETWORK_INDUCED_FAILURE_TYPE,
+                true, false, true, null, null, null));
     }
 
     /**

@@ -69,21 +69,13 @@ public class CharacterisedVariableItemProvider extends VariableItemProvider {
      * @generated
      */
     protected void addCharacterisationTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CharacterisedVariable_characterisationType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CharacterisedVariable_characterisationType_feature",
-                                "_UI_CharacterisedVariable_type"),
-                        ParameterPackage.Literals.CHARACTERISED_VARIABLE__CHARACTERISATION_TYPE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CharacterisedVariable_characterisationType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CharacterisedVariable_characterisationType_feature", "_UI_CharacterisedVariable_type"),
+                ParameterPackage.Literals.CHARACTERISED_VARIABLE__CHARACTERISATION_TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

@@ -62,22 +62,14 @@ public class InfrastructureProvidedRoleItemProvider extends ProvidedRoleItemProv
      * @generated
      */
     protected void addProvidedInterface__InfrastructureProvidedRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_InfrastructureProvidedRole_providedInterface__InfrastructureProvidedRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InfrastructureProvidedRole_providedInterface__InfrastructureProvidedRole_feature",
-                                "_UI_InfrastructureProvidedRole_type"),
-                        RepositoryPackage.Literals.INFRASTRUCTURE_PROVIDED_ROLE__PROVIDED_INTERFACE_INFRASTRUCTURE_PROVIDED_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InfrastructureProvidedRole_providedInterface__InfrastructureProvidedRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InfrastructureProvidedRole_providedInterface__InfrastructureProvidedRole_feature",
+                        "_UI_InfrastructureProvidedRole_type"),
+                RepositoryPackage.Literals.INFRASTRUCTURE_PROVIDED_ROLE__PROVIDED_INTERFACE_INFRASTRUCTURE_PROVIDED_ROLE,
+                true, false, true, null, null, null));
     }
 
     /**

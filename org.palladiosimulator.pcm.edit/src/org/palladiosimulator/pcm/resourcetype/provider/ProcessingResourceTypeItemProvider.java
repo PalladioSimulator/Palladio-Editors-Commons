@@ -62,22 +62,14 @@ public class ProcessingResourceTypeItemProvider extends ResourceTypeItemProvider
      * @generated
      */
     protected void addHardwareInducedFailureType__ProcessingResourceTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ProcessingResourceType_hardwareInducedFailureType__ProcessingResourceType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceType_hardwareInducedFailureType__ProcessingResourceType_feature",
-                                "_UI_ProcessingResourceType_type"),
-                        ResourcetypePackage.Literals.PROCESSING_RESOURCE_TYPE__HARDWARE_INDUCED_FAILURE_TYPE_PROCESSING_RESOURCE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceType_hardwareInducedFailureType__ProcessingResourceType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProcessingResourceType_hardwareInducedFailureType__ProcessingResourceType_feature",
+                        "_UI_ProcessingResourceType_type"),
+                ResourcetypePackage.Literals.PROCESSING_RESOURCE_TYPE__HARDWARE_INDUCED_FAILURE_TYPE_PROCESSING_RESOURCE_TYPE,
+                true, false, true, null, null, null));
     }
 
     /**

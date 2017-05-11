@@ -76,22 +76,15 @@ public class SpecifiedOutputParameterAbstractionItemProvider extends ItemProvide
      * @generated
      */
     protected void addSignature_SpecifiedOutputParameterAbstractionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature",
-                                "_UI_SpecifiedOutputParameterAbstraction_type"),
-                        QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__SIGNATURE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SpecifiedOutputParameterAbstraction_signature_SpecifiedOutputParameterAbstraction_feature",
+                        "_UI_SpecifiedOutputParameterAbstraction_type"),
+                QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__SIGNATURE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -101,22 +94,15 @@ public class SpecifiedOutputParameterAbstractionItemProvider extends ItemProvide
      * @generated
      */
     protected void addRole_SpecifiedOutputParameterAbstractionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature",
-                                "_UI_SpecifiedOutputParameterAbstraction_type"),
-                        QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__ROLE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_SpecifiedOutputParameterAbstraction_role_SpecifiedOutputParameterAbstraction_feature",
+                        "_UI_SpecifiedOutputParameterAbstraction_type"),
+                QosannotationsPackage.Literals.SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION__ROLE_SPECIFIED_OUTPUT_PARAMETER_ABSTRACTION,
+                true, false, true, null, null, null));
     }
 
     /**

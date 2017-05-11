@@ -66,21 +66,13 @@ public class ResourceContainerItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addHddResourceSpecificationsPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ResourceContainer_hddResourceSpecifications_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ResourceContainer_hddResourceSpecifications_feature",
-                                "_UI_ResourceContainer_type"),
-                        ResourceenvironmentPackage.Literals.RESOURCE_CONTAINER__HDD_RESOURCE_SPECIFICATIONS,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ResourceContainer_hddResourceSpecifications_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ResourceContainer_hddResourceSpecifications_feature", "_UI_ResourceContainer_type"),
+                ResourceenvironmentPackage.Literals.RESOURCE_CONTAINER__HDD_RESOURCE_SPECIFICATIONS, true, false, true,
+                null, null, null));
     }
 
     /**

@@ -62,22 +62,15 @@ public class CommunicationLinkResourceTypeItemProvider extends ResourceTypeItemP
      * @generated
      */
     protected void addNetworkInducedFailureType__CommunicationLinkResourceTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_CommunicationLinkResourceType_networkInducedFailureType__CommunicationLinkResourceType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CommunicationLinkResourceType_networkInducedFailureType__CommunicationLinkResourceType_feature",
-                                "_UI_CommunicationLinkResourceType_type"),
-                        ResourcetypePackage.Literals.COMMUNICATION_LINK_RESOURCE_TYPE__NETWORK_INDUCED_FAILURE_TYPE_COMMUNICATION_LINK_RESOURCE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_CommunicationLinkResourceType_networkInducedFailureType__CommunicationLinkResourceType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CommunicationLinkResourceType_networkInducedFailureType__CommunicationLinkResourceType_feature",
+                        "_UI_CommunicationLinkResourceType_type"),
+                ResourcetypePackage.Literals.COMMUNICATION_LINK_RESOURCE_TYPE__NETWORK_INDUCED_FAILURE_TYPE_COMMUNICATION_LINK_RESOURCE_TYPE,
+                true, false, true, null, null, null));
     }
 
     /**

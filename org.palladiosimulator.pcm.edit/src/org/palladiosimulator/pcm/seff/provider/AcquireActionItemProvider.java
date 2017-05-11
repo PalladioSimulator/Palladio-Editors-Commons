@@ -65,20 +65,13 @@ public class AcquireActionItemProvider extends AbstractInternalControlFlowAction
      * @generated
      */
     protected void addPassiveresource_AcquireActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AcquireAction_passiveresource_AcquireAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AcquireAction_passiveresource_AcquireAction_feature", "_UI_AcquireAction_type"),
-                        SeffPackage.Literals.ACQUIRE_ACTION__PASSIVERESOURCE_ACQUIRE_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AcquireAction_passiveresource_AcquireAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AcquireAction_passiveresource_AcquireAction_feature", "_UI_AcquireAction_type"),
+                SeffPackage.Literals.ACQUIRE_ACTION__PASSIVERESOURCE_ACQUIRE_ACTION, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -88,20 +81,13 @@ public class AcquireActionItemProvider extends AbstractInternalControlFlowAction
      * @generated
      */
     protected void addTimeoutPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AcquireAction_timeout_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_AcquireAction_timeout_feature",
-                                "_UI_AcquireAction_type"),
-                        SeffPackage.Literals.ACQUIRE_ACTION__TIMEOUT,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AcquireAction_timeout_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_AcquireAction_timeout_feature",
+                        "_UI_AcquireAction_type"),
+                SeffPackage.Literals.ACQUIRE_ACTION__TIMEOUT, true, false, false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -111,20 +97,13 @@ public class AcquireActionItemProvider extends AbstractInternalControlFlowAction
      * @generated
      */
     protected void addTimeoutValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AcquireAction_timeoutValue_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_AcquireAction_timeoutValue_feature",
-                                "_UI_AcquireAction_type"),
-                        SeffPackage.Literals.ACQUIRE_ACTION__TIMEOUT_VALUE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AcquireAction_timeoutValue_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_AcquireAction_timeoutValue_feature",
+                        "_UI_AcquireAction_type"),
+                SeffPackage.Literals.ACQUIRE_ACTION__TIMEOUT_VALUE, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**

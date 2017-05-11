@@ -61,21 +61,12 @@ public class SinkRoleItemProvider extends ProvidedRoleItemProvider {
      * @generated
      */
     protected void addEventGroup__SinkRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SinkRole_eventGroup__SinkRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SinkRole_eventGroup__SinkRole_feature",
-                                "_UI_SinkRole_type"),
-                        RepositoryPackage.Literals.SINK_ROLE__EVENT_GROUP_SINK_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SinkRole_eventGroup__SinkRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_SinkRole_eventGroup__SinkRole_feature",
+                        "_UI_SinkRole_type"),
+                RepositoryPackage.Literals.SINK_ROLE__EVENT_GROUP_SINK_ROLE, true, false, true, null, null, null));
     }
 
     /**

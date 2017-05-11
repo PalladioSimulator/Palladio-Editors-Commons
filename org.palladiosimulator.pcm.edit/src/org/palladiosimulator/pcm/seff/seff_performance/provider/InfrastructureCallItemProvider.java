@@ -67,21 +67,13 @@ public class InfrastructureCallItemProvider extends CallActionItemProvider {
      * @generated
      */
     protected void addSignature__InfrastructureCallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_InfrastructureCall_signature__InfrastructureCall_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InfrastructureCall_signature__InfrastructureCall_feature",
-                                "_UI_InfrastructureCall_type"),
-                        SeffPerformancePackage.Literals.INFRASTRUCTURE_CALL__SIGNATURE_INFRASTRUCTURE_CALL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InfrastructureCall_signature__InfrastructureCall_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InfrastructureCall_signature__InfrastructureCall_feature", "_UI_InfrastructureCall_type"),
+                SeffPerformancePackage.Literals.INFRASTRUCTURE_CALL__SIGNATURE_INFRASTRUCTURE_CALL, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -91,21 +83,14 @@ public class InfrastructureCallItemProvider extends CallActionItemProvider {
      * @generated
      */
     protected void addRequiredRole__InfrastructureCallPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_InfrastructureCall_requiredRole__InfrastructureCall_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InfrastructureCall_requiredRole__InfrastructureCall_feature",
-                                "_UI_InfrastructureCall_type"),
-                        SeffPerformancePackage.Literals.INFRASTRUCTURE_CALL__REQUIRED_ROLE_INFRASTRUCTURE_CALL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InfrastructureCall_requiredRole__InfrastructureCall_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InfrastructureCall_requiredRole__InfrastructureCall_feature",
+                        "_UI_InfrastructureCall_type"),
+                SeffPerformancePackage.Literals.INFRASTRUCTURE_CALL__REQUIRED_ROLE_INFRASTRUCTURE_CALL, true, false,
+                true, null, null, null));
     }
 
     /**

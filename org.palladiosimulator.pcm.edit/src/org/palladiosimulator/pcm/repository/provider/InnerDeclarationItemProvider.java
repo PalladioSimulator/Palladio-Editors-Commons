@@ -63,20 +63,13 @@ public class InnerDeclarationItemProvider extends NamedElementItemProvider {
      * @generated
      */
     protected void addDatatype_InnerDeclarationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_InnerDeclaration_datatype_InnerDeclaration_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_InnerDeclaration_datatype_InnerDeclaration_feature", "_UI_InnerDeclaration_type"),
-                        RepositoryPackage.Literals.INNER_DECLARATION__DATATYPE_INNER_DECLARATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InnerDeclaration_datatype_InnerDeclaration_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_InnerDeclaration_datatype_InnerDeclaration_feature", "_UI_InnerDeclaration_type"),
+                RepositoryPackage.Literals.INNER_DECLARATION__DATATYPE_INNER_DECLARATION, true, false, true, null, null,
+                null));
     }
 
     /**

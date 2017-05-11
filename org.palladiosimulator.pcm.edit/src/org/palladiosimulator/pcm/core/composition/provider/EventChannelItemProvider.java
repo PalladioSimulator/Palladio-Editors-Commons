@@ -65,20 +65,13 @@ public class EventChannelItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEventGroup__EventChannelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannel_eventGroup__EventChannel_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannel_eventGroup__EventChannel_feature", "_UI_EventChannel_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_GROUP_EVENT_CHANNEL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannel_eventGroup__EventChannel_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannel_eventGroup__EventChannel_feature", "_UI_EventChannel_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_GROUP_EVENT_CHANNEL, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -88,21 +81,13 @@ public class EventChannelItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEventChannelSourceConnector__EventChannelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature",
-                                "_UI_EventChannel_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannel_eventChannelSourceConnector__EventChannel_feature", "_UI_EventChannel_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -112,21 +97,13 @@ public class EventChannelItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEventChannelSinkConnector__EventChannelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature",
-                                "_UI_EventChannel_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannel_eventChannelSinkConnector__EventChannel_feature", "_UI_EventChannel_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL, true, false,
+                true, null, null, null));
     }
 
     /**

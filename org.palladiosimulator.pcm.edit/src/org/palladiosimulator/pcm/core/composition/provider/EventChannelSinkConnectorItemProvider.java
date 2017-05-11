@@ -67,21 +67,14 @@ public class EventChannelSinkConnectorItemProvider extends ConnectorItemProvider
      * @generated
      */
     protected void addSinkRole__EventChannelSinkConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannelSinkConnector_sinkRole__EventChannelSinkConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSinkConnector_sinkRole__EventChannelSinkConnector_feature",
-                                "_UI_EventChannelSinkConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__SINK_ROLE_EVENT_CHANNEL_SINK_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSinkConnector_sinkRole__EventChannelSinkConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSinkConnector_sinkRole__EventChannelSinkConnector_feature",
+                        "_UI_EventChannelSinkConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__SINK_ROLE_EVENT_CHANNEL_SINK_CONNECTOR, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -91,22 +84,14 @@ public class EventChannelSinkConnectorItemProvider extends ConnectorItemProvider
      * @generated
      */
     protected void addAssemblyContext__EventChannelSinkConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_EventChannelSinkConnector_assemblyContext__EventChannelSinkConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSinkConnector_assemblyContext__EventChannelSinkConnector_feature",
-                                "_UI_EventChannelSinkConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__ASSEMBLY_CONTEXT_EVENT_CHANNEL_SINK_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSinkConnector_assemblyContext__EventChannelSinkConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSinkConnector_assemblyContext__EventChannelSinkConnector_feature",
+                        "_UI_EventChannelSinkConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__ASSEMBLY_CONTEXT_EVENT_CHANNEL_SINK_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -116,21 +101,14 @@ public class EventChannelSinkConnectorItemProvider extends ConnectorItemProvider
      * @generated
      */
     protected void addEventChannel__EventChannelSinkConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannelSinkConnector_eventChannel__EventChannelSinkConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSinkConnector_eventChannel__EventChannelSinkConnector_feature",
-                                "_UI_EventChannelSinkConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__EVENT_CHANNEL_EVENT_CHANNEL_SINK_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSinkConnector_eventChannel__EventChannelSinkConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSinkConnector_eventChannel__EventChannelSinkConnector_feature",
+                        "_UI_EventChannelSinkConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SINK_CONNECTOR__EVENT_CHANNEL_EVENT_CHANNEL_SINK_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

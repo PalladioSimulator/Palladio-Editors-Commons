@@ -65,21 +65,14 @@ public class AllocationContextItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addResourceContainer_AllocationContextPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AllocationContext_resourceContainer_AllocationContext_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AllocationContext_resourceContainer_AllocationContext_feature",
-                                "_UI_AllocationContext_type"),
-                        AllocationPackage.Literals.ALLOCATION_CONTEXT__RESOURCE_CONTAINER_ALLOCATION_CONTEXT,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AllocationContext_resourceContainer_AllocationContext_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AllocationContext_resourceContainer_AllocationContext_feature",
+                        "_UI_AllocationContext_type"),
+                AllocationPackage.Literals.ALLOCATION_CONTEXT__RESOURCE_CONTAINER_ALLOCATION_CONTEXT, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -89,21 +82,14 @@ public class AllocationContextItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addAssemblyContext_AllocationContextPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AllocationContext_assemblyContext_AllocationContext_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AllocationContext_assemblyContext_AllocationContext_feature",
-                                "_UI_AllocationContext_type"),
-                        AllocationPackage.Literals.ALLOCATION_CONTEXT__ASSEMBLY_CONTEXT_ALLOCATION_CONTEXT,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AllocationContext_assemblyContext_AllocationContext_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AllocationContext_assemblyContext_AllocationContext_feature",
+                        "_UI_AllocationContext_type"),
+                AllocationPackage.Literals.ALLOCATION_CONTEXT__ASSEMBLY_CONTEXT_ALLOCATION_CONTEXT, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -113,21 +99,13 @@ public class AllocationContextItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addEventChannel__AllocationContextPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AllocationContext_eventChannel__AllocationContext_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AllocationContext_eventChannel__AllocationContext_feature",
-                                "_UI_AllocationContext_type"),
-                        AllocationPackage.Literals.ALLOCATION_CONTEXT__EVENT_CHANNEL_ALLOCATION_CONTEXT,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AllocationContext_eventChannel__AllocationContext_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AllocationContext_eventChannel__AllocationContext_feature", "_UI_AllocationContext_type"),
+                AllocationPackage.Literals.ALLOCATION_CONTEXT__EVENT_CHANNEL_ALLOCATION_CONTEXT, true, false, true,
+                null, null, null));
     }
 
     /**

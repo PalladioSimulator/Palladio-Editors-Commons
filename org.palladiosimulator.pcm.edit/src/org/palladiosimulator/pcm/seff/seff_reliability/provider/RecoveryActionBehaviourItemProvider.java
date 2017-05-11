@@ -67,22 +67,15 @@ public class RecoveryActionBehaviourItemProvider extends FailureHandlingEntityIt
      * @generated
      */
     protected void addFailureHandlingAlternatives__RecoveryActionBehaviourPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_RecoveryActionBehaviour_failureHandlingAlternatives__RecoveryActionBehaviour_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RecoveryActionBehaviour_failureHandlingAlternatives__RecoveryActionBehaviour_feature",
-                                "_UI_RecoveryActionBehaviour_type"),
-                        SeffReliabilityPackage.Literals.RECOVERY_ACTION_BEHAVIOUR__FAILURE_HANDLING_ALTERNATIVES_RECOVERY_ACTION_BEHAVIOUR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_RecoveryActionBehaviour_failureHandlingAlternatives__RecoveryActionBehaviour_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_RecoveryActionBehaviour_failureHandlingAlternatives__RecoveryActionBehaviour_feature",
+                        "_UI_RecoveryActionBehaviour_type"),
+                SeffReliabilityPackage.Literals.RECOVERY_ACTION_BEHAVIOUR__FAILURE_HANDLING_ALTERNATIVES_RECOVERY_ACTION_BEHAVIOUR,
+                true, false, true, null, null, null));
     }
 
     /**

@@ -68,21 +68,14 @@ public class AssemblyEventConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addSinkRole__AssemblyEventConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyEventConnector_sinkRole__AssemblyEventConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyEventConnector_sinkRole__AssemblyEventConnector_feature",
-                                "_UI_AssemblyEventConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SINK_ROLE_ASSEMBLY_EVENT_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyEventConnector_sinkRole__AssemblyEventConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyEventConnector_sinkRole__AssemblyEventConnector_feature",
+                        "_UI_AssemblyEventConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SINK_ROLE_ASSEMBLY_EVENT_CONNECTOR, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -92,21 +85,14 @@ public class AssemblyEventConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addSourceRole__AssemblyEventConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AssemblyEventConnector_sourceRole__AssemblyEventConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyEventConnector_sourceRole__AssemblyEventConnector_feature",
-                                "_UI_AssemblyEventConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SOURCE_ROLE_ASSEMBLY_EVENT_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyEventConnector_sourceRole__AssemblyEventConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyEventConnector_sourceRole__AssemblyEventConnector_feature",
+                        "_UI_AssemblyEventConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SOURCE_ROLE_ASSEMBLY_EVENT_CONNECTOR, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -116,22 +102,14 @@ public class AssemblyEventConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addSinkAssemblyContext__AssemblyEventConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyEventConnector_sinkAssemblyContext__AssemblyEventConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyEventConnector_sinkAssemblyContext__AssemblyEventConnector_feature",
-                                "_UI_AssemblyEventConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SINK_ASSEMBLY_CONTEXT_ASSEMBLY_EVENT_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyEventConnector_sinkAssemblyContext__AssemblyEventConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyEventConnector_sinkAssemblyContext__AssemblyEventConnector_feature",
+                        "_UI_AssemblyEventConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SINK_ASSEMBLY_CONTEXT_ASSEMBLY_EVENT_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -141,22 +119,14 @@ public class AssemblyEventConnectorItemProvider extends ConnectorItemProvider {
      * @generated
      */
     protected void addSourceAssemblyContext__AssemblyEventConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_AssemblyEventConnector_sourceAssemblyContext__AssemblyEventConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AssemblyEventConnector_sourceAssemblyContext__AssemblyEventConnector_feature",
-                                "_UI_AssemblyEventConnector_type"),
-                        CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SOURCE_ASSEMBLY_CONTEXT_ASSEMBLY_EVENT_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AssemblyEventConnector_sourceAssemblyContext__AssemblyEventConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_AssemblyEventConnector_sourceAssemblyContext__AssemblyEventConnector_feature",
+                        "_UI_AssemblyEventConnector_type"),
+                CompositionPackage.Literals.ASSEMBLY_EVENT_CONNECTOR__SOURCE_ASSEMBLY_CONTEXT_ASSEMBLY_EVENT_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

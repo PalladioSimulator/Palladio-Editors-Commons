@@ -65,20 +65,13 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addEventType__EmitEventActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EmitEventAction_eventType__EmitEventAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EmitEventAction_eventType__EmitEventAction_feature", "_UI_EmitEventAction_type"),
-                        SeffPackage.Literals.EMIT_EVENT_ACTION__EVENT_TYPE_EMIT_EVENT_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EmitEventAction_eventType__EmitEventAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EmitEventAction_eventType__EmitEventAction_feature", "_UI_EmitEventAction_type"),
+                SeffPackage.Literals.EMIT_EVENT_ACTION__EVENT_TYPE_EMIT_EVENT_ACTION, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -88,20 +81,13 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addSourceRole__EmitEventActionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EmitEventAction_sourceRole__EmitEventAction_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EmitEventAction_sourceRole__EmitEventAction_feature", "_UI_EmitEventAction_type"),
-                        SeffPackage.Literals.EMIT_EVENT_ACTION__SOURCE_ROLE_EMIT_EVENT_ACTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EmitEventAction_sourceRole__EmitEventAction_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EmitEventAction_sourceRole__EmitEventAction_feature", "_UI_EmitEventAction_type"),
+                SeffPackage.Literals.EMIT_EVENT_ACTION__SOURCE_ROLE_EMIT_EVENT_ACTION, true, false, true, null, null,
+                null));
     }
 
     /**

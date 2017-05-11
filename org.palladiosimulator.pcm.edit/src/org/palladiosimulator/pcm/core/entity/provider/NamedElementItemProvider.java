@@ -73,20 +73,13 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addEntityNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_NamedElement_entityName_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_entityName_feature",
-                                "_UI_NamedElement_type"),
-                        EntityPackage.Literals.NAMED_ELEMENT__ENTITY_NAME,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_NamedElement_entityName_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_entityName_feature",
+                        "_UI_NamedElement_type"),
+                EntityPackage.Literals.NAMED_ELEMENT__ENTITY_NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

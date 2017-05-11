@@ -139,10 +139,9 @@ public class OperationInterfaceItemProvider extends InterfaceItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        RepositoryPackage.Literals.OPERATION_INTERFACE__SIGNATURES_OPERATION_INTERFACE,
-                        RepositoryFactory.eINSTANCE.createOperationSignature()));
+        newChildDescriptors.add(this.createChildParameter(
+                RepositoryPackage.Literals.OPERATION_INTERFACE__SIGNATURES_OPERATION_INTERFACE,
+                RepositoryFactory.eINSTANCE.createOperationSignature()));
     }
 
 }

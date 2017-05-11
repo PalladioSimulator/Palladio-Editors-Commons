@@ -61,21 +61,12 @@ public class SourceRoleItemProvider extends RequiredRoleItemProvider {
      * @generated
      */
     protected void addEventGroup__SourceRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_SourceRole_eventGroup__SourceRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_SourceRole_eventGroup__SourceRole_feature",
-                                "_UI_SourceRole_type"),
-                        RepositoryPackage.Literals.SOURCE_ROLE__EVENT_GROUP_SOURCE_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_SourceRole_eventGroup__SourceRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_SourceRole_eventGroup__SourceRole_feature",
+                        "_UI_SourceRole_type"),
+                RepositoryPackage.Literals.SOURCE_ROLE__EVENT_GROUP_SOURCE_ROLE, true, false, true, null, null, null));
     }
 
     /**

@@ -66,20 +66,13 @@ public class ClosedWorkloadItemProvider extends WorkloadItemProvider {
      * @generated
      */
     protected void addPopulationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ClosedWorkload_population_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_ClosedWorkload_population_feature",
-                                "_UI_ClosedWorkload_type"),
-                        UsagemodelPackage.Literals.CLOSED_WORKLOAD__POPULATION,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ClosedWorkload_population_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ClosedWorkload_population_feature",
+                        "_UI_ClosedWorkload_type"),
+                UsagemodelPackage.Literals.CLOSED_WORKLOAD__POPULATION, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**

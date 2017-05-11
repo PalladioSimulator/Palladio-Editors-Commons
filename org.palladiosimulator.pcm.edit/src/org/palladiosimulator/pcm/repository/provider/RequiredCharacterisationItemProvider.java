@@ -75,21 +75,13 @@ public class RequiredCharacterisationItemProvider extends ItemProviderAdapter im
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_RequiredCharacterisation_type_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RequiredCharacterisation_type_feature",
-                                "_UI_RequiredCharacterisation_type"),
-                        RepositoryPackage.Literals.REQUIRED_CHARACTERISATION__TYPE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RequiredCharacterisation_type_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_RequiredCharacterisation_type_feature",
+                        "_UI_RequiredCharacterisation_type"),
+                RepositoryPackage.Literals.REQUIRED_CHARACTERISATION__TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -99,20 +91,12 @@ public class RequiredCharacterisationItemProvider extends ItemProviderAdapter im
      * @generated
      */
     protected void addParameterPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_RequiredCharacterisation_parameter_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_RequiredCharacterisation_parameter_feature", "_UI_RequiredCharacterisation_type"),
-                        RepositoryPackage.Literals.REQUIRED_CHARACTERISATION__PARAMETER,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_RequiredCharacterisation_parameter_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_RequiredCharacterisation_parameter_feature",
+                        "_UI_RequiredCharacterisation_type"),
+                RepositoryPackage.Literals.REQUIRED_CHARACTERISATION__PARAMETER, true, false, true, null, null, null));
     }
 
     /**

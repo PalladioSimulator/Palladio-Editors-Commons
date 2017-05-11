@@ -69,21 +69,14 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addFailureTypes_FailureHandlingEntityPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_FailureHandlingEntity_failureTypes_FailureHandlingEntity_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_FailureHandlingEntity_failureTypes_FailureHandlingEntity_feature",
-                                "_UI_FailureHandlingEntity_type"),
-                        SeffReliabilityPackage.Literals.FAILURE_HANDLING_ENTITY__FAILURE_TYPES_FAILURE_HANDLING_ENTITY,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_FailureHandlingEntity_failureTypes_FailureHandlingEntity_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_FailureHandlingEntity_failureTypes_FailureHandlingEntity_feature",
+                        "_UI_FailureHandlingEntity_type"),
+                SeffReliabilityPackage.Literals.FAILURE_HANDLING_ENTITY__FAILURE_TYPES_FAILURE_HANDLING_ENTITY, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -93,21 +86,13 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addCalledService_ExternalServicePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ExternalCallAction_calledService_ExternalService_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ExternalCallAction_calledService_ExternalService_feature",
-                                "_UI_ExternalCallAction_type"),
-                        SeffPackage.Literals.EXTERNAL_CALL_ACTION__CALLED_SERVICE_EXTERNAL_SERVICE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ExternalCallAction_calledService_ExternalService_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ExternalCallAction_calledService_ExternalService_feature", "_UI_ExternalCallAction_type"),
+                SeffPackage.Literals.EXTERNAL_CALL_ACTION__CALLED_SERVICE_EXTERNAL_SERVICE, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -117,20 +102,12 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addRole_ExternalServicePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ExternalCallAction_role_ExternalService_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ExternalCallAction_role_ExternalService_feature", "_UI_ExternalCallAction_type"),
-                        SeffPackage.Literals.EXTERNAL_CALL_ACTION__ROLE_EXTERNAL_SERVICE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ExternalCallAction_role_ExternalService_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ExternalCallAction_role_ExternalService_feature", "_UI_ExternalCallAction_type"),
+                SeffPackage.Literals.EXTERNAL_CALL_ACTION__ROLE_EXTERNAL_SERVICE, true, false, true, null, null, null));
     }
 
     /**
@@ -140,21 +117,13 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      * @generated
      */
     protected void addRetryCountPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ExternalCallAction_retryCount_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ExternalCallAction_retryCount_feature",
-                                "_UI_ExternalCallAction_type"),
-                        SeffPackage.Literals.EXTERNAL_CALL_ACTION__RETRY_COUNT,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ExternalCallAction_retryCount_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ExternalCallAction_retryCount_feature",
+                        "_UI_ExternalCallAction_type"),
+                SeffPackage.Literals.EXTERNAL_CALL_ACTION__RETRY_COUNT, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -250,10 +219,9 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
                 .add(this.createChildParameter(SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION,
                         ParameterFactory.eINSTANCE.createVariableUsage()));
 
-        newChildDescriptors.add(
-                this.createChildParameter(
-                        SeffPackage.Literals.CALL_RETURN_ACTION__RETURN_VARIABLE_USAGE_CALL_RETURN_ACTION,
-                        ParameterFactory.eINSTANCE.createVariableUsage()));
+        newChildDescriptors.add(this.createChildParameter(
+                SeffPackage.Literals.CALL_RETURN_ACTION__RETURN_VARIABLE_USAGE_CALL_RETURN_ACTION,
+                ParameterFactory.eINSTANCE.createVariableUsage()));
     }
 
     /**
@@ -268,13 +236,12 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
         final Object childFeature = feature;
         final Object childObject = child;
 
-        final boolean qualify = childFeature == SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION ||
-                childFeature == SeffPackage.Literals.CALL_RETURN_ACTION__RETURN_VARIABLE_USAGE_CALL_RETURN_ACTION;
+        final boolean qualify = childFeature == SeffPackage.Literals.CALL_ACTION__INPUT_VARIABLE_USAGES_CALL_ACTION
+                || childFeature == SeffPackage.Literals.CALL_RETURN_ACTION__RETURN_VARIABLE_USAGE_CALL_RETURN_ACTION;
 
         if (qualify) {
-            return this.getString("_UI_CreateChild_text2",
-                    new Object[] { this.getTypeText(childObject), this.getFeatureText(childFeature),
-                            this.getTypeText(owner) });
+            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
+                    this.getFeatureText(childFeature), this.getTypeText(owner) });
         }
         return super.getCreateChildText(owner, feature, child, selection);
     }

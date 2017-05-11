@@ -68,21 +68,13 @@ public class RepositoryItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addRepositoryDescriptionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Repository_repositoryDescription_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_Repository_repositoryDescription_feature",
-                                "_UI_Repository_type"),
-                        RepositoryPackage.Literals.REPOSITORY__REPOSITORY_DESCRIPTION,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Repository_repositoryDescription_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Repository_repositoryDescription_feature",
+                        "_UI_Repository_type"),
+                RepositoryPackage.Literals.REPOSITORY__REPOSITORY_DESCRIPTION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

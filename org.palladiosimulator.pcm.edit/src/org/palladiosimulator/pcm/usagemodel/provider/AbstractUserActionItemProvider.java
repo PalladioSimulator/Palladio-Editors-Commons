@@ -64,20 +64,12 @@ public class AbstractUserActionItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addSuccessorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AbstractUserAction_successor_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_AbstractUserAction_successor_feature",
-                                "_UI_AbstractUserAction_type"),
-                        UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__SUCCESSOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AbstractUserAction_successor_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_AbstractUserAction_successor_feature",
+                        "_UI_AbstractUserAction_type"),
+                UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__SUCCESSOR, true, false, true, null, null, null));
     }
 
     /**
@@ -87,21 +79,12 @@ public class AbstractUserActionItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addPredecessorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_AbstractUserAction_predecessor_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_AbstractUserAction_predecessor_feature",
-                                "_UI_AbstractUserAction_type"),
-                        UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__PREDECESSOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AbstractUserAction_predecessor_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_AbstractUserAction_predecessor_feature",
+                        "_UI_AbstractUserAction_type"),
+                UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__PREDECESSOR, true, false, true, null, null, null));
     }
 
     /**

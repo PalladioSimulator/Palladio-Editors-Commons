@@ -66,21 +66,14 @@ public class PassiveResourceItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addResourceTimeoutFailureType__PassiveResourcePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_PassiveResource_resourceTimeoutFailureType__PassiveResource_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_PassiveResource_resourceTimeoutFailureType__PassiveResource_feature",
-                                "_UI_PassiveResource_type"),
-                        RepositoryPackage.Literals.PASSIVE_RESOURCE__RESOURCE_TIMEOUT_FAILURE_TYPE_PASSIVE_RESOURCE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_PassiveResource_resourceTimeoutFailureType__PassiveResource_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_PassiveResource_resourceTimeoutFailureType__PassiveResource_feature",
+                        "_UI_PassiveResource_type"),
+                RepositoryPackage.Literals.PASSIVE_RESOURCE__RESOURCE_TIMEOUT_FAILURE_TYPE_PASSIVE_RESOURCE, true,
+                false, true, null, null, null));
     }
 
     /**

@@ -75,21 +75,13 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addMTTRPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProcessingResourceSpecification_MTTR_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_MTTR_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__MTTR,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceSpecification_MTTR_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ProcessingResourceSpecification_MTTR_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__MTTR, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -99,21 +91,13 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addMTTFPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProcessingResourceSpecification_MTTF_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_MTTF_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__MTTF,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceSpecification_MTTF_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ProcessingResourceSpecification_MTTF_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__MTTF, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -123,21 +107,14 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addRequiredByContainerPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProcessingResourceSpecification_requiredByContainer_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_requiredByContainer_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__REQUIRED_BY_CONTAINER,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceSpecification_requiredByContainer_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProcessingResourceSpecification_requiredByContainer_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__REQUIRED_BY_CONTAINER, true,
+                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -147,21 +124,14 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addSchedulingPolicyPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProcessingResourceSpecification_schedulingPolicy_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_schedulingPolicy_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__SCHEDULING_POLICY,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceSpecification_schedulingPolicy_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProcessingResourceSpecification_schedulingPolicy_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__SCHEDULING_POLICY, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -171,22 +141,15 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addActiveResourceType_ActiveResourceSpecificationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ProcessingResourceSpecification_activeResourceType_ActiveResourceSpecification_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_activeResourceType_ActiveResourceSpecification_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__ACTIVE_RESOURCE_TYPE_ACTIVE_RESOURCE_SPECIFICATION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ProcessingResourceSpecification_activeResourceType_ActiveResourceSpecification_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProcessingResourceSpecification_activeResourceType_ActiveResourceSpecification_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__ACTIVE_RESOURCE_TYPE_ACTIVE_RESOURCE_SPECIFICATION,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -196,21 +159,14 @@ public class ProcessingResourceSpecificationItemProvider extends IdentifierItemP
      * @generated
      */
     protected void addNumberOfReplicasPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ProcessingResourceSpecification_numberOfReplicas_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ProcessingResourceSpecification_numberOfReplicas_feature",
-                                "_UI_ProcessingResourceSpecification_type"),
-                        ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__NUMBER_OF_REPLICAS,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ProcessingResourceSpecification_numberOfReplicas_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ProcessingResourceSpecification_numberOfReplicas_feature",
+                        "_UI_ProcessingResourceSpecification_type"),
+                ResourceenvironmentPackage.Literals.PROCESSING_RESOURCE_SPECIFICATION__NUMBER_OF_REPLICAS, true, false,
+                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**

@@ -140,9 +140,8 @@ public class ForkActionItemProvider extends AbstractInternalControlFlowActionIte
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        SeffPackage.Literals.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION,
+        newChildDescriptors.add(
+                this.createChildParameter(SeffPackage.Literals.FORK_ACTION__ASYNCHRONOUS_FORKED_BEHAVIOURS_FORK_ACTION,
                         SeffFactory.eINSTANCE.createForkedBehaviour()));
 
         newChildDescriptors

@@ -66,21 +66,13 @@ public class CompositeDataTypeItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addParentType_CompositeDataTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_CompositeDataType_parentType_CompositeDataType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_CompositeDataType_parentType_CompositeDataType_feature",
-                                "_UI_CompositeDataType_type"),
-                        RepositoryPackage.Literals.COMPOSITE_DATA_TYPE__PARENT_TYPE_COMPOSITE_DATA_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CompositeDataType_parentType_CompositeDataType_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompositeDataType_parentType_CompositeDataType_feature", "_UI_CompositeDataType_type"),
+                RepositoryPackage.Literals.COMPOSITE_DATA_TYPE__PARENT_TYPE_COMPOSITE_DATA_TYPE, true, false, true,
+                null, null, null));
     }
 
     /**

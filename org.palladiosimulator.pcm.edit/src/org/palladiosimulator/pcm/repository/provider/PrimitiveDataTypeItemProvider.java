@@ -65,20 +65,13 @@ public class PrimitiveDataTypeItemProvider extends DataTypeItemProvider {
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_PrimitiveDataType_type_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_PrimitiveDataType_type_feature",
-                                "_UI_PrimitiveDataType_type"),
-                        RepositoryPackage.Literals.PRIMITIVE_DATA_TYPE__TYPE,
-                        true,
-                        false,
-                        false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_PrimitiveDataType_type_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_PrimitiveDataType_type_feature",
+                        "_UI_PrimitiveDataType_type"),
+                RepositoryPackage.Literals.PRIMITIVE_DATA_TYPE__TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

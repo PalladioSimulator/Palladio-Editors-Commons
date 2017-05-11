@@ -73,21 +73,12 @@ public class UserDataItemProvider extends ItemProviderAdapter implements IEditin
      * @generated
      */
     protected void addAssemblyContext_userDataPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_UserData_assemblyContext_userData_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_UserData_assemblyContext_userData_feature",
-                                "_UI_UserData_type"),
-                        UsagemodelPackage.Literals.USER_DATA__ASSEMBLY_CONTEXT_USER_DATA,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_UserData_assemblyContext_userData_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_UserData_assemblyContext_userData_feature",
+                        "_UI_UserData_type"),
+                UsagemodelPackage.Literals.USER_DATA__ASSEMBLY_CONTEXT_USER_DATA, true, false, true, null, null, null));
     }
 
     /**
@@ -171,9 +162,8 @@ public class UserDataItemProvider extends ItemProviderAdapter implements IEditin
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors
-                .add(this.createChildParameter(
-                        UsagemodelPackage.Literals.USER_DATA__USER_DATA_PARAMETER_USAGES_USER_DATA,
+        newChildDescriptors.add(
+                this.createChildParameter(UsagemodelPackage.Literals.USER_DATA__USER_DATA_PARAMETER_USAGES_USER_DATA,
                         ParameterFactory.eINSTANCE.createVariableUsage()));
     }
 

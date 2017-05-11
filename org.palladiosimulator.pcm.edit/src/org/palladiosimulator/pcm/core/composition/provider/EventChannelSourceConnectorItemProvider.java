@@ -64,21 +64,14 @@ public class EventChannelSourceConnectorItemProvider extends ConnectorItemProvid
      * @generated
      */
     protected void addSourceRole__EventChannelSourceRolePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_EventChannelSourceConnector_sourceRole__EventChannelSourceRole_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSourceConnector_sourceRole__EventChannelSourceRole_feature",
-                                "_UI_EventChannelSourceConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__SOURCE_ROLE_EVENT_CHANNEL_SOURCE_ROLE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSourceConnector_sourceRole__EventChannelSourceRole_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSourceConnector_sourceRole__EventChannelSourceRole_feature",
+                        "_UI_EventChannelSourceConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__SOURCE_ROLE_EVENT_CHANNEL_SOURCE_ROLE, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -88,22 +81,14 @@ public class EventChannelSourceConnectorItemProvider extends ConnectorItemProvid
      * @generated
      */
     protected void addAssemblyContext__EventChannelSourceConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_EventChannelSourceConnector_assemblyContext__EventChannelSourceConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSourceConnector_assemblyContext__EventChannelSourceConnector_feature",
-                                "_UI_EventChannelSourceConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__ASSEMBLY_CONTEXT_EVENT_CHANNEL_SOURCE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSourceConnector_assemblyContext__EventChannelSourceConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSourceConnector_assemblyContext__EventChannelSourceConnector_feature",
+                        "_UI_EventChannelSourceConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__ASSEMBLY_CONTEXT_EVENT_CHANNEL_SOURCE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**
@@ -113,22 +98,14 @@ public class EventChannelSourceConnectorItemProvider extends ConnectorItemProvid
      * @generated
      */
     protected void addEventChannel__EventChannelSourceConnectorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_EventChannelSourceConnector_eventChannel__EventChannelSourceConnector_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_EventChannelSourceConnector_eventChannel__EventChannelSourceConnector_feature",
-                                "_UI_EventChannelSourceConnector_type"),
-                        CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__EVENT_CHANNEL_EVENT_CHANNEL_SOURCE_CONNECTOR,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_EventChannelSourceConnector_eventChannel__EventChannelSourceConnector_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_EventChannelSourceConnector_eventChannel__EventChannelSourceConnector_feature",
+                        "_UI_EventChannelSourceConnector_type"),
+                CompositionPackage.Literals.EVENT_CHANNEL_SOURCE_CONNECTOR__EVENT_CHANNEL_EVENT_CHANNEL_SOURCE_CONNECTOR,
+                true, false, true, null, null, null));
     }
 
     /**

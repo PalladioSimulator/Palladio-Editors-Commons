@@ -65,20 +65,12 @@ public class SignatureItemProvider extends EntityItemProvider {
      * @generated
      */
     protected void addFailureTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_Signature_failureType_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_Signature_failureType_feature",
-                                "_UI_Signature_type"),
-                        RepositoryPackage.Literals.SIGNATURE__FAILURE_TYPE,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Signature_failureType_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Signature_failureType_feature",
+                        "_UI_Signature_type"),
+                RepositoryPackage.Literals.SIGNATURE__FAILURE_TYPE, true, false, true, null, null, null));
     }
 
     /**

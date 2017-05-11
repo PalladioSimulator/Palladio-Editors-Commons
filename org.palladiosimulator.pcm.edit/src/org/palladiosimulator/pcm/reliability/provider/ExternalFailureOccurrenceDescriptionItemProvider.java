@@ -62,22 +62,15 @@ public class ExternalFailureOccurrenceDescriptionItemProvider extends FailureOcc
      * @generated
      */
     protected void addFailureType__ExternalFailureOccurrenceDescriptionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-                .add(this.createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString(
-                                "_UI_ExternalFailureOccurrenceDescription_failureType__ExternalFailureOccurrenceDescription_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ExternalFailureOccurrenceDescription_failureType__ExternalFailureOccurrenceDescription_feature",
-                                "_UI_ExternalFailureOccurrenceDescription_type"),
-                        ReliabilityPackage.Literals.EXTERNAL_FAILURE_OCCURRENCE_DESCRIPTION__FAILURE_TYPE_EXTERNAL_FAILURE_OCCURRENCE_DESCRIPTION,
-                        true,
-                        false,
-                        true,
-                        null,
-                        null,
-                        null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString(
+                        "_UI_ExternalFailureOccurrenceDescription_failureType__ExternalFailureOccurrenceDescription_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_ExternalFailureOccurrenceDescription_failureType__ExternalFailureOccurrenceDescription_feature",
+                        "_UI_ExternalFailureOccurrenceDescription_type"),
+                ReliabilityPackage.Literals.EXTERNAL_FAILURE_OCCURRENCE_DESCRIPTION__FAILURE_TYPE_EXTERNAL_FAILURE_OCCURRENCE_DESCRIPTION,
+                true, false, true, null, null, null));
     }
 
     /**
