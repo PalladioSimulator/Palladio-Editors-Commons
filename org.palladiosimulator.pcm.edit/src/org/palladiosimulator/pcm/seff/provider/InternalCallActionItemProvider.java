@@ -19,14 +19,14 @@ import org.palladiosimulator.pcm.seff.seff_performance.SeffPerformanceFactory;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.InternalCallAction}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class InternalCallActionItemProvider extends CallActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -34,7 +34,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public InternalCallActionItemProvider(final AdapterFactory adapterFactory) {
@@ -44,7 +44,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -93,7 +93,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
     /**
      * This adds a property descriptor for the Called Resource Demanding Internal Behaviour feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addCalledResourceDemandingInternalBehaviourPropertyDescriptor(final Object object) {
@@ -131,7 +131,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
 
     /**
      * This returns InternalCallAction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -169,7 +169,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -189,7 +189,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -21,14 +21,14 @@ import org.palladiosimulator.pcm.seff.seff_reliability.SeffReliabilityPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.seff.ExternalCallAction}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -36,7 +36,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ExternalCallActionItemProvider(final AdapterFactory adapterFactory) {
@@ -46,7 +46,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -98,7 +98,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
     /**
      * This adds a property descriptor for the Role External Service feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRole_ExternalServicePropertyDescriptor(final Object object) {
@@ -113,7 +113,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
     /**
      * This adds a property descriptor for the Retry Count feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRetryCountPropertyDescriptor(final Object object) {
@@ -148,7 +148,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -161,7 +161,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
 
     /**
      * This returns ExternalCallAction.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -186,7 +186,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -208,7 +208,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

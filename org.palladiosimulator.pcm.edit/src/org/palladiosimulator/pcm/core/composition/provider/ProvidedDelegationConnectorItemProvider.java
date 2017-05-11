@@ -24,7 +24,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -32,7 +32,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ProvidedDelegationConnectorItemProvider(final AdapterFactory adapterFactory) {
@@ -42,7 +42,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -60,7 +60,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This adds a property descriptor for the Inner Provided Role Provided Delegation Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addInnerProvidedRole_ProvidedDelegationConnectorPropertyDescriptor(final Object object) {
@@ -77,7 +77,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This adds a property descriptor for the Outer Provided Role Provided Delegation Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addOuterProvidedRole_ProvidedDelegationConnectorPropertyDescriptor(final Object object) {
@@ -94,7 +94,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This adds a property descriptor for the Assembly Context Provided Delegation Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addAssemblyContext_ProvidedDelegationConnectorPropertyDescriptor(final Object object) {
@@ -110,7 +110,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
 
     /**
      * This returns ProvidedDelegationConnector.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -147,7 +147,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

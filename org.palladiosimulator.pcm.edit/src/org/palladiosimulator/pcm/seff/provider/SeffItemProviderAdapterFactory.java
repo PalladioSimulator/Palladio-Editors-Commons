@@ -35,7 +35,7 @@ import org.palladiosimulator.pcm.seff.util.SeffAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
@@ -43,7 +43,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -66,7 +66,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public SeffItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.StopAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StopActionItemProvider stopActionItemProvider;
@@ -130,7 +130,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.BranchAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected BranchActionItemProvider branchActionItemProvider;
@@ -170,7 +170,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.StartAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StartActionItemProvider startActionItemProvider;
@@ -194,7 +194,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ResourceDemandingSEFF} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ResourceDemandingSEFFItemProvider resourceDemandingSEFFItemProvider;
@@ -202,7 +202,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.ResourceDemandingSEFF}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -244,7 +244,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ReleaseAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ReleaseActionItemProvider releaseActionItemProvider;
@@ -268,7 +268,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.LoopAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected LoopActionItemProvider loopActionItemProvider;
@@ -292,7 +292,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ForkAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ForkActionItemProvider forkActionItemProvider;
@@ -316,7 +316,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ForkedBehaviour} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ForkedBehaviourItemProvider forkedBehaviourItemProvider;
@@ -340,7 +340,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.SynchronisationPoint} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SynchronisationPointItemProvider synchronisationPointItemProvider;
@@ -348,7 +348,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.SynchronisationPoint}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -364,7 +364,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.ExternalCallAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExternalCallActionItemProvider externalCallActionItemProvider;
@@ -388,7 +388,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.CallReturnAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected CallReturnActionItemProvider callReturnActionItemProvider;
@@ -421,7 +421,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.seff.ProbabilisticBranchTransition}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -437,7 +437,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.AcquireAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected AcquireActionItemProvider acquireActionItemProvider;
@@ -470,7 +470,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.seff.CollectionIteratorAction}. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -486,7 +486,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.GuardedBranchTransition} instances. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected GuardedBranchTransitionItemProvider guardedBranchTransitionItemProvider;
@@ -494,7 +494,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This creates an adapter for a {@link org.palladiosimulator.pcm.seff.GuardedBranchTransition}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -510,7 +510,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.SetVariableAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SetVariableActionItemProvider setVariableActionItemProvider;
@@ -534,7 +534,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.InternalCallAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected InternalCallActionItemProvider internalCallActionItemProvider;
@@ -558,7 +558,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.EmitEventAction} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EmitEventActionItemProvider emitEventActionItemProvider;
@@ -582,7 +582,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.seff.InternalAction} instances. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected InternalActionItemProvider internalActionItemProvider;
@@ -605,7 +605,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -616,7 +616,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -626,7 +626,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -647,7 +647,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -664,7 +664,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -673,7 +673,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -683,7 +683,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -693,7 +693,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -703,7 +703,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -729,7 +729,7 @@ public class SeffItemProviderAdapterFactory extends SeffAdapterFactory
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -35,7 +35,7 @@ import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class CompositionItemProviderAdapterFactory extends CompositionAdapterFactory
@@ -43,7 +43,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -66,7 +66,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public CompositionItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ResourceRequiredDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ResourceRequiredDelegationConnectorItemProvider resourceRequiredDelegationConnectorItemProvider;
@@ -132,7 +132,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.EventChannel}. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.EventChannelSourceConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EventChannelSourceConnectorItemProvider eventChannelSourceConnectorItemProvider;
@@ -198,7 +198,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedDelegationConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ProvidedDelegationConnectorItemProvider providedDelegationConnectorItemProvider;
@@ -223,7 +223,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredDelegationConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected RequiredDelegationConnectorItemProvider requiredDelegationConnectorItemProvider;
@@ -257,7 +257,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyConnector}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -348,7 +348,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyInfrastructureConnector} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected AssemblyInfrastructureConnectorItemProvider assemblyInfrastructureConnectorItemProvider;
@@ -373,7 +373,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ProvidedInfrastructureDelegationConnectorItemProvider providedInfrastructureDelegationConnectorItemProvider;
@@ -382,7 +382,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegationConnector}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -399,7 +399,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredInfrastructureDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected RequiredInfrastructureDelegationConnectorItemProvider requiredInfrastructureDelegationConnectorItemProvider;
@@ -408,7 +408,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.RequiredInfrastructureDelegationConnector}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -425,7 +425,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.core.composition.RequiredResourceDelegationConnector}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected RequiredResourceDelegationConnectorItemProvider requiredResourceDelegationConnectorItemProvider;
@@ -460,7 +460,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.core.composition.AssemblyContext}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -475,7 +475,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -486,7 +486,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -496,7 +496,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -517,7 +517,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -534,7 +534,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -543,7 +543,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -553,7 +553,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -563,7 +563,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -573,7 +573,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -599,7 +599,7 @@ public class CompositionItemProviderAdapterFactory extends CompositionAdapterFac
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

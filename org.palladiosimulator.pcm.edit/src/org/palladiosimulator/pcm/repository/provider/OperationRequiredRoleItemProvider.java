@@ -17,14 +17,14 @@ import org.palladiosimulator.pcm.repository.RepositoryPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.repository.OperationRequiredRole} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -32,7 +32,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public OperationRequiredRoleItemProvider(final AdapterFactory adapterFactory) {
@@ -42,7 +42,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -58,7 +58,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
     /**
      * This adds a property descriptor for the Required Interface Operation Required Role feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRequiredInterface__OperationRequiredRolePropertyDescriptor(final Object object) {
@@ -74,7 +74,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
 
     /**
      * This returns OperationRequiredRole.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -99,7 +99,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

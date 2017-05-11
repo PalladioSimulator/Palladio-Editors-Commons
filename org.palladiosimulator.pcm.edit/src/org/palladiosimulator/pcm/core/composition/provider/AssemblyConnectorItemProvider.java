@@ -17,14 +17,14 @@ import org.palladiosimulator.pcm.core.composition.CompositionPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.composition.AssemblyConnector} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -32,7 +32,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public AssemblyConnectorItemProvider(final AdapterFactory adapterFactory) {
@@ -42,7 +42,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
     /**
      * This adds a property descriptor for the Requiring Assembly Context Assembly Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRequiringAssemblyContext_AssemblyConnectorPropertyDescriptor(final Object object) {
@@ -78,7 +78,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
     /**
      * This adds a property descriptor for the Providing Assembly Context Assembly Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addProvidingAssemblyContext_AssemblyConnectorPropertyDescriptor(final Object object) {
@@ -126,7 +126,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
 
     /**
      * This returns AssemblyConnector.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -151,7 +151,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -163,7 +163,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

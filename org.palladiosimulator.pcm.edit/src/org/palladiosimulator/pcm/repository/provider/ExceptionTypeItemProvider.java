@@ -27,7 +27,7 @@ import org.palladiosimulator.pcm.repository.RepositoryPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.repository.ExceptionType} object. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -35,7 +35,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -43,7 +43,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ExceptionTypeItemProvider(final AdapterFactory adapterFactory) {
@@ -53,7 +53,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -70,7 +70,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * This adds a property descriptor for the Exception Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addExceptionNamePropertyDescriptor(final Object object) {
@@ -86,7 +86,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * This adds a property descriptor for the Exception Message feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addExceptionMessagePropertyDescriptor(final Object object) {
@@ -101,7 +101,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
 
     /**
      * This returns ExceptionType.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -156,7 +156,7 @@ public class ExceptionTypeItemProvider extends ItemProviderAdapter implements IE
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

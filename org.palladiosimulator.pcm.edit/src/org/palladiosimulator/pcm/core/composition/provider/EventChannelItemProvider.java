@@ -18,14 +18,14 @@ import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.composition.EventChannel} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class EventChannelItemProvider extends EntityItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -33,7 +33,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public EventChannelItemProvider(final AdapterFactory adapterFactory) {
@@ -43,7 +43,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -77,7 +77,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This adds a property descriptor for the Event Channel Source Connector Event Channel feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addEventChannelSourceConnector__EventChannelPropertyDescriptor(final Object object) {
@@ -93,7 +93,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This adds a property descriptor for the Event Channel Sink Connector Event Channel feature.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addEventChannelSinkConnector__EventChannelPropertyDescriptor(final Object object) {
@@ -108,7 +108,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
 
     /**
      * This returns EventChannel.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,7 +145,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

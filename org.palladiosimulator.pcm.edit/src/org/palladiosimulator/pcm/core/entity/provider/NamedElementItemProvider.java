@@ -27,7 +27,7 @@ import org.palladiosimulator.pcm.core.entity.NamedElement;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.entity.NamedElement} object. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class NamedElementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -35,7 +35,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -43,7 +43,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NamedElementItemProvider(final AdapterFactory adapterFactory) {
@@ -53,7 +53,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -69,7 +69,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds a property descriptor for the Entity Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addEntityNamePropertyDescriptor(final Object object) {
@@ -99,7 +99,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -117,7 +117,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -128,7 +128,7 @@ public class NamedElementItemProvider extends ItemProviderAdapter implements IEd
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

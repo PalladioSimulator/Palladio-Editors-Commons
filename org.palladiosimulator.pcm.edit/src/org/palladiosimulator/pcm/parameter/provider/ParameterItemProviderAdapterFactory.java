@@ -35,7 +35,7 @@ import org.palladiosimulator.pcm.parameter.util.ParameterAdapterFactory;
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
@@ -43,7 +43,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -66,7 +66,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ParameterItemProviderAdapterFactory() {
@@ -97,7 +97,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.pcm.parameter.VariableUsage} instances. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariableUsageItemProvider variableUsageItemProvider;
@@ -130,7 +130,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.parameter.VariableCharacterisation}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.parameter.CharacterisedVariable}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -181,7 +181,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -191,7 +191,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -212,7 +212,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -229,7 +229,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -238,7 +238,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -248,7 +248,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -258,7 +258,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -268,7 +268,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -294,7 +294,7 @@ public class ParameterItemProviderAdapterFactory extends ParameterAdapterFactory
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -29,7 +29,7 @@ import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.usagemodel.BranchTransition} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class BranchTransitionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -37,7 +37,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -45,7 +45,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public BranchTransitionItemProvider(final AdapterFactory adapterFactory) {
@@ -55,7 +55,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -71,7 +71,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     /**
      * This adds a property descriptor for the Branch Probability feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addBranchProbabilityPropertyDescriptor(final Object object) {
@@ -105,7 +105,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
 
     /**
      * This returns BranchTransition.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -142,7 +142,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -163,7 +163,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -178,7 +178,7 @@ public class BranchTransitionItemProvider extends ItemProviderAdapter implements
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

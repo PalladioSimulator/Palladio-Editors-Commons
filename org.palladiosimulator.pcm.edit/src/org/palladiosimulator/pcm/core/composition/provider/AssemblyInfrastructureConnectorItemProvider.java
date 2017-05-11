@@ -24,7 +24,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -32,7 +32,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public AssemblyInfrastructureConnectorItemProvider(final AdapterFactory adapterFactory) {
@@ -42,7 +42,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This adds a property descriptor for the Provided Role Assembly Infrastructure Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addProvidedRole__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
@@ -79,7 +79,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This adds a property descriptor for the Required Role Assembly Infrastructure Connector
      * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRequiredRole__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
@@ -97,7 +97,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This adds a property descriptor for the Providing Assembly Context Assembly Infrastructure
      * Connector feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addProvidingAssemblyContext__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
@@ -115,7 +115,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This adds a property descriptor for the Requiring Assembly Context Assembly Infrastructure
      * Connector feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRequiringAssemblyContext__AssemblyInfrastructureConnectorPropertyDescriptor(final Object object) {
@@ -159,7 +159,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

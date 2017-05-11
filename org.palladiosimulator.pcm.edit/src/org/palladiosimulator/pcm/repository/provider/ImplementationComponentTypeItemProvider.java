@@ -28,7 +28,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -36,7 +36,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ImplementationComponentTypeItemProvider(final AdapterFactory adapterFactory) {
@@ -46,7 +46,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -80,7 +80,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
     /**
      * This adds a property descriptor for the Component Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addComponentTypePropertyDescriptor(final Object object) {
@@ -115,7 +115,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -143,7 +143,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -164,7 +164,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -17,14 +17,14 @@ import org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegati
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.core.composition.ProvidedInfrastructureDelegationConnector}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ProvidedInfrastructureDelegationConnectorItemProvider extends DelegationConnectorItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -32,7 +32,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ProvidedInfrastructureDelegationConnectorItemProvider(final AdapterFactory adapterFactory) {
@@ -42,7 +42,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -60,7 +60,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This adds a property descriptor for the Inner Provided Role Provided Infrastructure
      * Delegation Connector feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addInnerProvidedRole__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
@@ -79,7 +79,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This adds a property descriptor for the Outer Provided Role Provided Infrastructure
      * Delegation Connector feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addOuterProvidedRole__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
@@ -98,7 +98,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This adds a property descriptor for the Assembly Context Provided Infrastructure Delegation
      * Connector feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addAssemblyContext__ProvidedInfrastructureDelegationConnectorPropertyDescriptor(
@@ -117,7 +117,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This returns ProvidedInfrastructureDelegationConnector.gif. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -144,7 +144,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -156,7 +156,7 @@ public class ProvidedInfrastructureDelegationConnectorItemProvider extends Deleg
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

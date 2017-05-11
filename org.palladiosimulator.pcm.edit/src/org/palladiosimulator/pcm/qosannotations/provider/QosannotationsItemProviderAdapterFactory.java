@@ -35,7 +35,7 @@ import org.palladiosimulator.pcm.qosannotations.util.QosannotationsAdapterFactor
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdapterFactory
@@ -43,7 +43,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -66,7 +66,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * This helps manage the child creation extenders. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
@@ -75,14 +75,14 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public QosannotationsItemProviderAdapterFactory() {
@@ -106,7 +106,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
      * This creates an adapter for a
      * {@link org.palladiosimulator.pcm.qosannotations.QoSAnnotations}. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -121,7 +121,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -132,7 +132,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -142,7 +142,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -163,7 +163,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -180,7 +180,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public List<IChildCreationExtender> getChildCreationExtenders() {
@@ -189,7 +189,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -199,7 +199,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -209,7 +209,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -219,7 +219,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -245,7 +245,7 @@ public class QosannotationsItemProviderAdapterFactory extends QosannotationsAdap
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

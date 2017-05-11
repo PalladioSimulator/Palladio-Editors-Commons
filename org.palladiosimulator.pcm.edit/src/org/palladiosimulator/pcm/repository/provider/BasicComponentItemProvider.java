@@ -20,14 +20,14 @@ import org.palladiosimulator.pcm.seff.SeffFactory;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.pcm.repository.BasicComponent} object. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class BasicComponentItemProvider extends ImplementationComponentTypeItemProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -35,7 +35,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public BasicComponentItemProvider(final AdapterFactory adapterFactory) {
@@ -45,7 +45,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +79,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -92,7 +92,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
 
     /**
      * This returns BasicComponent.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -139,7 +139,7 @@ public class BasicComponentItemProvider extends ImplementationComponentTypeItemP
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

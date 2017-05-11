@@ -26,7 +26,7 @@ import org.palladiosimulator.pcm.repository.RepositoryPackage;
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.repository.Parameter}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ParameterItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -34,7 +34,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
@@ -42,7 +42,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ParameterItemProvider(final AdapterFactory adapterFactory) {
@@ -52,7 +52,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -70,7 +70,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds a property descriptor for the Data Type Parameter feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addDataType__ParameterPropertyDescriptor(final Object object) {
@@ -85,7 +85,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds a property descriptor for the Parameter Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addParameterNamePropertyDescriptor(final Object object) {
@@ -101,7 +101,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds a property descriptor for the Modifier Parameter feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addModifier__ParameterPropertyDescriptor(final Object object) {
@@ -116,7 +116,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
 
     /**
      * This returns Parameter.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to
      * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public class ParameterItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
