@@ -104,7 +104,7 @@ public class BranchItemProvider extends AbstractUserActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Branch) object).getId();
+        final String label = ((Branch) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Branch_type")
                 : this.getString("_UI_Branch_type") + " " + label;
     }

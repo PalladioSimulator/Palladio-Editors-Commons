@@ -59,7 +59,7 @@ public class RequiredRoleItemProvider extends RoleItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((RequiredRole) object).getId();
+        final String label = ((RequiredRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_RequiredRole_type")
                 : this.getString("_UI_RequiredRole_type") + " " + label;
     }

@@ -145,7 +145,7 @@ public class CompositeComponentItemProvider extends ComposedProvidingRequiringEn
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((CompositeComponent) object).getId();
+        final String label = ((CompositeComponent) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_CompositeComponent_type")
                 : this.getString("_UI_CompositeComponent_type") + " " + label;
     }

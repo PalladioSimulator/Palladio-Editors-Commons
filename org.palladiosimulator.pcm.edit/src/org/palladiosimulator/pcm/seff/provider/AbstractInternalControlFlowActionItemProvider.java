@@ -99,7 +99,7 @@ public class AbstractInternalControlFlowActionItemProvider extends AbstractActio
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AbstractInternalControlFlowAction) object).getId();
+        final String label = ((AbstractInternalControlFlowAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AbstractInternalControlFlowAction_type")
                 : this.getString("_UI_AbstractInternalControlFlowAction_type") + " " + label;
     }

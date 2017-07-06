@@ -87,7 +87,7 @@ public class SourceRoleItemProvider extends RequiredRoleItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SourceRole) object).getId();
+        final String label = ((SourceRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_SourceRole_type")
                 : this.getString("_UI_SourceRole_type") + " " + label;
     }

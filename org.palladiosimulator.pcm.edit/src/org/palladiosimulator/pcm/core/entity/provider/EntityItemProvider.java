@@ -84,7 +84,7 @@ public class EntityItemProvider extends IdentifierItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Entity) object).getId();
+        final String label = ((Entity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Entity_type")
                 : this.getString("_UI_Entity_type") + " " + label;
     }

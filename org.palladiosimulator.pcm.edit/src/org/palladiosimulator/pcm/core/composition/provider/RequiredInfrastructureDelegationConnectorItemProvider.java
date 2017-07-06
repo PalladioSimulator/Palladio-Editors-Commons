@@ -134,7 +134,7 @@ public class RequiredInfrastructureDelegationConnectorItemProvider extends Deleg
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((RequiredInfrastructureDelegationConnector) object).getId();
+        final String label = ((RequiredInfrastructureDelegationConnector) object).getEntityName();
         return label == null || label.length() == 0
                 ? this.getString("_UI_RequiredInfrastructureDelegationConnector_type")
                 : this.getString("_UI_RequiredInfrastructureDelegationConnector_type") + " " + label;

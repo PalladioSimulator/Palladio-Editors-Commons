@@ -99,7 +99,7 @@ public class InterfaceProvidingRequiringEntityItemProvider extends InterfaceProv
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InterfaceProvidingRequiringEntity) object).getId();
+        final String label = ((InterfaceProvidingRequiringEntity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InterfaceProvidingRequiringEntity_type")
                 : this.getString("_UI_InterfaceProvidingRequiringEntity_type") + " " + label;
     }

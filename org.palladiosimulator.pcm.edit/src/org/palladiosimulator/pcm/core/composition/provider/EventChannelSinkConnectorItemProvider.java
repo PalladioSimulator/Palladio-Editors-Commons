@@ -161,7 +161,7 @@ public class EventChannelSinkConnectorItemProvider extends ConnectorItemProvider
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((EventChannelSinkConnector) object).getId();
+        final String label = ((EventChannelSinkConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_EventChannelSinkConnector_type")
                 : this.getString("_UI_EventChannelSinkConnector_type") + " " + label;
     }

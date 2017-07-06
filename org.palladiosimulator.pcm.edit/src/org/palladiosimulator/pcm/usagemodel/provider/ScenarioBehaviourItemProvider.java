@@ -106,7 +106,7 @@ public class ScenarioBehaviourItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ScenarioBehaviour) object).getId();
+        final String label = ((ScenarioBehaviour) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ScenarioBehaviour_type")
                 : this.getString("_UI_ScenarioBehaviour_type") + " " + label;
     }

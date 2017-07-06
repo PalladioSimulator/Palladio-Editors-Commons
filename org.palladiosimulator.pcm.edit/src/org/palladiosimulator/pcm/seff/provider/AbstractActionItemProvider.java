@@ -95,7 +95,7 @@ public class AbstractActionItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AbstractAction) object).getId();
+        final String label = ((AbstractAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AbstractAction_type")
                 : this.getString("_UI_AbstractAction_type") + " " + label;
     }

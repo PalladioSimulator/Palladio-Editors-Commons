@@ -139,7 +139,7 @@ public class EmitEventActionItemProvider extends AbstractActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((EmitEventAction) object).getId();
+        final String label = ((EmitEventAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_EmitEventAction_type")
                 : this.getString("_UI_EmitEventAction_type") + " " + label;
     }

@@ -123,7 +123,7 @@ public class OperationSignatureItemProvider extends SignatureItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((OperationSignature) object).getId();
+        final String label = ((OperationSignature) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_OperationSignature_type")
                 : this.getString("_UI_OperationSignature_type") + " " + label;
     }

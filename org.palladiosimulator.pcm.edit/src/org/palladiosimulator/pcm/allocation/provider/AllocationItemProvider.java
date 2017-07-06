@@ -139,7 +139,7 @@ public class AllocationItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Allocation) object).getId();
+        final String label = ((Allocation) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Allocation_type")
                 : this.getString("_UI_Allocation_type") + " " + label;
     }

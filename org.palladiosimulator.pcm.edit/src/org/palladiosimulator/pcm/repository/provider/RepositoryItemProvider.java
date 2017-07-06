@@ -129,7 +129,7 @@ public class RepositoryItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Repository) object).getId();
+        final String label = ((Repository) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Repository_type")
                 : this.getString("_UI_Repository_type") + " " + label;
     }

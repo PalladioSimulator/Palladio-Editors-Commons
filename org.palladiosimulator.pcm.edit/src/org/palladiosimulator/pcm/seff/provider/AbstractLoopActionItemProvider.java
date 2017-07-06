@@ -95,7 +95,7 @@ public class AbstractLoopActionItemProvider extends AbstractInternalControlFlowA
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AbstractLoopAction) object).getId();
+        final String label = ((AbstractLoopAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AbstractLoopAction_type")
                 : this.getString("_UI_AbstractLoopAction_type") + " " + label;
     }

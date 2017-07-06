@@ -105,7 +105,7 @@ public class SetVariableActionItemProvider extends AbstractInternalControlFlowAc
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SetVariableAction) object).getId();
+        final String label = ((SetVariableAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_SetVariableAction_type")
                 : this.getString("_UI_SetVariableAction_type") + " " + label;
     }

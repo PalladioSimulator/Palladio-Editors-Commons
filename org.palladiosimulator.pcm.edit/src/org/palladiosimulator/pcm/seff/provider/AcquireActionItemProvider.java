@@ -124,7 +124,7 @@ public class AcquireActionItemProvider extends AbstractInternalControlFlowAction
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AcquireAction) object).getId();
+        final String label = ((AcquireAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AcquireAction_type")
                 : this.getString("_UI_AcquireAction_type") + " " + label;
     }

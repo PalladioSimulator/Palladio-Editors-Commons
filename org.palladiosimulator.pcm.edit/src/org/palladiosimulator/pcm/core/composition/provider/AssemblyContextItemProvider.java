@@ -126,7 +126,7 @@ public class AssemblyContextItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AssemblyContext) object).getId();
+        final String label = ((AssemblyContext) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AssemblyContext_type")
                 : this.getString("_UI_AssemblyContext_type") + " " + label;
     }

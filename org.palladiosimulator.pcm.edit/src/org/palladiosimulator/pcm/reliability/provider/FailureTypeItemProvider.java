@@ -60,7 +60,7 @@ public class FailureTypeItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((FailureType) object).getId();
+        final String label = ((FailureType) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_FailureType_type")
                 : this.getString("_UI_FailureType_type") + " " + label;
     }

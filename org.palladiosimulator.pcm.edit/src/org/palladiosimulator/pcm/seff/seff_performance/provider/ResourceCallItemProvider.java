@@ -141,7 +141,7 @@ public class ResourceCallItemProvider extends CallActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceCall) object).getId();
+        final String label = ((ResourceCall) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ResourceCall_type")
                 : this.getString("_UI_ResourceCall_type") + " " + label;
     }

@@ -121,7 +121,7 @@ public class SystemItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((org.palladiosimulator.pcm.system.System) object).getId();
+        final String label = ((org.palladiosimulator.pcm.system.System) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_System_type")
                 : this.getString("_UI_System_type") + " " + label;
     }

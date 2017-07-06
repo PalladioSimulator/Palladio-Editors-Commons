@@ -126,7 +126,7 @@ public class EventChannelSourceConnectorItemProvider extends ConnectorItemProvid
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((EventChannelSourceConnector) object).getId();
+        final String label = ((EventChannelSourceConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_EventChannelSourceConnector_type")
                 : this.getString("_UI_EventChannelSourceConnector_type") + " " + label;
     }

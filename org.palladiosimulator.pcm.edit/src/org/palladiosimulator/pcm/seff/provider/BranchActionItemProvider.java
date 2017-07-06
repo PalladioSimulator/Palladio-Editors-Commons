@@ -104,7 +104,7 @@ public class BranchActionItemProvider extends AbstractInternalControlFlowActionI
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((BranchAction) object).getId();
+        final String label = ((BranchAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_BranchAction_type")
                 : this.getString("_UI_BranchAction_type") + " " + label;
     }

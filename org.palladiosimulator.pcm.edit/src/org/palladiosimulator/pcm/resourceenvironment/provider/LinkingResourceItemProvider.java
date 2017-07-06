@@ -126,7 +126,7 @@ public class LinkingResourceItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((LinkingResource) object).getId();
+        final String label = ((LinkingResource) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_LinkingResource_type")
                 : this.getString("_UI_LinkingResource_type") + " " + label;
     }

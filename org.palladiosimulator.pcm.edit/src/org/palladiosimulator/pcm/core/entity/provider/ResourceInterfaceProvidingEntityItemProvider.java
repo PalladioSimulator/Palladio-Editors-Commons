@@ -108,7 +108,7 @@ public class ResourceInterfaceProvidingEntityItemProvider extends EntityItemProv
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceInterfaceProvidingEntity) object).getId();
+        final String label = ((ResourceInterfaceProvidingEntity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ResourceInterfaceProvidingEntity_type")
                 : this.getString("_UI_ResourceInterfaceProvidingEntity_type") + " " + label;
     }

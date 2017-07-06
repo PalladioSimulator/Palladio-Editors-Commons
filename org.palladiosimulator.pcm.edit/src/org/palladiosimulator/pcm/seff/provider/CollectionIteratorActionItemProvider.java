@@ -90,7 +90,7 @@ public class CollectionIteratorActionItemProvider extends AbstractLoopActionItem
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((CollectionIteratorAction) object).getId();
+        final String label = ((CollectionIteratorAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_CollectionIteratorAction_type")
                 : this.getString("_UI_CollectionIteratorAction_type") + " " + label;
     }

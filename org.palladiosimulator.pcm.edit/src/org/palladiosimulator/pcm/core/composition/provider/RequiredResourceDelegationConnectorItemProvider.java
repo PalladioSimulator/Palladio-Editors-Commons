@@ -131,7 +131,7 @@ public class RequiredResourceDelegationConnectorItemProvider extends DelegationC
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((RequiredResourceDelegationConnector) object).getId();
+        final String label = ((RequiredResourceDelegationConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_RequiredResourceDelegationConnector_type")
                 : this.getString("_UI_RequiredResourceDelegationConnector_type") + " " + label;
     }

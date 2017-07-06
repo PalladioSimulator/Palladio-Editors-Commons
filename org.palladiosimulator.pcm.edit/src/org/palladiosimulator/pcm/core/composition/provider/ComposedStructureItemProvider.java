@@ -101,7 +101,7 @@ public class ComposedStructureItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ComposedStructure) object).getId();
+        final String label = ((ComposedStructure) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ComposedStructure_type")
                 : this.getString("_UI_ComposedStructure_type") + " " + label;
     }

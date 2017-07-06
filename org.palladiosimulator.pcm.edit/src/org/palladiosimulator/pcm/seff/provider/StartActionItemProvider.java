@@ -69,7 +69,7 @@ public class StartActionItemProvider extends AbstractInternalControlFlowActionIt
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((StartAction) object).getId();
+        final String label = ((StartAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_StartAction_type")
                 : this.getString("_UI_StartAction_type") + " " + label;
     }

@@ -90,7 +90,7 @@ public class OperationRequiredRoleItemProvider extends RequiredRoleItemProvider 
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((OperationRequiredRole) object).getId();
+        final String label = ((OperationRequiredRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_OperationRequiredRole_type")
                 : this.getString("_UI_OperationRequiredRole_type") + " " + label;
     }

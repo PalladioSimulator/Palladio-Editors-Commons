@@ -134,7 +134,7 @@ public class ImplementationComponentTypeItemProvider extends RepositoryComponent
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ImplementationComponentType) object).getId();
+        final String label = ((ImplementationComponentType) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ImplementationComponentType_type")
                 : this.getString("_UI_ImplementationComponentType_type") + " " + label;
     }

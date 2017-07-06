@@ -125,7 +125,7 @@ public class CompositeDataTypeItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((CompositeDataType) object).getId();
+        final String label = ((CompositeDataType) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_CompositeDataType_type")
                 : this.getString("_UI_CompositeDataType_type") + " " + label;
     }

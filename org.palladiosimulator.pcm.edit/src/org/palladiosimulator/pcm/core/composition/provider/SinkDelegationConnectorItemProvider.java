@@ -126,7 +126,7 @@ public class SinkDelegationConnectorItemProvider extends DelegationConnectorItem
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SinkDelegationConnector) object).getId();
+        final String label = ((SinkDelegationConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_SinkDelegationConnector_type")
                 : this.getString("_UI_SinkDelegationConnector_type") + " " + label;
     }

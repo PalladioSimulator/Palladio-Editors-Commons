@@ -69,7 +69,7 @@ public class StartItemProvider extends AbstractUserActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Start) object).getId();
+        final String label = ((Start) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Start_type")
                 : this.getString("_UI_Start_type") + " " + label;
     }

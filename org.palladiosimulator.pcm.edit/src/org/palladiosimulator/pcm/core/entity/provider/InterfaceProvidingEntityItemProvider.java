@@ -96,7 +96,7 @@ public class InterfaceProvidingEntityItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InterfaceProvidingEntity) object).getId();
+        final String label = ((InterfaceProvidingEntity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InterfaceProvidingEntity_type")
                 : this.getString("_UI_InterfaceProvidingEntity_type") + " " + label;
     }

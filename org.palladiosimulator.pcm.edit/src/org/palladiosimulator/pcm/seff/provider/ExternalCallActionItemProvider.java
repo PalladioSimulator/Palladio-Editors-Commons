@@ -177,7 +177,7 @@ public class ExternalCallActionItemProvider extends AbstractActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ExternalCallAction) object).getId();
+        final String label = ((ExternalCallAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ExternalCallAction_type")
                 : this.getString("_UI_ExternalCallAction_type") + " " + label;
     }

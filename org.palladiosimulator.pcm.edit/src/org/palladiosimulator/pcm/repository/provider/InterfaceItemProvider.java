@@ -114,7 +114,7 @@ public class InterfaceItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Interface) object).getId();
+        final String label = ((Interface) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Interface_type")
                 : this.getString("_UI_Interface_type") + " " + label;
     }

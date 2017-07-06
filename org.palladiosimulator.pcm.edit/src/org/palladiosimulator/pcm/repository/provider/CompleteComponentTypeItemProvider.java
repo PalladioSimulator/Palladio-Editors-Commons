@@ -90,7 +90,7 @@ public class CompleteComponentTypeItemProvider extends RepositoryComponentItemPr
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((CompleteComponentType) object).getId();
+        final String label = ((CompleteComponentType) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_CompleteComponentType_type")
                 : this.getString("_UI_CompleteComponentType_type") + " " + label;
     }

@@ -104,7 +104,7 @@ public class EventGroupItemProvider extends InterfaceItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((EventGroup) object).getId();
+        final String label = ((EventGroup) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_EventGroup_type")
                 : this.getString("_UI_EventGroup_type") + " " + label;
     }

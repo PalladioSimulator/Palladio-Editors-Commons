@@ -106,7 +106,7 @@ public class GuardedBranchTransitionItemProvider extends AbstractBranchTransitio
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((GuardedBranchTransition) object).getId();
+        final String label = ((GuardedBranchTransition) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_GuardedBranchTransition_type")
                 : this.getString("_UI_GuardedBranchTransition_type") + " " + label;
     }

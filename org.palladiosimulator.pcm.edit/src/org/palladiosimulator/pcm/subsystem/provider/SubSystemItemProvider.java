@@ -70,7 +70,7 @@ public class SubSystemItemProvider extends ComposedProvidingRequiringEntityItemP
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SubSystem) object).getId();
+        final String label = ((SubSystem) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_SubSystem_type")
                 : this.getString("_UI_SubSystem_type") + " " + label;
     }

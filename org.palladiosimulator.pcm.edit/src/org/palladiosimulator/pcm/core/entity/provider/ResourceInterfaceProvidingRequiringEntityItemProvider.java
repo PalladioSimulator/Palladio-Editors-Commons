@@ -109,7 +109,7 @@ public class ResourceInterfaceProvidingRequiringEntityItemProvider
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceInterfaceProvidingRequiringEntity) object).getId();
+        final String label = ((ResourceInterfaceProvidingRequiringEntity) object).getEntityName();
         return label == null || label.length() == 0
                 ? this.getString("_UI_ResourceInterfaceProvidingRequiringEntity_type")
                 : this.getString("_UI_ResourceInterfaceProvidingRequiringEntity_type") + " " + label;

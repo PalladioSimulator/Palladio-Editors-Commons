@@ -150,7 +150,7 @@ public class AssemblyInfrastructureConnectorItemProvider extends ConnectorItemPr
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AssemblyInfrastructureConnector) object).getId();
+        final String label = ((AssemblyInfrastructureConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AssemblyInfrastructureConnector_type")
                 : this.getString("_UI_AssemblyInfrastructureConnector_type") + " " + label;
     }

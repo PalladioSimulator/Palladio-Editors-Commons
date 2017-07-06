@@ -125,7 +125,7 @@ public class RecoveryActionItemProvider extends AbstractInternalControlFlowActio
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((RecoveryAction) object).getId();
+        final String label = ((RecoveryAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_RecoveryAction_type")
                 : this.getString("_UI_RecoveryAction_type") + " " + label;
     }

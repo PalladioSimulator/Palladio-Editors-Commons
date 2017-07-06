@@ -106,7 +106,7 @@ public class InfrastructureInterfaceItemProvider extends InterfaceItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureInterface) object).getId();
+        final String label = ((InfrastructureInterface) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureInterface_type")
                 : this.getString("_UI_InfrastructureInterface_type") + " " + label;
     }

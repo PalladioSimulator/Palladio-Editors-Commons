@@ -102,7 +102,7 @@ public class ComposedProvidingRequiringEntityItemProvider extends ComposedStruct
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ComposedProvidingRequiringEntity) object).getId();
+        final String label = ((ComposedProvidingRequiringEntity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ComposedProvidingRequiringEntity_type")
                 : this.getString("_UI_ComposedProvidingRequiringEntity_type") + " " + label;
     }

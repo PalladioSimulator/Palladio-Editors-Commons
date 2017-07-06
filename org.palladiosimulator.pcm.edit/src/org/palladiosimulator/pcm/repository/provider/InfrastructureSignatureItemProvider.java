@@ -106,7 +106,7 @@ public class InfrastructureSignatureItemProvider extends SignatureItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureSignature) object).getId();
+        final String label = ((InfrastructureSignature) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureSignature_type")
                 : this.getString("_UI_InfrastructureSignature_type") + " " + label;
     }

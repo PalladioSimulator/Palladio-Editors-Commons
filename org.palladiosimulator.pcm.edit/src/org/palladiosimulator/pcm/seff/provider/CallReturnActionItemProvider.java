@@ -105,7 +105,7 @@ public class CallReturnActionItemProvider extends CallActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((CallReturnAction) object).getId();
+        final String label = ((CallReturnAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_CallReturnAction_type")
                 : this.getString("_UI_CallReturnAction_type") + " " + label;
     }

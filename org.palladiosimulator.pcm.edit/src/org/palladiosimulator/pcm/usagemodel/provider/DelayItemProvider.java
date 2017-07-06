@@ -104,7 +104,7 @@ public class DelayItemProvider extends AbstractUserActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Delay) object).getId();
+        final String label = ((Delay) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Delay_type")
                 : this.getString("_UI_Delay_type") + " " + label;
     }

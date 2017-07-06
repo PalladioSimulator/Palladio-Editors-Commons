@@ -90,7 +90,7 @@ public class OperationProvidedRoleItemProvider extends ProvidedRoleItemProvider 
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((OperationProvidedRole) object).getId();
+        final String label = ((OperationProvidedRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_OperationProvidedRole_type")
                 : this.getString("_UI_OperationProvidedRole_type") + " " + label;
     }

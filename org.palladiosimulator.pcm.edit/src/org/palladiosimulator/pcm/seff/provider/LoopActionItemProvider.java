@@ -104,7 +104,7 @@ public class LoopActionItemProvider extends AbstractLoopActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((LoopAction) object).getId();
+        final String label = ((LoopAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_LoopAction_type")
                 : this.getString("_UI_LoopAction_type") + " " + label;
     }

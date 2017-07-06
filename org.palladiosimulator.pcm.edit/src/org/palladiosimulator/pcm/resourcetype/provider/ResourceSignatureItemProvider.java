@@ -125,7 +125,7 @@ public class ResourceSignatureItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceSignature) object).getId();
+        final String label = ((ResourceSignature) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ResourceSignature_type")
                 : this.getString("_UI_ResourceSignature_type") + " " + label;
     }

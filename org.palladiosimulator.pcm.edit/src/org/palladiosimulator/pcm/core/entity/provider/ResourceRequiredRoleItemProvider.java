@@ -91,7 +91,7 @@ public class ResourceRequiredRoleItemProvider extends RoleItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceRequiredRole) object).getId();
+        final String label = ((ResourceRequiredRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ResourceRequiredRole_type")
                 : this.getString("_UI_ResourceRequiredRole_type") + " " + label;
     }

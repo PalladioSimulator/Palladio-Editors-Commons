@@ -105,7 +105,7 @@ public class OperationInterfaceItemProvider extends InterfaceItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((OperationInterface) object).getId();
+        final String label = ((OperationInterface) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_OperationInterface_type")
                 : this.getString("_UI_OperationInterface_type") + " " + label;
     }

@@ -90,7 +90,7 @@ public class InfrastructureProvidedRoleItemProvider extends ProvidedRoleItemProv
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureProvidedRole) object).getId();
+        final String label = ((InfrastructureProvidedRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureProvidedRole_type")
                 : this.getString("_UI_InfrastructureProvidedRole_type") + " " + label;
     }

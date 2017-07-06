@@ -61,7 +61,7 @@ public class RepositoryComponentItemProvider extends InterfaceProvidingRequiring
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((RepositoryComponent) object).getId();
+        final String label = ((RepositoryComponent) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_RepositoryComponent_type")
                 : this.getString("_UI_RepositoryComponent_type") + " " + label;
     }

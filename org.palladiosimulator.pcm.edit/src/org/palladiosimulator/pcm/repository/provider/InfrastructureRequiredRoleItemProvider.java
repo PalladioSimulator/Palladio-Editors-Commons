@@ -90,7 +90,7 @@ public class InfrastructureRequiredRoleItemProvider extends RequiredRoleItemProv
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureRequiredRole) object).getId();
+        final String label = ((InfrastructureRequiredRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureRequiredRole_type")
                 : this.getString("_UI_InfrastructureRequiredRole_type") + " " + label;
     }

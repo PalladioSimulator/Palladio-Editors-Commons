@@ -90,7 +90,7 @@ public class ResourceTimeoutFailureTypeItemProvider extends SoftwareInducedFailu
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ResourceTimeoutFailureType) object).getId();
+        final String label = ((ResourceTimeoutFailureType) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ResourceTimeoutFailureType_type")
                 : this.getString("_UI_ResourceTimeoutFailureType_type") + " " + label;
     }

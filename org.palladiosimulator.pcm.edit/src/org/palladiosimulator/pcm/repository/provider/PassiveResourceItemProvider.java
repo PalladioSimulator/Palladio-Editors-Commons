@@ -125,7 +125,7 @@ public class PassiveResourceItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((PassiveResource) object).getId();
+        final String label = ((PassiveResource) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_PassiveResource_type")
                 : this.getString("_UI_PassiveResource_type") + " " + label;
     }

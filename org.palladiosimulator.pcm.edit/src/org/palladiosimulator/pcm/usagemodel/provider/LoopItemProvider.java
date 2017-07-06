@@ -106,7 +106,7 @@ public class LoopItemProvider extends AbstractUserActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((Loop) object).getId();
+        final String label = ((Loop) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_Loop_type")
                 : this.getString("_UI_Loop_type") + " " + label;
     }

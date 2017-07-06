@@ -126,7 +126,7 @@ public class ProvidedDelegationConnectorItemProvider extends DelegationConnector
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ProvidedDelegationConnector) object).getId();
+        final String label = ((ProvidedDelegationConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_ProvidedDelegationConnector_type")
                 : this.getString("_UI_ProvidedDelegationConnector_type") + " " + label;
     }

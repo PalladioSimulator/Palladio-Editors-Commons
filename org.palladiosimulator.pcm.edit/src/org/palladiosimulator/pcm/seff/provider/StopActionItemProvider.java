@@ -69,7 +69,7 @@ public class StopActionItemProvider extends AbstractInternalControlFlowActionIte
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((StopAction) object).getId();
+        final String label = ((StopAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_StopAction_type")
                 : this.getString("_UI_StopAction_type") + " " + label;
     }

@@ -81,7 +81,7 @@ public class FailureHandlingEntityItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((FailureHandlingEntity) object).getId();
+        final String label = ((FailureHandlingEntity) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_FailureHandlingEntity_type")
                 : this.getString("_UI_FailureHandlingEntity_type") + " " + label;
     }

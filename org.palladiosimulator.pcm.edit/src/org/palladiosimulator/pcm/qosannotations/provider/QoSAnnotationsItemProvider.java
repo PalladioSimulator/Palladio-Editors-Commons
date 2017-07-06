@@ -110,7 +110,7 @@ public class QoSAnnotationsItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((QoSAnnotations) object).getId();
+        final String label = ((QoSAnnotations) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_QoSAnnotations_type")
                 : this.getString("_UI_QoSAnnotations_type") + " " + label;
     }

@@ -160,7 +160,7 @@ public class InternalCallActionItemProvider extends CallActionItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InternalCallAction) object).getId();
+        final String label = ((InternalCallAction) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_InternalCallAction_type")
                 : this.getString("_UI_InternalCallAction_type") + " " + label;
     }

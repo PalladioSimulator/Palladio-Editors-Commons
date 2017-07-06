@@ -87,7 +87,7 @@ public class SinkRoleItemProvider extends ProvidedRoleItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SinkRole) object).getId();
+        final String label = ((SinkRole) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_SinkRole_type")
                 : this.getString("_UI_SinkRole_type") + " " + label;
     }

@@ -124,7 +124,7 @@ public class EventChannelItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((EventChannel) object).getId();
+        final String label = ((EventChannel) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_EventChannel_type")
                 : this.getString("_UI_EventChannel_type") + " " + label;
     }

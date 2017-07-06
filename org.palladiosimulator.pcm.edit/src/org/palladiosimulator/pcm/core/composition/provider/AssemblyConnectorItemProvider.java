@@ -142,7 +142,7 @@ public class AssemblyConnectorItemProvider extends ConnectorItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((AssemblyConnector) object).getId();
+        final String label = ((AssemblyConnector) object).getEntityName();
         return label == null || label.length() == 0 ? this.getString("_UI_AssemblyConnector_type")
                 : this.getString("_UI_AssemblyConnector_type") + " " + label;
     }
