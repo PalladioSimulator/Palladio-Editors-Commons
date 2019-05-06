@@ -52,6 +52,7 @@
       <import plugin="org.palladiosimulator.edp2.edit"/>
       <import plugin="org.palladiosimulator.metricspec"/>
       <import plugin="org.palladiosimulator.metricspec.edit"/>
+      <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
    <plugin
@@ -84,13 +85,6 @@
 
    <plugin
          id="org.palladiosimulator.pcm.edp2.measuringpoint.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"
