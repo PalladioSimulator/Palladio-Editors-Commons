@@ -33,4 +33,4 @@ Require-Bundle: de.uka.ipd.sdq.stoex;bundle-version="2.2.0",
 Bundle-Vendor: palladiosimulator.org
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.palladiosimulator.editors.commons.dialogs.PCMDialogPluginActivator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-11

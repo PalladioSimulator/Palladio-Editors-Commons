@@ -4,5 +4,5 @@ Bundle-Name: Palladio Component Model - Common Editor Tests
 Bundle-SymbolicName: org.palladiosimulator.editors.commons.tests
 Bundle-Version: 2.1.1.qualifier
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.junit

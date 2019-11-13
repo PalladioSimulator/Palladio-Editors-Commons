@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin$Implementation
 Bundle-Vendor: sdq.ipd.uka.de
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.pcm.allocation.provider,
  org.palladiosimulator.pcm.core.composition.provider,
  org.palladiosimulator.pcm.core.entity.provider,

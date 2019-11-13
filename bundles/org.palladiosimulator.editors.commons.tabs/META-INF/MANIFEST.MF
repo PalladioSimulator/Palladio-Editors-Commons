@@ -21,4 +21,4 @@ Bundle-Activator: org.palladiosimulator.editors.commons.tabs.PCMBenchTabsActivat
 Export-Package: org.palladiosimulator.editors.commons.tabs,
  org.palladiosimulator.editors.commons.tabs.generic,
  org.palladiosimulator.editors.commons.tabs.operations
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-11
