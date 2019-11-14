@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.editors.commons.feature"
       label="Palladio Component Model - Commons for Editor Development"
-      version="2.1.1.qualifier"
+      version="4.2.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
