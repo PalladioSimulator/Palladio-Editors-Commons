@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.palladiosimulator.pcm.edit;singleton:=true
 Bundle-Version: 4.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin$Implementation
-Bundle-Vendor: sdq.ipd.uka.de
+Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.pcm.allocation.provider,
@@ -42,5 +42,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.units.edit;visibility:=reexport,
  org.eclipse.uml2.common.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.edit;visibility:=reexport
+ org.eclipse.emf.ecore.edit;visibility:=reexport,
+ org.palladiosimulator.editorscommons.workflow;resolution:=optional
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.palladiosimulator.pcm.edit
