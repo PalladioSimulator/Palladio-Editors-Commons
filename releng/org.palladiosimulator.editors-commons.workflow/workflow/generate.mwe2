@@ -1,0 +1,97 @@
+module generate.edit
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.ContextDependentMapping
+import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
+import tools.mdsd.ecoreworkflow.mwe2lib.component.GapPatternPostProcessor
+import tools.mdsd.ecoreworkflow.mwe2lib.component.RegexComponent
+import tools.mdsd.ecoreworkflow.umlecoregenerator.UMLEcoreGenerator
+
+var workspaceRoot = "../../"
+
+Workflow {
+
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+
+		projectMapping = {
+			projectName = "org.palladiosimulator.pcm"
+			path = "releng/org.palladiosimulator.editors-commons.workflow/target/org.palladiosimulator.pcm"
+		}
+
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+	}
+
+	component = UMLEcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = false
+		genModel = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		srcPath = "platform:/resource/org.palladiosimulator.pcm/src-gen"
+		srcPath = "platform:/resource/org.palladiosimulator.pcm.edit/src-gen"
+	}
+
+	component = GapPatternPostProcessor {
+		folders =  {
+			gen = "platform:/resource/org.palladiosimulator.pcm.edit/src-gen"
+			src = "platform:/resource/org.palladiosimulator.pcm.edit/src-man"
+		}
+	}
+}	
