@@ -66,7 +66,7 @@ Workflow {
 
 		projectMapping = {
 			projectName = "org.palladiosimulator.pcm"
-			path = "releng/org.palladiosimulator.editors-commons.workflow/target/org.palladiosimulator.pcm"
+			path = "${workspaceRoot}/releng/org.palladiosimulator.editors-commons.workflow/target/org.palladiosimulator.pcm"
 		}
 
 		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
