@@ -3,9 +3,14 @@ package org.palladiosimulator.pcm.reliability.provider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.palladiosimulator.pcm.reliability.NetworkInducedFailureType;
 
-
+/**
+ * Customized version of {@link NetworkInducedFailureTypeItemProviderGen}.
+ */
 public class NetworkInducedFailureTypeItemProvider extends NetworkInducedFailureTypeItemProviderGen {
 
+    /**
+     * {@inheritDoc}
+     */
     public NetworkInducedFailureTypeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
@@ -17,8 +22,6 @@ public class NetworkInducedFailureTypeItemProvider extends NetworkInducedFailure
      * it's actually controlled, maybe the
      * org.palladiosimulator.editors.commons.tabs.PropertyLabelProvider.getText() method?) <!--
      * end-user-doc -->
-     *
-     * @generated not
      */
     @Override
     public String getText(final Object object) {
