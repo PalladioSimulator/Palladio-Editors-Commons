@@ -3,19 +3,21 @@ package org.palladiosimulator.pcm.resourceenvironment.provider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.palladiosimulator.pcm.resourceenvironment.CommunicationLinkResourceSpecification;
 
-
+/**
+ * Customized version of {@link CommunicationLinkResourceSpecificationItemProviderGen}.
+ */
 public class CommunicationLinkResourceSpecificationItemProvider extends CommunicationLinkResourceSpecificationItemProviderGen {
 
+    /**
+     * {@inheritDoc}
+     */
 	public CommunicationLinkResourceSpecificationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+    /**
+     * {@inheritDoc}
+     */
 	@Override
 	public String getText(Object object)
 	{
