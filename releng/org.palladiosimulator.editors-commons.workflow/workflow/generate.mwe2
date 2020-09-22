@@ -64,11 +64,6 @@ Workflow {
 			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 		}
 
-		projectMapping = {
-			projectName = "org.palladiosimulator.pcm"
-			path = "${workspaceRoot}/releng/org.palladiosimulator.editors-commons.workflow/target/org.palladiosimulator.pcm"
-		}
-
 		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
 		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
 		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
@@ -81,10 +76,10 @@ Workflow {
 
 	component = UMLEcoreGenerator {
 		generateCustomClasses = false
+		generateModel = false
 		generateEdit = true
 		generateEditor = false
 		genModel = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
-		srcPath = "platform:/resource/org.palladiosimulator.pcm/src-gen"
 		srcPath = "platform:/resource/org.palladiosimulator.pcm.edit/src-gen"
 	}
 
