@@ -19,6 +19,7 @@ import org.eclipse.swt.graphics.Image;
  *
  * @author Steffen Becker
  */
+@Deprecated(forRemoval = true)
 public class StoExTemplateCompletionProcessor extends TemplateCompletionProcessor {
 
     /** The Constant STO_EX_CONTEXT_TYPE. */

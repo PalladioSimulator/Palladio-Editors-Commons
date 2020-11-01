@@ -20,6 +20,7 @@ import org.eclipse.jface.text.rules.ITokenScanner;
  *
  * @author Steffen Becker
  */
+@Deprecated(forRemoval = true)
 public class ANTLRTokenScannerAdapter implements ITokenScanner {
 
     /** The last token length. */
