@@ -16,6 +16,7 @@ import org.palladiosimulator.pcm.stochasticexpressions.parser.PCMStoExLexer;
  * 
  * @author Steffen Becker
  */
+@Deprecated(forRemoval = true)
 public class StoExTokenMapper implements ITokenMapper {
 
     /**

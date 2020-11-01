@@ -6,6 +6,7 @@ import org.antlr.runtime.Token;
 /**
  * The Interface ITokenMapper.
  */
+@Deprecated(forRemoval = true)
 public interface ITokenMapper {
     
     /**

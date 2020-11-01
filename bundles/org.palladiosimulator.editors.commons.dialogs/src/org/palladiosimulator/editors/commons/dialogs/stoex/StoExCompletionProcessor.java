@@ -27,6 +27,7 @@ import org.palladiosimulator.pcm.repository.Parameter;
  * 
  * @author Snowball
  */
+@Deprecated(forRemoval = true)
 public class StoExCompletionProcessor implements IContentAssistProcessor {
 
     /** The default characterisations. */

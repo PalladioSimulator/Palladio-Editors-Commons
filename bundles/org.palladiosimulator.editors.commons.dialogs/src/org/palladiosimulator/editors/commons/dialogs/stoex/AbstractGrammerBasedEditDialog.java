@@ -62,6 +62,7 @@ import de.uka.ipd.sdq.errorhandling.IIssue;
  * @author Snowball
  * @author joerg henss
  */
+@Deprecated(forRemoval = true)
 public abstract class AbstractGrammerBasedEditDialog extends TitleAreaDialog {
 
     /** The dialog title. */
