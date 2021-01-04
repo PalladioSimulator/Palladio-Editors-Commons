@@ -60,13 +60,9 @@
 <unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="2.1.1.201709282144"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="tbd"/>
-<repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/latest/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="tbd"/>
-<repository location="https://updatesite.mdsd.tools/ecore-workflow/nightly/"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="0.0.0"/>
+<repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/0.3.0/"/>
 </location>
 </locations>
 </target>
