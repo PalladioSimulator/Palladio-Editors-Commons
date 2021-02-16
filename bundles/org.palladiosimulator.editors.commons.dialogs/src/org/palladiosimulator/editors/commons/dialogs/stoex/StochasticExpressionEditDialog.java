@@ -2,9 +2,9 @@ package org.palladiosimulator.editors.commons.dialogs.stoex;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.widgets.Shell;
-import org.palladiosimulator.commons.stoex.ui.dialog.StoExEditDialog;
-import org.palladiosimulator.commons.stoex.ui.dialog.StoExEditDialogFactory;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
+import org.palladiosimulator.pcm.stoex.ui.dialog.StoExEditDialog;
+import org.palladiosimulator.pcm.stoex.ui.dialog.StoExEditDialogFactory;
 
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
