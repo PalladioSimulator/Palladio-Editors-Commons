@@ -1,63 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?><target name="org.palladiosimulator.editors-commons Target Platform" sequenceNumber="1">
 <locations>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="de.uka.ipd.sdq.stoex.feature.feature.group" version="2.2.0.201611171324"/>
-<unit id="org.palladiosimulator.commons.feature.feature.group" version="1.5.3.201611171324-7D7P1cBtalw7QCJsJJJz-JXQe"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="de.uka.ipd.sdq.stoex.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.commons.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="de.uka.ipd.sdq.stoex.feature.feature.group" version="2.2.0.201611171324"/>
-<unit id="org.palladiosimulator.commons.feature.feature.group" version="1.5.3.201611171324-7D7P1cBtalw7QCJsJJJz-JXQe"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="de.uka.ipd.sdq.stoex.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.commons.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.pcm.feature.feature.group" version="4.1.0.201709282114"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.pcm.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.pcm.stoex.ui.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.pcm.edp2.measuringpoint.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.pcm.feature.feature.group" version="4.1.0.201709282114"/>
-<unit id="org.palladiosimulator.pcm.edp2.measuringpoint.feature.feature.group" version="4.1.0.201808020827"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.pcm.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.pcm.stoex.ui.feature.feature.group" version="0.0.0"/>
+<unit id="org.palladiosimulator.pcm.edp2.measuringpoint.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.edp2.feature.feature.group" version="1.0.0.201712071336"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.edp2.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-edp2/releases/latest"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.edp2.feature.feature.group" version="1.0.0.201712071336"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.edp2.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-edp2/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.thirdpartywrapper.feature.feature.group" version="1.0.2.201709282218"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.thirdpartywrapper.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-thirdparty-wrapper/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.thirdpartywrapper.feature.feature.group" version="1.0.2.201709282218"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.thirdpartywrapper.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-thirdparty-wrapper/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="1.0.1.201606011729"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="1.0.1.201606011729"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="1.0.3.201712071325"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="1.0.3.201712071325"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/nightly/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="2.1.1.201709282144"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/releases/latest/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="2.1.1.201709282144"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/nightly/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
