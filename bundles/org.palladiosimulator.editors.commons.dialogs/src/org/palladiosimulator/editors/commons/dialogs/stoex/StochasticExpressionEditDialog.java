@@ -3,8 +3,6 @@ package org.palladiosimulator.editors.commons.dialogs.stoex;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.widgets.Shell;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
-import org.palladiosimulator.pcm.stoex.ui.dialog.StoExEditDialog;
-import org.palladiosimulator.pcm.stoex.ui.dialog.StoExEditDialogFactory;
 
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
@@ -18,7 +16,7 @@ public class StochasticExpressionEditDialog {
     }
 
     public StochasticExpressionEditDialog(Shell shell, TypeEnum expectedType, EObject elementToConfigure) {
-        this.dialog = StoExEditDialogFactory.getInstance()
+        this.dialog = StoExEditDialogFactoryProvider.getInstance()
             .create(shell, expectedType);
         // TODO use passed element to improve completion proposals
     }
