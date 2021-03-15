@@ -23,7 +23,7 @@ import org.palladiosimulator.pcm.stoex.parser.antlr.PCMStoexParser;
 import com.google.inject.Inject;
 
 import de.uka.ipd.sdq.stoex.Expression;
-import de.uka.ipd.sdq.stoex.analyser.visitors.NonProbabilisticExpressionInferTypeVisitor;
+import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
 @SuppressWarnings("restriction")
@@ -47,7 +47,7 @@ public class StoExEditDialogImpl extends TitleAreaDialog implements StoExEditDia
     @Inject
     private PCMStoexParser parser;
 
-    private final TypeEnum expectedType;
+    private final StoexContextProvidingAdapterImpl contextProvider = new StoexContextProvidingAdapterImpl();
 
     private EmbeddedEditorModelAccess modelAccess;
 
@@ -56,12 +56,12 @@ public class StoExEditDialogImpl extends TitleAreaDialog implements StoExEditDia
     private Expression result = null;
 
     private String resultString = null;
-    
+
     private String title = "Edit a stochastic expression";
 
     public StoExEditDialogImpl(Shell parentShell, TypeEnum expectedType) {
         super(parentShell);
-        this.expectedType = expectedType;
+        contextProvider.setExpectedType(expectedType);
         setHelpAvailable(true);
     }
 
@@ -87,13 +87,14 @@ public class StoExEditDialogImpl extends TitleAreaDialog implements StoExEditDia
 
     @Override
     protected Control createDialogArea(Composite parent) {
-        PlatformUI.getWorkbench().getHelpSystem().setHelp(parent, "org.palladiosimulator.pcm.help.stoexdialog");
+        PlatformUI.getWorkbench()
+            .getHelpSystem()
+            .setHelp(parent, "org.palladiosimulator.pcm.help.stoexdialog");
         final var composite = (Composite) super.createDialogArea(parent);
-        final var extendedValidator = new TypeExtendedResourceValidator(originalValidator,
-                new NonProbabilisticExpressionInferTypeVisitor(), expectedType);
+        final var observableValidator = new ObservableResourceValidator(originalValidator);
         final var embeddedEditor = embeddedEditorFactory.newEditor(editedResourceProvider)
             .showErrorAndWarningAnnotations()
-            .withResourceValidator(extendedValidator)
+            .withResourceValidator(observableValidator)
             .withParent(composite);
         modelAccess = embeddedEditor.createPartialEditor();
         configuration.getHighlightingHelper()
@@ -103,7 +104,13 @@ public class StoExEditDialogImpl extends TitleAreaDialog implements StoExEditDia
             .setFont(JFaceResources.getFont(JFaceResources.TEXT_FONT));
         embeddedEditor.getDocument()
             .set(serialize(initialExpression));
-        extendedValidator.addValidationListener(this::processValidationResult);
+        observableValidator.addValidationListener(this::processValidationResult);
+        embeddedEditor.getDocument()
+            .readOnly(resource -> {
+                resource.eAdapters()
+                    .add(contextProvider);
+                return contextProvider;
+            });
         composite.pack();
         return composite;
     }
@@ -148,15 +155,20 @@ public class StoExEditDialogImpl extends TitleAreaDialog implements StoExEditDia
     }
 
     protected void processValidationResult(final Collection<Issue> issues) {
-        final var okButton = getButton(IDialogConstants.OK_ID);
         Display.getDefault()
             .asyncExec(() -> {
+                final var okButton = getButton(IDialogConstants.OK_ID);
                 if (issues.isEmpty()) {
                     okButton.setEnabled(true);
                 } else {
                     okButton.setEnabled(false);
                 }
             });
+    }
+
+    @Override
+    public void setContext(RandomVariable context) {
+        contextProvider.setStoexContainer(context);
     }
 
 }
