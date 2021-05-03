@@ -15,10 +15,10 @@ public class StochasticExpressionEditDialog {
         this(shell, expectedType, null);
     }
 
-    public StochasticExpressionEditDialog(Shell shell, TypeEnum expectedType, EObject elementToConfigure) {
+    public StochasticExpressionEditDialog(Shell shell, TypeEnum expectedType, RandomVariable container) {
         this.dialog = StoExEditDialogFactoryProvider.getInstance()
             .create(shell, expectedType);
-        // TODO use passed element to improve completion proposals
+        dialog.setContext(container);
     }
 
     public int open() {
