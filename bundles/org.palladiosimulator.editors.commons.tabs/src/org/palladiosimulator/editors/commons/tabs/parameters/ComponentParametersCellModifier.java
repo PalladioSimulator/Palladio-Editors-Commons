@@ -16,7 +16,6 @@ import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
 import org.palladiosimulator.pcm.parameter.VariableUsage;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
 
 /**
  * The class define a cell modifier is used to access the data model from a cell
@@ -25,7 +24,7 @@ import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
  * @author Roman Andrej
  */
 public class ComponentParametersCellModifier extends ObservableCellModifier {
-
+    
 	private List<String> columnNames;
 	private VariableUsageWrapper wrapper;
 	
@@ -189,9 +188,9 @@ public class ComponentParametersCellModifier extends ObservableCellModifier {
 		EList<VariableUsage> variables = context
 				.getConfigParameterUsages__AssemblyContext();
 
-		String newName = new PCMStoExPrettyPrintVisitor().prettyPrint(newVariable);
+		String newName = VariableUsageSerialiser.serialiseVariableName(newVariable);
 		for (VariableUsage existedVariable : variables) {
-			String existedName = new PCMStoExPrettyPrintVisitor().prettyPrint(existedVariable);
+			String existedName = VariableUsageSerialiser.serialiseVariableName(existedVariable);
 			if (newName.equals(existedName)) {
 				return existedVariable;
 			}

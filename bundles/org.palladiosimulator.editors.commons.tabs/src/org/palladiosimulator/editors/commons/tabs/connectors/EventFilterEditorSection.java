@@ -14,7 +14,7 @@ import org.palladiosimulator.editors.commons.dialogs.stoex.StochasticExpressionE
 import org.palladiosimulator.editors.commons.tabs.generic.EditorSection;
 import org.palladiosimulator.editors.commons.tabs.generic.ObservableCellModifier;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
+
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
 public class EventFilterEditorSection extends EditorSection{
@@ -65,8 +65,7 @@ public class EventFilterEditorSection extends EditorSection{
 				dialog.setInitialExpression(rv);
 				dialog.open();
 				if (dialog.getReturnCode() == Dialog.OK) {
-					return new PCMStoExPrettyPrintVisitor().prettyPrint(dialog
-							.getResult());
+					return dialog.getResultText();
 				}
 
 				return null;

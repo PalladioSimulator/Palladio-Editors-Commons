@@ -22,7 +22,7 @@ import org.palladiosimulator.editors.commons.tabs.generic.EditorSection;
 import org.palladiosimulator.editors.commons.tabs.generic.ObservableCellModifier;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
+
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
@@ -119,8 +119,7 @@ public class ComponentParametersEditorSection extends EditorSection {
 				dialog.setInitialExpression(randVar);
 				dialog.open();
 				if (dialog.getReturnCode() == Dialog.OK) {
-					return new PCMStoExPrettyPrintVisitor().prettyPrint(dialog
-							.getResult());
+					return dialog.getResultText();
 				}
 
 				return null;

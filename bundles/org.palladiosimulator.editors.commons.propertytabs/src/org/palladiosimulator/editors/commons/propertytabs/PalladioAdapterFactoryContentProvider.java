@@ -16,7 +16,7 @@ import org.eclipse.ui.views.properties.IPropertyDescriptor;
 import org.eclipse.ui.views.properties.IPropertySource;
 import org.palladiosimulator.editors.commons.dialogs.stoex.StochasticExpressionEditDialog;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
+
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
 
@@ -71,8 +71,7 @@ public class PalladioAdapterFactoryContentProvider extends
 						dialog.setInitialExpression(randVar);
 						dialog.open();
 						if (dialog.getReturnCode() == Dialog.OK) {
-							String result = new PCMStoExPrettyPrintVisitor().prettyPrint(dialog.getResult());
-							return result;
+							return dialog.getResultText();
 						}
 						return null;
 					}
