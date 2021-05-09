@@ -14,7 +14,6 @@ import org.eclipse.ui.PlatformUI;
 import org.palladiosimulator.editors.commons.dialogs.stoex.StochasticExpressionEditDialog;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
 
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
 import de.uka.ipd.sdq.stoex.RandomVariable;
 import de.uka.ipd.sdq.stoex.StoexPackage;
 import de.uka.ipd.sdq.stoex.analyser.visitors.TypeEnum;
@@ -56,7 +55,7 @@ public class OpenStoExDialog extends OpenEditPolicy {
         dialog.open();
         if (dialog.getReturnCode() == Dialog.OK) {
             final SetRequest setRequest = new SetRequest(rv, StoexPackage.eINSTANCE.getRandomVariable_Specification(),
-                    new PCMStoExPrettyPrintVisitor().prettyPrint(dialog.getResult()));
+                    dialog.getResultText());
             final SetValueCommand cmd = new SetValueCommand(setRequest);
             return new ICommandProxy(cmd);
         }

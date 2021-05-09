@@ -5,11 +5,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ItemProviderDecorator;
-
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
 import org.palladiosimulator.pcm.parameter.VariableUsage;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
 
 /**
  * @author Snowball This class is a decorator for the generated EMF.Edit item
@@ -59,7 +57,7 @@ public class ParametersTabItemProvider extends ItemProviderDecorator implements
 		case ComponentParametersEditorSection.ICON_COLUMN_INDEX:
 			break;
 		case ComponentParametersEditorSection.VARIABLE_COLUMN_INDEX:
-			result = new PCMStoExPrettyPrintVisitor().prettyPrint(variable.getVariableUsage());
+			result = VariableUsageSerialiser.serialiseVariableName(variable.getVariableUsage());
 			break;
 		case ComponentParametersEditorSection.STOEX_COLUMN_INDEX:
 			result = getSpecification(variable.getVariableUsage());

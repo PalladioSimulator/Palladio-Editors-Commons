@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Editor Commons Tabs Tests
+Bundle-SymbolicName: org.palladiosimulator.editors.commons.tabs.tests
+Bundle-Version: 5.0.0.qualifier
+Fragment-Host: org.palladiosimulator.editors.commons.tabs;bundle-version="5.0.0"
+Automatic-Module-Name: org.palladiosimulator.editors.commons.tabs.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: org.junit.jupiter.api;version="5.7.0",
+ org.junit.jupiter.api.function;version="5.7.0",
+ tools.mdsd.junit5utils.annotations,
+ tools.mdsd.library.standalone.initialization

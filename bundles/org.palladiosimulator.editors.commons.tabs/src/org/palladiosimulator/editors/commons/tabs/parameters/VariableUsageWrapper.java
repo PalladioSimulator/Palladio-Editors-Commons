@@ -1,9 +1,7 @@
 package org.palladiosimulator.editors.commons.tabs.parameters;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.palladiosimulator.pcm.parameter.VariableUsage;
-import de.uka.ipd.sdq.pcm.stochasticexpressions.PCMStoExPrettyPrintVisitor;
 
 /**
  * The class build a container for VariableUsage value. IsEdited value will by
@@ -78,11 +76,7 @@ public class VariableUsageWrapper extends EObjectImpl {
 	
 	
 	private String getName(VariableUsage variableUsage){
-		return new PCMStoExPrettyPrintVisitor().prettyPrint(variableUsage);
+	    return VariableUsageSerialiser.serialiseVariableName(variableUsage);
 	}
-	
-	
-	
-	
 	
 }
