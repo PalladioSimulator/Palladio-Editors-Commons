@@ -1,10 +1,11 @@
 package org.palladiosimulator.editors.commons.tabs.parameters;
 
+import java.io.NotSerializableException;
+
 import org.palladiosimulator.editors.commons.tabs.PCMBenchTabsActivator;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
 import org.palladiosimulator.pcm.parameter.VariableUsage;
 import org.palladiosimulator.pcm.stoex.api.StoExSerialiser;
-import org.palladiosimulator.pcm.stoex.api.StoExSerialiser.SerialisationErrorException;
 
 /**
  * Utility class for serialising (parts of) {@link VariableUsage} elements.
@@ -30,7 +31,7 @@ public final class VariableUsageSerialiser {
         if (variableUsage.getNamedReference__VariableUsage() != null) {
             try {
                 result = STOEX_SERIALISER.serialise(variableUsage.getNamedReference__VariableUsage());
-            } catch (SerialisationErrorException e) {
+            } catch (NotSerializableException e) {
                 // only log error and continue
                 PCMBenchTabsActivator.getDefault()
                     .getLog()
