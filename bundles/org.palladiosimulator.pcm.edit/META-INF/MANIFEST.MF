@@ -43,6 +43,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.common.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- org.palladiosimulator.editorscommons.workflow;resolution:=optional
+ org.palladiosimulator.editorscommons.workflow;resolution:=optional,
+ tools.mdsd.library.emfeditutils
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.palladiosimulator.pcm.edit
