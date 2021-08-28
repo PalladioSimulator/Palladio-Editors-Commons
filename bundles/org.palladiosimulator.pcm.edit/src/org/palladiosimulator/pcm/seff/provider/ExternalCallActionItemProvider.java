@@ -24,38 +24,38 @@ public class ExternalCallActionItemProvider extends ExternalCallActionItemProvid
 		super(adapterFactory);
 	}
 	
-	@Override
-	protected void addSuccessor_AbstractActionPropertyDescriptor(Object object) {
-		super.addSuccessor_AbstractActionPropertyDescriptor(object);
-		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(ExternalCallAction.class, AbstractAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(ExternalCallAction object,
-                    List<AbstractAction> typedList) {
-            	ResourceDemandingBehaviour resourceDemandingBehaviour = object.getResourceDemandingBehaviour_AbstractAction();
-            	EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
-            	return actionList.stream()
-            			.filter(Predicate.not(StartAction.class::isInstance))
-            			.collect(Collectors.toList());
-            }
-		});
-	}
-
-	@Override
-	protected void addPredecessor_AbstractActionPropertyDescriptor(Object object) {
-		super.addPredecessor_AbstractActionPropertyDescriptor(object);
-		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(ExternalCallAction.class, AbstractAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(ExternalCallAction object,
-                    List<AbstractAction> typedList) {
-            	ResourceDemandingBehaviour resourceDemandingBehaviour = object.getResourceDemandingBehaviour_AbstractAction();
-            	EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
-            	return actionList.stream()
-            			.filter(action -> !(action instanceof StopActionImpl))
-            			.collect(Collectors.toList());
-            }
-		});
-	}
+//	@Override
+//	protected void addSuccessor_AbstractActionPropertyDescriptor(Object object) {
+//		super.addSuccessor_AbstractActionPropertyDescriptor(object);
+//		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
+//		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(ExternalCallAction.class, AbstractAction.class) {
+//            @Override
+//            protected Collection<?> getValueChoiceTyped(ExternalCallAction object,
+//                    List<AbstractAction> typedList) {
+//            	ResourceDemandingBehaviour resourceDemandingBehaviour = object.getResourceDemandingBehaviour_AbstractAction();
+//            	EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
+//            	return actionList.stream()
+//            			.filter(Predicate.not(StartAction.class::isInstance))
+//            			.collect(Collectors.toList());
+//            }
+//		});
+//	}
+//
+//	@Override
+//	protected void addPredecessor_AbstractActionPropertyDescriptor(Object object) {
+//		super.addPredecessor_AbstractActionPropertyDescriptor(object);
+//		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
+//		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(ExternalCallAction.class, AbstractAction.class) {
+//            @Override
+//            protected Collection<?> getValueChoiceTyped(ExternalCallAction object,
+//                    List<AbstractAction> typedList) {
+//            	ResourceDemandingBehaviour resourceDemandingBehaviour = object.getResourceDemandingBehaviour_AbstractAction();
+//            	EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
+//            	return actionList.stream()
+//            			.filter(action -> !(action instanceof StopActionImpl))
+//            			.collect(Collectors.toList());
+//            }
+//		});
+//	}
 	
 }
