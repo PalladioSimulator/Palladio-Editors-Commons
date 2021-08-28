@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.ExternalCallAction;
 import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
+import org.palladiosimulator.pcm.seff.StartAction;
 import org.palladiosimulator.pcm.seff.impl.StartActionImpl;
 import org.palladiosimulator.pcm.seff.impl.StopActionImpl;
 
@@ -34,7 +35,7 @@ public class ExternalCallActionItemProvider extends ExternalCallActionItemProvid
             	ResourceDemandingBehaviour resourceDemandingBehaviour = object.getResourceDemandingBehaviour_AbstractAction();
             	EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
             	return actionList.stream()
-            			.filter(action -> !(action instanceof StartActionImpl))
+            			.filter(Predicate.not(StartAction.class::isInstance))
             			.collect(Collectors.toList());
             }
 		});
