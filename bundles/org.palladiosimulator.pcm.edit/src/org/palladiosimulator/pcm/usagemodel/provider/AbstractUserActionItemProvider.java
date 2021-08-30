@@ -33,8 +33,8 @@ public class AbstractUserActionItemProvider extends AbstractUserActionItemProvid
             @Override
             protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
                     List<AbstractUserAction> typedList) {
-            	ScenarioBehaviour resourceDemandingBehaviour = object.getScenarioBehaviour_AbstractUserAction();
-            	EList<AbstractUserAction> actionList = resourceDemandingBehaviour.getActions_ScenarioBehaviour();
+            	ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
+            	EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
             	return actionList.stream()
             			.filter(Predicate.not(Start.class::isInstance))
             			.filter(a -> object != a)
@@ -51,8 +51,8 @@ public class AbstractUserActionItemProvider extends AbstractUserActionItemProvid
             @Override
             protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
                     List<AbstractUserAction> typedList) {
-            	ScenarioBehaviour resourceDemandingBehaviour = object.getScenarioBehaviour_AbstractUserAction();
-            	EList<AbstractUserAction> actionList = resourceDemandingBehaviour.getActions_ScenarioBehaviour();
+            	ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
+            	EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
             	return actionList.stream()
             			.filter(Predicate.not(Stop.class::isInstance))
             			.filter(a -> object != a)
