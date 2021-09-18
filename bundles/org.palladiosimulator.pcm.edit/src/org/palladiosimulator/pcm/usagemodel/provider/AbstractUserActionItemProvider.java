@@ -37,7 +37,7 @@ public class AbstractUserActionItemProvider extends AbstractUserActionItemProvid
             	EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
             	return actionList.stream()
             			.filter(Predicate.not(Start.class::isInstance))
-            			.filter(a -> object != a)
+            			.filter(Predicate.not(object::equals))
             			.collect(Collectors.toList());
             }
 		});

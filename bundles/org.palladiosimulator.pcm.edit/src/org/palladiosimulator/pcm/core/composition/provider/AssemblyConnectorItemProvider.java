@@ -2,6 +2,7 @@ package org.palladiosimulator.pcm.core.composition.provider;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -14,6 +15,7 @@ import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
+import org.palladiosimulator.pcm.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
 
@@ -69,8 +71,9 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				OperationInterface myRole = object.getRequiredRole_AssemblyConnector().getRequiredInterface__OperationRequiredRole();
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	List<RepositoryComponent> basicComponents = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
+            	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
             	//Wie bekomme ich hier jetzt die OperationInterfaces der basicComponents?
+            	RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object);
             	return contexts;
             }
 		});
