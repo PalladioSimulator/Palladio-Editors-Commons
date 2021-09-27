@@ -39,6 +39,9 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<AssemblyContext> typedList) {
 				Role myRole = object.getProvidedRole_AssemblyConnector();
+				if (myRole == null) {
+					return typedList;
+				}
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	return contexts.stream()
@@ -57,6 +60,9 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<AssemblyContext> typedList) {
 				Role myRole = object.getRequiredRole_AssemblyConnector();
+				if (myRole == null) {
+					return typedList;
+				}
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	return contexts.stream()
@@ -74,19 +80,30 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<OperationProvidedRole> typedList) {
+				Role myRole = object.getRequiredRole_AssemblyConnector();
+				if(myRole == null) {
+					return typedList;
+				}
 				OperationInterface myInterface = object.getRequiredRole_AssemblyConnector().getRequiredInterface__OperationRequiredRole();
+				if (myInterface == null) {
+					return typedList;
+				}
+				
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
             	//Wie bekomme ich hier jetzt die OperationInterfaces der basicComponents? RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)
             	List<ProvidedRole> operationProvidedRoles = components.stream()
             			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
-            			.flatMap(List::stream).filter(OperationProvidedRole.class::isInstance)
+            			.flatMap(List::stream)
+            			.filter(OperationProvidedRole.class::isInstance)
             			.map(OperationProvidedRole.class::cast)
-            			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().getId() == myInterface.getId())
+            			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
             			.collect(Collectors.toList());
             	return operationProvidedRoles;
             	//return operationProvidedRoles.stream().filter(opr -> RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)).collect(Collectors.toList());
+            	//isInstanceInterface Methode bauen, auf Basis von getParentInterfaces aus Interface.class
+            	// Filterung von Objekten: Null Wert soll möglich sein.
             }
 		});
 	}
