@@ -25,7 +25,22 @@ import tools.mdsd.library.emfeditutils.itempropertydescriptor.ItemPropertyDescri
 import tools.mdsd.library.emfeditutils.itempropertydescriptor.ValueChoiceCalculatorBase;
 
 public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProviderGen {
-
+	/**
+	 * Call sources, methods call helper Methods with.
+	 * @author Nathan
+	 *
+	 */
+	private enum RequiringProviding {
+		/**
+		 * addRequiring[...] is calling the helper Method
+		 */
+		REQUIRING,
+		/**
+		 * addProviding[...] is calling the helper Method
+		 */
+		PROVIDING;
+	}
+	
 	public AssemblyConnectorItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
@@ -80,18 +95,30 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<OperationProvidedRole> typedList) {
+				
+				ComposedStructure composedStructure = object.getParentStructure__Connector();
+            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+            	AssemblyContext myContext = object.getRequiringAssemblyContext_AssemblyConnector();
+            	if (myContext != null) {
+            		removeOwnContext(contexts, object, RequiringProviding.PROVIDING);
+            	}
+            	List<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
+            	// Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
+            	// Hier gab es den Vorschlag ein Set zu nehmen. Ich habe mich dagegen entschieden, da bspw. eine durch einen Context gefangene Komponente mehrmals vorkommen kann im selben Diagramm.
+            	// Siehe MediaManagement und AssemblyMediaManagement.
+            	
 				Role myRole = object.getRequiredRole_AssemblyConnector();
 				if(myRole == null) {
-					return typedList;
+					return components.stream()
+	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toList());
 				}
 				OperationInterface myInterface = object.getRequiredRole_AssemblyConnector().getRequiredInterface__OperationRequiredRole();
 				if (myInterface == null) {
-					return typedList;
+					return components.stream()
+	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).collect(Collectors.toList());
 				}
-				
-            	ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
+				// Umschreiben auf Optional.ofNullable alles schön in eine Zeile.
+            	
             	//Wie bekomme ich hier jetzt die OperationInterfaces der basicComponents? RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)
             	List<ProvidedRole> operationProvidedRoles = components.stream()
             			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
@@ -103,7 +130,6 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	return operationProvidedRoles;
             	//return operationProvidedRoles.stream().filter(opr -> RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)).collect(Collectors.toList());
             	//isInstanceInterface Methode bauen, auf Basis von getParentInterfaces aus Interface.class
-            	// Filterung von Objekten: Null Wert soll möglich sein.
             }
 		});
 	}
@@ -131,4 +157,19 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 		});
 	}
 
+	private List<AssemblyContext> removeOwnContext(List<AssemblyContext> contexts, AssemblyConnector connector, RequiringProviding flag) {
+		AssemblyContext myContext;
+		if (flag == RequiringProviding.REQUIRING) {
+			myContext = connector.getRequiringAssemblyContext_AssemblyConnector();
+		}	else {
+			myContext = connector.getProvidingAssemblyContext_AssemblyConnector();
+		}
+		return contexts.stream().filter(c -> c != myContext).collect(Collectors.toList());
+	}
+	
+	private List<Role> filterForMatchingRoles (Role compareRole, List<Role> roles, RequiringProviding flag) {
+		return null;
+	}
+	
+	
 }
