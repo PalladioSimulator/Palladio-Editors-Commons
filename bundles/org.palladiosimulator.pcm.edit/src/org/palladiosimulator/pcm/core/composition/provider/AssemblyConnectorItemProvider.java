@@ -74,15 +74,40 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<AssemblyContext> typedList) {
-				Role myRole = object.getRequiredRole_AssemblyConnector();
-				if (myRole == null) {
-					return typedList;
-				}
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	return contexts.stream()
-            			.filter(Predicate.not(object.getRequiringAssemblyContext_AssemblyConnector()::equals))
-            			.collect(Collectors.toList());
+            	List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+            	AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
+            	List<OperationInterface> requiringContextInterfaces;
+            	if (requiringContext != null) {
+            		removeContext(contexts, object, RequiringProviding.REQUIRING);
+            		List<RequiredRole> requiringContextRoles = requiringContext
+            				.getEncapsulatedComponent__AssemblyContext()
+            				.getRequiredRoles_InterfaceRequiringEntity()
+            				.stream()
+            				.filter(OperationRequiredRole.class::isInstance)
+                			.map(OperationRequiredRole.class::cast).collect(Collectors.toList());
+            		requiringContextInterfaces = requiringContextRoles.stream()
+            				.map(OperationRequiredRole.class::cast)
+            				.map(OperationRequiredRole::getRequiredInterface__OperationRequiredRole)
+            				.collect(Collectors.toList());
+            	}
+            	OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
+            	if (providedRole != null) {
+            		contexts = contexts.stream()
+            				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
+            						.getProvidedRoles_InterfaceProvidingEntity()
+            						.contains(providedRole))
+            				.collect(Collectors.toList());
+            	}
+            	OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
+            	if (requiredRole != null) {
+            		contexts = contexts.stream()
+            				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
+            						.getRequiredRoles_InterfaceRequiringEntity()
+            						.contains(requiredRole))
+            						.collect(Collectors.toList());
+            	}
+            	return contexts;
             }
 		});
 	}
@@ -100,7 +125,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	AssemblyContext myContext = object.getRequiringAssemblyContext_AssemblyConnector();
             	if (myContext != null) {
-            		removeOwnContext(contexts, object, RequiringProviding.PROVIDING);
+            		removeContext(contexts, object, RequiringProviding.PROVIDING);
             	}
             	List<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
             	// Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
@@ -142,22 +167,39 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<OperationRequiredRole> typedList) {
-				OperationInterface myInterface = object.getProvidedRole_AssemblyConnector().getProvidedInterface__OperationProvidedRole();
-            	ComposedStructure composedStructure = object.getParentStructure__Connector();
+				
+				ComposedStructure composedStructure = object.getParentStructure__Connector();
             	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
-            	List<RequiredRole> operationRequiredRoles = components.stream()
+            	AssemblyContext myContext = object.getProvidingAssemblyContext_AssemblyConnector();
+            	if (myContext != null) {
+            		removeContext(contexts, object, RequiringProviding.REQUIRING);
+            	}
+            	List<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
+				
+            	Role myRole = object.getProvidedRole_AssemblyConnector();
+				if(myRole == null) {
+					return components.stream()
+	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).flatMap(List::stream).collect(Collectors.toList());
+				}
+				OperationInterface myInterface = object.getProvidedRole_AssemblyConnector().getProvidedInterface__OperationProvidedRole();
+				if (myInterface == null) {
+					return components.stream()
+	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).collect(Collectors.toList());
+				}
+				
+				List<RequiredRole> operationRequiredRoles = components.stream()
             			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity)
-            			.flatMap(List::stream).filter(OperationRequiredRole.class::isInstance)
+            			.flatMap(List::stream)
+            			.filter(OperationRequiredRole.class::isInstance)
             			.map(OperationRequiredRole.class::cast)
-            			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole().getId() == myInterface.getId())
+            			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole() == myInterface)
             			.collect(Collectors.toList());
             	return operationRequiredRoles;
             }
 		});
 	}
 
-	private List<AssemblyContext> removeOwnContext(List<AssemblyContext> contexts, AssemblyConnector connector, RequiringProviding flag) {
+	private List<AssemblyContext> removeContext(List<AssemblyContext> contexts, AssemblyConnector connector, RequiringProviding flag) {
 		AssemblyContext myContext;
 		if (flag == RequiringProviding.REQUIRING) {
 			myContext = connector.getRequiringAssemblyContext_AssemblyConnector();
