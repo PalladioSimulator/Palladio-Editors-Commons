@@ -93,10 +93,14 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	}
             	OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
             	if (providedRole != null) {
-            		contexts = contexts.stream()
+            		contexts = contexts
+            				.stream()
             				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
             						.getProvidedRoles_InterfaceProvidingEntity()
-            						.contains(providedRole))
+            						.stream()
+            						.filter(OperationProvidedRole.class::isInstance)
+            						.map(OperationProvidedRole.class::cast)
+            						.anyMatch(orr -> orr.getProvidedInterface__OperationProvidedRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
             				.collect(Collectors.toList());
             	}
             	OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
@@ -104,8 +108,21 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             		contexts = contexts.stream()
             				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
             						.getRequiredRoles_InterfaceRequiringEntity()
-            						.contains(requiredRole))
+            						.stream()
+            						.filter(OperationProvidedRole.class::isInstance)
+            						.map(OperationProvidedRole.class::cast)
+            						.map(opr -> opr.getProvidedInterface__OperationProvidedRole())
+            						.collect(Collectors.toList())
+            						.contains(requiredRole.getRequiredInterface__OperationRequiredRole()))
             						.collect(Collectors.toList());
+            						
+//            		List<ProvidedRole> operationProvidedRoles = components.stream()
+//                			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
+//                			.flatMap(List::stream)
+//                			.filter(OperationProvidedRole.class::isInstance)
+//                			.map(OperationProvidedRole.class::cast)
+//                			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
+//                			.collect(Collectors.toList());
             	}
             	return contexts;
             }
