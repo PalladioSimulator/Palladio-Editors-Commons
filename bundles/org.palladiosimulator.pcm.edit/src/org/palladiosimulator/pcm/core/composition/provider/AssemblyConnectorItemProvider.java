@@ -79,7 +79,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
             	List<OperationInterface> requiringContextInterfaces;
             	if (requiringContext != null) {
-            		removeContext(contexts, object, RequiringProviding.REQUIRING);
+            		contexts = removeContext(contexts, object, RequiringProviding.REQUIRING);
             		List<RequiredRole> requiringContextRoles = requiringContext
             				.getEncapsulatedComponent__AssemblyContext()
             				.getRequiredRoles_InterfaceRequiringEntity()
@@ -100,29 +100,19 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             						.stream()
             						.filter(OperationProvidedRole.class::isInstance)
             						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(orr -> orr.getProvidedInterface__OperationProvidedRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
             				.collect(Collectors.toList());
             	}
             	OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
             	if (requiredRole != null) {
             		contexts = contexts.stream()
             				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
-            						.getRequiredRoles_InterfaceRequiringEntity()
+            						.getProvidedRoles_InterfaceProvidingEntity()
             						.stream()
             						.filter(OperationProvidedRole.class::isInstance)
             						.map(OperationProvidedRole.class::cast)
-            						.map(opr -> opr.getProvidedInterface__OperationProvidedRole())
-            						.collect(Collectors.toList())
-            						.contains(requiredRole.getRequiredInterface__OperationRequiredRole()))
-            						.collect(Collectors.toList());
-            						
-//            		List<ProvidedRole> operationProvidedRoles = components.stream()
-//                			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
-//                			.flatMap(List::stream)
-//                			.filter(OperationProvidedRole.class::isInstance)
-//                			.map(OperationProvidedRole.class::cast)
-//                			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
-//                			.collect(Collectors.toList());
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == requiredRole.getRequiredInterface__OperationRequiredRole()))
+            				.collect(Collectors.toList());
             	}
             	return contexts;
             }
