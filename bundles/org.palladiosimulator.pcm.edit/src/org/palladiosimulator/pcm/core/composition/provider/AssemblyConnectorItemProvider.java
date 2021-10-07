@@ -1,9 +1,9 @@
 package org.palladiosimulator.pcm.core.composition.provider;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -11,13 +11,11 @@ import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.ComposedStructure;
-import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
-import org.palladiosimulator.pcm.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
 
@@ -53,15 +51,63 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<AssemblyContext> typedList) {
-				Role myRole = object.getProvidedRole_AssemblyConnector();
-				if (myRole == null) {
-					return typedList;
+				ComposedStructure composedStructure = object.getParentStructure__Connector();		
+				List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+				AssemblyContext providingContext = object.getProvidingAssemblyContext_AssemblyConnector();
+				List<OperationInterface> providingContextInterfaces;
+				if (providingContext != null) {
+					contexts = removeContext(contexts, object, RequiringProviding.PROVIDING);
+					List<ProvidedRole> providingContextRoles = providingContext
+							.getEncapsulatedComponent__AssemblyContext()
+							.getProvidedRoles_InterfaceProvidingEntity()
+							.stream()
+							.filter(OperationProvidedRole.class::isInstance)
+							.map(OperationProvidedRole.class::cast).collect(Collectors.toList());
+					providingContextInterfaces = providingContextRoles.stream()
+							.map(OperationProvidedRole.class::cast)
+							.map(OperationProvidedRole::getProvidedInterface__OperationProvidedRole)
+							.collect(Collectors.toList());
+					Set<AssemblyContext> contexts2 = new HashSet<AssemblyContext>();
+					for (OperationInterface oi : providingContextInterfaces) {
+            			for (AssemblyContext c : contexts) {
+            				if (c.getEncapsulatedComponent__AssemblyContext()
+            						.getRequiredRoles_InterfaceRequiringEntity()
+            						.stream()
+            						.filter(OperationRequiredRole.class::isInstance)
+            						.map(OperationRequiredRole.class::cast)
+            						.anyMatch(opr -> opr.getRequiredInterface__OperationRequiredRole() == oi)) {
+            					contexts2.add(c);
+            				}
+            			}
+            		}
+            		contexts.clear();
+            		contexts.addAll(contexts2);
 				}
-            	ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	return contexts.stream()
-            			.filter(Predicate.not(object.getProvidingAssemblyContext_AssemblyConnector()::equals))
-            			.collect(Collectors.toList());
+				OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
+				if (requiredRole != null) {
+					contexts = contexts
+							.stream()
+							.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
+									.getRequiredRoles_InterfaceRequiringEntity()
+									.stream()
+									.filter(OperationRequiredRole.class::isInstance)
+									.map(OperationRequiredRole.class::cast)
+									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole() == requiredRole.getRequiredInterface__OperationRequiredRole()))
+							.collect(Collectors.toList());
+				}
+				OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
+				if (providedRole != null) {
+					contexts = contexts.stream()
+							.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
+									.getRequiredRoles_InterfaceRequiringEntity()
+									.stream()
+									.filter(OperationRequiredRole.class::isInstance)
+									.map(OperationRequiredRole.class::cast)
+									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
+							.collect(Collectors.toList());
+				}
+				return contexts;
+				
             }
 		});
 	}
@@ -90,6 +136,22 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             				.map(OperationRequiredRole.class::cast)
             				.map(OperationRequiredRole::getRequiredInterface__OperationRequiredRole)
             				.collect(Collectors.toList());
+            		//Schmeiße alle Contexte raus, die keinen Match mit der requiringContextInterfaces Liste haben:
+            		Set<AssemblyContext> contexts2 = new HashSet<AssemblyContext>();
+            		for (OperationInterface oi : requiringContextInterfaces) {
+            			for (AssemblyContext c : contexts) {
+            				if (c.getEncapsulatedComponent__AssemblyContext()
+            						.getProvidedRoles_InterfaceProvidingEntity()
+            						.stream()
+            						.filter(OperationProvidedRole.class::isInstance)
+            						.map(OperationProvidedRole.class::cast)
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == oi)) {
+            					contexts2.add(c);
+            				}
+            			}
+            		}
+            		contexts.clear();
+            		contexts.addAll(contexts2);
             	}
             	OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
             	if (providedRole != null) {
@@ -214,10 +276,6 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			myContext = connector.getProvidingAssemblyContext_AssemblyConnector();
 		}
 		return contexts.stream().filter(c -> c != myContext).collect(Collectors.toList());
-	}
-	
-	private List<Role> filterForMatchingRoles (Role compareRole, List<Role> roles, RequiringProviding flag) {
-		return null;
 	}
 	
 	
