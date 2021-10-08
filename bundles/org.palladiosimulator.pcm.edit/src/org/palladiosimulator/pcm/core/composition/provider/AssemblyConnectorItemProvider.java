@@ -120,6 +120,8 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 			@Override
             protected Collection<?> getValueChoiceTyped(AssemblyConnector object,
                     List<AssemblyContext> typedList) {
+				// Für Filterschritte private Methoden bauen die predicates zurückggeben, jenachdem welcher Filter bruacht.
+				// Stream in Variable und pro gesetztem Wert die Filter hinzufügen.
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
             	List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
@@ -219,11 +221,13 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             			.flatMap(List::stream)
             			.filter(OperationProvidedRole.class::isInstance)
             			.map(OperationProvidedRole.class::cast)
-            			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
+            			//.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
+            			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(myInterface))
+            			// führt zu org.eclipse.ocl.pivot.internal.delegate.OCLDelegateException: Failed to create Xtext resource for '_jdvmwCgBEeyGWpe2k9LoxQ.essentialocl'
             			.collect(Collectors.toList());
             	return operationProvidedRoles;
             	//return operationProvidedRoles.stream().filter(opr -> RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)).collect(Collectors.toList());
-            	//isInstanceInterface Methode bauen, auf Basis von getParentInterfaces aus Interface.class
+
             }
 		});
 	}
