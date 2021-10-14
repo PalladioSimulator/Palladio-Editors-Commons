@@ -75,7 +75,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             						.stream()
             						.filter(OperationRequiredRole.class::isInstance)
             						.map(OperationRequiredRole.class::cast)
-            						.anyMatch(opr -> opr.getRequiredInterface__OperationRequiredRole() == oi)) {
+            						.anyMatch(opr -> opr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(oi))) {
             					contexts2.add(c);
             				}
             			}
@@ -92,7 +92,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 									.stream()
 									.filter(OperationRequiredRole.class::isInstance)
 									.map(OperationRequiredRole.class::cast)
-									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole() == requiredRole.getRequiredInterface__OperationRequiredRole()))
+									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole())))
 							.collect(Collectors.toList());
 				}
 				OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
@@ -103,7 +103,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 									.stream()
 									.filter(OperationRequiredRole.class::isInstance)
 									.map(OperationRequiredRole.class::cast)
-									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
+									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole())))
 							.collect(Collectors.toList());
 				}
 				return contexts;
@@ -147,7 +147,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             						.stream()
             						.filter(OperationProvidedRole.class::isInstance)
             						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == oi)) {
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(oi))) {
             					contexts2.add(c);
             				}
             			}
@@ -164,7 +164,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             						.stream()
             						.filter(OperationProvidedRole.class::isInstance)
             						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == providedRole.getProvidedInterface__OperationProvidedRole()))
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole())))
             				.collect(Collectors.toList());
             	}
             	OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
@@ -175,7 +175,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             						.stream()
             						.filter(OperationProvidedRole.class::isInstance)
             						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole() == requiredRole.getRequiredInterface__OperationRequiredRole()))
+            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole())))
             				.collect(Collectors.toList());
             	}
             	return contexts;
@@ -193,38 +193,31 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                     List<OperationProvidedRole> typedList) {
 				
 				ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+            	Collection<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	AssemblyContext myContext = object.getRequiringAssemblyContext_AssemblyConnector();
             	if (myContext != null) {
             		removeContext(contexts, object, RequiringProviding.PROVIDING);
             	}
-            	List<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
-            	// Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
-            	// Hier gab es den Vorschlag ein Set zu nehmen. Ich habe mich dagegen entschieden, da bspw. eine durch einen Context gefangene Komponente mehrmals vorkommen kann im selben Diagramm.
-            	// Siehe MediaManagement und AssemblyMediaManagement.
+            	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
             	
 				Role myRole = object.getRequiredRole_AssemblyConnector();
 				if(myRole == null) {
 					return components.stream()
-	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toList());
+	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toSet());
 				}
 				OperationInterface myInterface = object.getRequiredRole_AssemblyConnector().getRequiredInterface__OperationRequiredRole();
 				if (myInterface == null) {
 					return components.stream()
-	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).collect(Collectors.toList());
+	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).collect(Collectors.toSet());
 				}
 				// Umschreiben auf Optional.ofNullable alles schön in eine Zeile.
-            	
-            	//Wie bekomme ich hier jetzt die OperationInterfaces der basicComponents? RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)
-            	List<ProvidedRole> operationProvidedRoles = components.stream()
+            	Set<ProvidedRole> operationProvidedRoles = components.stream()
             			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
             			.flatMap(List::stream)
             			.filter(OperationProvidedRole.class::isInstance)
             			.map(OperationProvidedRole.class::cast)
-            			//.filter(opr -> opr.getProvidedInterface__OperationProvidedRole() == myInterface) //tatsächlicher Vergleich, sodass auch Kind Schnittstellen gültig sind?
             			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(myInterface))
-            			// führt zu org.eclipse.ocl.pivot.internal.delegate.OCLDelegateException: Failed to create Xtext resource for '_jdvmwCgBEeyGWpe2k9LoxQ.essentialocl'
-            			.collect(Collectors.toList());
+            			.collect(Collectors.toSet());
             	return operationProvidedRoles;
             	//return operationProvidedRoles.stream().filter(opr -> RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)).collect(Collectors.toList());
 
@@ -265,14 +258,14 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             			.flatMap(List::stream)
             			.filter(OperationRequiredRole.class::isInstance)
             			.map(OperationRequiredRole.class::cast)
-            			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole() == myInterface)
+            			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(myInterface))
             			.collect(Collectors.toList());
             	return operationRequiredRoles;
             }
 		});
 	}
 
-	private List<AssemblyContext> removeContext(List<AssemblyContext> contexts, AssemblyConnector connector, RequiringProviding flag) {
+	private List<AssemblyContext> removeContext(Collection<AssemblyContext> contexts, AssemblyConnector connector, RequiringProviding flag) {
 		AssemblyContext myContext;
 		if (flag == RequiringProviding.REQUIRING) {
 			myContext = connector.getRequiringAssemblyContext_AssemblyConnector();
