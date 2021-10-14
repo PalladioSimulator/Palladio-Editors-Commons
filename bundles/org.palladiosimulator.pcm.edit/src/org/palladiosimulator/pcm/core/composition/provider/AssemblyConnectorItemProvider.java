@@ -1,5 +1,6 @@
 package org.palladiosimulator.pcm.core.composition.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -198,6 +199,11 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	if (myContext != null) {
             		removeContext(contexts, object, RequiringProviding.PROVIDING);
             	}
+            	AssemblyContext providingContext = object.getProvidingAssemblyContext_AssemblyConnector();
+            	if (providingContext != null) {
+            		contexts = new ArrayList<AssemblyContext>();
+            		contexts.add(providingContext);
+            	}
             	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
             	
 				Role myRole = object.getRequiredRole_AssemblyConnector();
@@ -219,8 +225,6 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(myInterface))
             			.collect(Collectors.toSet());
             	return operationProvidedRoles;
-            	//return operationProvidedRoles.stream().filter(opr -> RepositoryPackage.Literals.OPERATION_PROVIDED_ROLE.isInstance(object)).collect(Collectors.toList());
-
             }
 		});
 	}
@@ -235,12 +239,17 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                     List<OperationRequiredRole> typedList) {
 				
 				ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	EList<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+            	Collection<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	AssemblyContext myContext = object.getProvidingAssemblyContext_AssemblyConnector();
             	if (myContext != null) {
             		removeContext(contexts, object, RequiringProviding.REQUIRING);
             	}
-            	List<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
+            	AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
+            	if (requiringContext != null) {
+            		contexts = new ArrayList<AssemblyContext>();
+            		contexts.add(requiringContext);
+            	}
+            	Collection<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
 				
             	Role myRole = object.getProvidedRole_AssemblyConnector();
 				if(myRole == null) {
