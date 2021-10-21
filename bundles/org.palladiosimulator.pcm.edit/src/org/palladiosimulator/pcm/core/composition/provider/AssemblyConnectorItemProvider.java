@@ -228,12 +228,12 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				
             	Role myRole = object.getProvidedRole_AssemblyConnector();
 				if(myRole == null) {
-					return components.stream() //TODO Verbessern und Extrahieren
+					return components.stream()
 	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).flatMap(List::stream).collect(Collectors.toList());
 				}
 				OperationInterface myInterface = object.getProvidedRole_AssemblyConnector().getProvidedInterface__OperationProvidedRole();
 				if (myInterface == null) {
-					return components.stream() //TODO Verbessern und Extrahieren
+					return components.stream()
 	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).collect(Collectors.toList());
 				}
 				Collection<Role> operationRequiredRoles = removeNotAssignableRoles(components, myInterface, RequiringProviding.REQUIRING);
