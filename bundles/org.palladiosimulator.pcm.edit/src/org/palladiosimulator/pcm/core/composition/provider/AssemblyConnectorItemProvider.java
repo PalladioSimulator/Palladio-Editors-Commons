@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -89,23 +90,13 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				if (requiredRole != null) {
 					contexts = contexts
 							.stream()
-							.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
-									.getRequiredRoles_InterfaceRequiringEntity()
-									.stream()
-									.filter(OperationRequiredRole.class::isInstance)
-									.map(OperationRequiredRole.class::cast)
-									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole())))
+							.filter(contextRequiringRolesAssignableFromRole(object, RequiringProviding.REQUIRING))
 							.collect(Collectors.toList());
 				}
 				OperationProvidedRole providedRole = object.getProvidedRole_AssemblyConnector();
 				if (providedRole != null) {
 					contexts = contexts.stream()
-							.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
-									.getRequiredRoles_InterfaceRequiringEntity()
-									.stream()
-									.filter(OperationRequiredRole.class::isInstance)
-									.map(OperationRequiredRole.class::cast)
-									.anyMatch(orr -> orr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole())))
+							.filter(contextRequiringRolesAssignableFromRole(object, RequiringProviding.PROVIDING))
 							.collect(Collectors.toList());
 				}
 				return contexts;
@@ -125,7 +116,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				// Für Filterschritte private Methoden bauen die predicates zurückggeben, jenachdem welcher Filter bruacht.
 				// Stream in Variable und pro gesetztem Wert die Filter hinzufügen.
             	ComposedStructure composedStructure = object.getParentStructure__Connector();
-            	List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
+            	Collection<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
             	AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
             	List<OperationInterface> requiringContextInterfaces;
             	if (requiringContext != null) {
@@ -161,23 +152,13 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	if (providedRole != null) {
             		contexts = contexts
             				.stream()
-            				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
-            						.getProvidedRoles_InterfaceProvidingEntity()
-            						.stream()
-            						.filter(OperationProvidedRole.class::isInstance)
-            						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole())))
+            				.filter(contextProvidingRolesAssignableFromRole(object, RequiringProviding.PROVIDING))
             				.collect(Collectors.toList());
             	}
             	OperationRequiredRole requiredRole = object.getRequiredRole_AssemblyConnector();
             	if (requiredRole != null) {
             		contexts = contexts.stream()
-            				.filter(c -> c.getEncapsulatedComponent__AssemblyContext()
-            						.getProvidedRoles_InterfaceProvidingEntity()
-            						.stream()
-            						.filter(OperationProvidedRole.class::isInstance)
-            						.map(OperationProvidedRole.class::cast)
-            						.anyMatch(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole())))
+            				.filter(contextProvidingRolesAssignableFromRole(object, RequiringProviding.REQUIRING))
             				.collect(Collectors.toList());
             	}
             	return contexts;
@@ -209,22 +190,15 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	
 				Role myRole = object.getRequiredRole_AssemblyConnector();
 				if(myRole == null) {
-					return components.stream()
+					return components.stream() //TODO Verbessern und Extrahieren
 	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toSet());
 				}
 				OperationInterface myInterface = object.getRequiredRole_AssemblyConnector().getRequiredInterface__OperationRequiredRole();
 				if (myInterface == null) {
-					return components.stream()
+					return components.stream() //TODO Verbessern und Extrahieren
 	            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).collect(Collectors.toSet());
 				}
-				// Umschreiben auf Optional.ofNullable alles schön in eine Zeile.
-            	Set<ProvidedRole> operationProvidedRoles = components.stream()
-            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
-            			.flatMap(List::stream)
-            			.filter(OperationProvidedRole.class::isInstance)
-            			.map(OperationProvidedRole.class::cast)
-            			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(myInterface))
-            			.collect(Collectors.toSet());
+            	Collection<Role> operationProvidedRoles = removeNotAssignableRoles(components, myInterface, RequiringProviding.PROVIDING);
             	return operationProvidedRoles;
             }
 		});
@@ -254,22 +228,15 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				
             	Role myRole = object.getProvidedRole_AssemblyConnector();
 				if(myRole == null) {
-					return components.stream()
+					return components.stream() //TODO Verbessern und Extrahieren
 	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).flatMap(List::stream).collect(Collectors.toList());
 				}
 				OperationInterface myInterface = object.getProvidedRole_AssemblyConnector().getProvidedInterface__OperationProvidedRole();
 				if (myInterface == null) {
-					return components.stream()
+					return components.stream() //TODO Verbessern und Extrahieren
 	            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).collect(Collectors.toList());
 				}
-				
-				List<RequiredRole> operationRequiredRoles = components.stream()
-            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity)
-            			.flatMap(List::stream)
-            			.filter(OperationRequiredRole.class::isInstance)
-            			.map(OperationRequiredRole.class::cast)
-            			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(myInterface))
-            			.collect(Collectors.toList());
+				Collection<Role> operationRequiredRoles = removeNotAssignableRoles(components, myInterface, RequiringProviding.REQUIRING);
             	return operationRequiredRoles;
             }
 		});
@@ -284,6 +251,73 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 		}
 		return contexts.stream().filter(c -> c != myContext).collect(Collectors.toList());
 	}
+	
+	private Collection<Role> removeNotAssignableRoles(Collection<RepositoryComponent> components, OperationInterface myInterface, RequiringProviding flag) {
+		List<Role> roles;
+		if (flag == RequiringProviding.REQUIRING) {
+			roles = components.stream()
+        			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity)
+        			.flatMap(List::stream)
+        			.filter(OperationRequiredRole.class::isInstance)
+        			.map(OperationRequiredRole.class::cast)
+        			.filter(opr -> opr.getRequiredInterface__OperationRequiredRole().isAssignableFrom(myInterface))
+        			.collect(Collectors.toList());
+		} else {
+			roles = components.stream()
+        			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
+        			.flatMap(List::stream)
+        			.filter(OperationProvidedRole.class::isInstance)
+        			.map(OperationProvidedRole.class::cast)
+        			.filter(opr -> opr.getProvidedInterface__OperationProvidedRole().isAssignableFrom(myInterface))
+        			.collect(Collectors.toList());
+		}
+		return roles;
+	}
+	
+	private Predicate<AssemblyContext> contextProvidingRolesAssignableFromRole(AssemblyConnector connector, RequiringProviding flag) {
+		if (flag == RequiringProviding.PROVIDING) {
+			OperationProvidedRole providedRole = connector.getProvidedRole_AssemblyConnector();
+			Predicate<OperationProvidedRole> predicate = role -> role
+    				.getProvidedInterface__OperationProvidedRole()
+    				.isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole());
+			return context -> context.getEncapsulatedComponent__AssemblyContext()
+					.getProvidedRoles_InterfaceProvidingEntity().stream().filter(OperationProvidedRole.class::isInstance)
+					.map(OperationProvidedRole.class::cast).anyMatch(predicate);
+		} else {
+			OperationRequiredRole requiredRole = connector.getRequiredRole_AssemblyConnector();
+			Predicate<OperationProvidedRole> predicate = role -> role
+    				.getProvidedInterface__OperationProvidedRole()
+    				.isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole());
+			return context -> context.getEncapsulatedComponent__AssemblyContext()
+					.getProvidedRoles_InterfaceProvidingEntity().stream().filter(OperationProvidedRole.class::isInstance)
+					.map(OperationProvidedRole.class::cast).anyMatch(predicate);
+		}
+	}
+
+	private Predicate<AssemblyContext> contextRequiringRolesAssignableFromRole(AssemblyConnector connector, RequiringProviding flag) {
+		if (flag == RequiringProviding.PROVIDING) {
+			OperationProvidedRole providedRole = connector.getProvidedRole_AssemblyConnector();
+			Predicate<OperationRequiredRole> predicate = role -> role
+    				.getRequiredInterface__OperationRequiredRole()
+    				.isAssignableFrom(providedRole.getProvidedInterface__OperationProvidedRole());
+			return context -> context.getEncapsulatedComponent__AssemblyContext()
+					.getRequiredRoles_InterfaceRequiringEntity().stream().filter(OperationRequiredRole.class::isInstance)
+					.map(OperationRequiredRole.class::cast)
+					.anyMatch(predicate);
+		} else {
+			OperationRequiredRole requiredRole = connector.getRequiredRole_AssemblyConnector();
+			Predicate<OperationRequiredRole> predicate = role -> role
+    				.getRequiredInterface__OperationRequiredRole()
+    				.isAssignableFrom(requiredRole.getRequiredInterface__OperationRequiredRole());
+			return context -> context.getEncapsulatedComponent__AssemblyContext()
+					.getRequiredRoles_InterfaceRequiringEntity().stream().filter(OperationRequiredRole.class::isInstance)
+					.map(OperationRequiredRole.class::cast)
+					.anyMatch(predicate);
+		}
+	}
+	
+	
+	
 	
 	
 }
