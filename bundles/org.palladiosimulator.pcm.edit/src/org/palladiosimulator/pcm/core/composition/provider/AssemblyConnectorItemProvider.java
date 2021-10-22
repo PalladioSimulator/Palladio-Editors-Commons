@@ -315,9 +315,4 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 					.anyMatch(predicate);
 		}
 	}
-	
-	
-	
-	
-	
 }
