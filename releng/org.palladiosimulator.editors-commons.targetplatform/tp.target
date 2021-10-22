@@ -91,5 +91,13 @@
 <unit id="tools.mdsd.junit5utils.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.mdsd.tools/library-junit5utils/releases/latest/"/>
 </location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
+<unit id="tools.mdsd.library.emfeditutils.feature.feature.group" version="0.0.0"/>
+<repository location="https://updatesite.mdsd.tools/build-updatesite/nightly/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
+<unit id="tools.mdsd.library.emfeditutils.feature.feature.group" version="0.0.0"/>
+<repository location="https://updatesite.mdsd.tools/build-updatesite/releases/latest/"/>
+</location>
 </locations>
 </target>
