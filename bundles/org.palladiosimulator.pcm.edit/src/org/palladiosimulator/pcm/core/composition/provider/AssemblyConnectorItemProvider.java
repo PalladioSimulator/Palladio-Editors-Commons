@@ -177,16 +177,36 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
 				
 				ComposedStructure composedStructure = object.getParentStructure__Connector();
             	Collection<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
-            	AssemblyContext myContext = object.getRequiringAssemblyContext_AssemblyConnector();
-            	if (myContext != null) {
-            		removeContext(contexts, object, RequiringProviding.PROVIDING);
-            	}
+            	Collection <RepositoryComponent> components;
             	AssemblyContext providingContext = object.getProvidingAssemblyContext_AssemblyConnector();
             	if (providingContext != null) {
             		contexts = new ArrayList<AssemblyContext>();
             		contexts.add(providingContext);
             	}
-            	Set<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
+            	AssemblyContext myContext = object.getRequiringAssemblyContext_AssemblyConnector();
+            	if (myContext != null) { // RequiringContext is set
+            		removeContext(contexts, object, RequiringProviding.PROVIDING);
+            		List<RequiredRole> requiringContextsRoles = myContext.getEncapsulatedComponent__AssemblyContext().getRequiredRoles_InterfaceRequiringEntity();
+            		Collection<OperationInterface> requiringContextsInterfaces = requiringContextsRoles.stream()
+            				.filter(OperationRequiredRole.class::isInstance)
+            				.map(OperationRequiredRole.class::cast)
+            				.map(orr -> orr.getRequiredInterface__OperationRequiredRole())
+            				.collect(Collectors.toList());
+            		components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
+            		Collection<OperationProvidedRole> providedRoles = components.stream()
+            				.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
+            				.flatMap(List::stream).map(OperationProvidedRole.class::cast).collect(Collectors.toSet());
+            		Set<OperationProvidedRole> filteredRoles = new HashSet<OperationProvidedRole>();
+            		for (OperationInterface oi : requiringContextsInterfaces) {
+            			for (OperationProvidedRole role : providedRoles) {
+            				if (role.getProvidedInterface__OperationProvidedRole().isAssignableFrom(oi)) {
+            					filteredRoles.add(role);
+            				}
+            			}
+            		}
+            		providedRoles = filteredRoles;
+            	}
+            	components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toSet());
             	
 				Role myRole = object.getRequiredRole_AssemblyConnector();
 				if(myRole == null) {
