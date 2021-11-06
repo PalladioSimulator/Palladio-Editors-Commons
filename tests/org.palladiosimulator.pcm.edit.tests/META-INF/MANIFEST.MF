@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Palladio-Editors-Commons Tests
+Bundle-SymbolicName: org.palladiosimulator.pcm.edit.tests
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: org.palladiosimulator.pcm.edit;bundle-version="5.0.0"
+Automatic-Module-Name: org.palladiosimulator.pcm.edit.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-11
