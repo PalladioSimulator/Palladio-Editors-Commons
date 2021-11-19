@@ -48,14 +48,12 @@ public class ModelTest {
 		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
 		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
 		
-		
 		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(connector1, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
-		
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(connector1);
         java.lang.System.out.println(actual.size());
-        assertEquals(actual.size(), 3);
+        assertEquals(actual.size(), 3); //null is in the list always included. 2 AssemblyContexts + null = 3. null is put into list by mdsd-tools in most cases
 	}
 	
 	
