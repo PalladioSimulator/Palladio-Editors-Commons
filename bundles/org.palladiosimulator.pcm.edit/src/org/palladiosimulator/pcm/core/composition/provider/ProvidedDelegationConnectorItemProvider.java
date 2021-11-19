@@ -69,6 +69,7 @@ public class ProvidedDelegationConnectorItemProvider extends ProvidedDelegationC
 			protected Collection<?> getValueChoiceTyped(ProvidedDelegationConnector object,
 					List<OperationProvidedRole> typedList) {
 				AssemblyContext context = object.getAssemblyContext_ProvidedDelegationConnector();
+				//object.getParentStructure__Connector() // InterfaceProvidingEntity und das hat dann die Liste der ProvidedRoles
 				if (context != null) {
 					return context.getEncapsulatedComponent__AssemblyContext().getProvidedRoles_InterfaceProvidingEntity();
 				}
