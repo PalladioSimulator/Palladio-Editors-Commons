@@ -183,7 +183,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             	Collection<OperationProvidedRole> operationProvidedRoles = contexts.stream()
             			.map(AssemblyContext::getEncapsulatedComponent__AssemblyContext)
             			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity)
-            			.flatMap(List::stream).map(OperationProvidedRole.class::cast)
+            			.flatMap(List::stream).filter(OperationProvidedRole.class::isInstance).map(OperationProvidedRole.class::cast)
             			.collect(Collectors.toSet());
             	Collection <RepositoryComponent> components = contexts.stream()
             			.map(AssemblyContext::getEncapsulatedComponent__AssemblyContext)
