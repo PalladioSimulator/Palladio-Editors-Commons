@@ -1,7 +1,10 @@
 package org.palladiosimulator.pcm.core.composition.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -9,6 +12,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.ComposedStructure;
 import org.palladiosimulator.pcm.core.composition.RequiredDelegationConnector;
+import org.palladiosimulator.pcm.core.entity.ComposedProvidingRequiringEntity;
+import org.palladiosimulator.pcm.repository.OperationInterface;
+import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
 
@@ -69,16 +75,48 @@ public class RequiredDelegationConnectorItemProvider extends RequiredDelegationC
 			protected Collection<?> getValueChoiceTyped(RequiredDelegationConnector object,
 					List<OperationRequiredRole> typedList) {
 				AssemblyContext context = object.getAssemblyContext_RequiredDelegationConnector();
+				ComposedStructure parentStructure = object.getParentStructure__Connector();
+				ComposedProvidingRequiringEntity requiringParentStructure;
+				if (parentStructure instanceof ComposedProvidingRequiringEntity) {
+					requiringParentStructure = (ComposedProvidingRequiringEntity) parentStructure;
+				} else {
+					return new ArrayList<OperationRequiredRole>();
+				}
+				Collection<OperationRequiredRole> outerRequiredRoles = requiringParentStructure.getRequiredRoles_InterfaceRequiringEntity()
+						.stream()
+						.filter(OperationRequiredRole.class::isInstance)
+						.map(OperationRequiredRole.class::cast)
+						.collect(Collectors.toList());
+				
 				if (context != null) {
-					return context.getEncapsulatedComponent__AssemblyContext().getRequiredRoles_InterfaceRequiringEntity();
+					Collection<OperationRequiredRole> contextsRoles = context.getEncapsulatedComponent__AssemblyContext()
+            				.getRequiredRoles_InterfaceRequiringEntity()
+            				.stream()
+            				.filter(OperationRequiredRole.class::isInstance)
+            				.map(OperationRequiredRole.class::cast)
+            				.collect(Collectors.toList());
+					Collection<OperationInterface> contextsInterfaces = contextsRoles.stream()
+							.map(orr -> orr.getRequiredInterface__OperationRequiredRole())
+							.collect(Collectors.toList());
+					Set<OperationRequiredRole> filteredRoles = new HashSet<OperationRequiredRole>();
+            		for (OperationInterface oi : contextsInterfaces) {
+            			for (OperationRequiredRole role : outerRequiredRoles) {
+            				if (role.getRequiredInterface__OperationRequiredRole().isAssignableFrom(oi)) {
+            					filteredRoles.add(role);
+            				}
+            			}
+            		}
+            		outerRequiredRoles = filteredRoles;
 				}
-				if (object.getInnerRequiredRole_RequiredDelegationConnector() == null) {
-					return typedList;
+				
+				OperationRequiredRole innerRole = object.getInnerRequiredRole_RequiredDelegationConnector();
+				if (innerRole != null) {
+					return outerRequiredRoles.stream()
+							.filter(opr -> opr.getRequiredInterface__OperationRequiredRole()
+									.isAssignableFrom(innerRole.getRequiredInterface__OperationRequiredRole()))
+							.collect(Collectors.toList());
 				}
-				Collection<AssemblyContext> contexts = object.getParentStructure__Connector().getAssemblyContexts__ComposedStructure();
-            	Collection<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
-            	return components.stream()
-            			.map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity).flatMap(List::stream).collect(Collectors.toList());
+            	return outerRequiredRoles;
 			}
 		});
 	}
@@ -92,7 +130,6 @@ public class RequiredDelegationConnectorItemProvider extends RequiredDelegationC
 			@Override
 			protected Collection<?> getValueChoiceTyped(RequiredDelegationConnector object,
 					List<AssemblyContext> typedList) {
-				//OuterRoles gehen verloren
 				ComposedStructure composedStructure = object.getParentStructure__Connector();
 				List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
 				OperationRequiredRole outerRole = object.getOuterRequiredRole_RequiredDelegationConnector();
