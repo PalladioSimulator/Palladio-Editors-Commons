@@ -75,7 +75,6 @@ public class AssemblyConnectorItemProviderTest {
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(connector1);
-        java.lang.System.out.println(actual.size());
         assertEquals(actual.size(), 3); //null is in the list always included. 2 AssemblyContexts + null = 3. null is put into list by mdsd-tools in most cases
         assertTrue(expected.containsAll(actual));
 	}
@@ -102,7 +101,7 @@ public class AssemblyConnectorItemProviderTest {
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
-		java.lang.System.out.println(actual.size());
+		assertTrue(expected.size() == actual.size());
 		assertTrue(expected.containsAll(actual));
 	}
 	
@@ -128,6 +127,7 @@ public class AssemblyConnectorItemProviderTest {
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
+        assertTrue(expected.size() == actual.size());
 		assertTrue(expected.containsAll(actual));
 	}
 	
@@ -136,7 +136,7 @@ public class AssemblyConnectorItemProviderTest {
 		System testSystem = loadSystem();
 		AssemblyConnector testConnector = getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ", testSystem);
 		List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
-		expected.add(null);
+
 		expected.add(getAssemblyContext("_qxAiILg7EeSNPorBlo7x9g", testSystem));
 		
 		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
@@ -146,6 +146,7 @@ public class AssemblyConnectorItemProviderTest {
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
+        assertTrue(expected.size() == actual.size());
 		assertTrue(expected.containsAll(actual));
 	}
 	
@@ -154,7 +155,6 @@ public class AssemblyConnectorItemProviderTest {
 		System testSystem = loadSystem();
 		AssemblyConnector testConnector = getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ", testSystem);
 		List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
-		expected.add(null);
 		expected.add(getAssemblyContext("_9eK7YHDrEeSqnN80MQ2uGw", testSystem));
 		
 		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
@@ -164,6 +164,7 @@ public class AssemblyConnectorItemProviderTest {
 		
 		assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
+        assertTrue(expected.size() == actual.size());
 		assertTrue(expected.containsAll(actual));
 	}
 
@@ -211,7 +212,6 @@ public class AssemblyConnectorItemProviderTest {
 
 	private AssemblyContext getAssemblyContext(String id, System system) {
 		List<AssemblyContext> contexts = system.getAssemblyContexts__ComposedStructure();
-		java.lang.System.out.println("getAC contexts Size: " + contexts.size());
 		for (AssemblyContext ac : contexts) {
 			if (ac.getId().equals(id)) {
 				return ac;
@@ -224,7 +224,7 @@ public class AssemblyConnectorItemProviderTest {
 		List<RepositoryComponent> components = repo.getComponents__Repository();
 		Set<ProvidedRole> roles = components.stream().map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toSet());
 		for (ProvidedRole r : roles) {
-			if (r.getId() == id) {
+			if (r.getId().equals(id)) {
 				return r;
 			}
 		}
@@ -239,7 +239,7 @@ public class AssemblyConnectorItemProviderTest {
     			.flatMap(List::stream).map(OperationRequiredRole.class::cast)
     			.collect(Collectors.toSet());
 		for (OperationRequiredRole r : roles) {
-			if (r.getId() == id) {
+			if (r.getId().equals(id)) {
 				return r;
 			}
 		}
