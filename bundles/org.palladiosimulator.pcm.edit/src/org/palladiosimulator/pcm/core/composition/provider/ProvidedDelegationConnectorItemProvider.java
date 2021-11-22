@@ -127,7 +127,6 @@ public class ProvidedDelegationConnectorItemProvider extends ProvidedDelegationC
 			@Override
 			protected Collection<?> getValueChoiceTyped(ProvidedDelegationConnector object,
 					List<AssemblyContext> typedList) {
-				//OuterRoles gehen verloren
 				ComposedStructure composedStructure = object.getParentStructure__Connector();
 				List<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
 				OperationProvidedRole outerRole = object.getOuterProvidedRole_ProvidedDelegationConnector();
