@@ -1,7 +1,10 @@
 package org.palladiosimulator.pcm.core.composition.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -9,6 +12,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.ComposedStructure;
 import org.palladiosimulator.pcm.core.composition.ProvidedDelegationConnector;
+import org.palladiosimulator.pcm.core.entity.ComposedProvidingRequiringEntity;
+import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
 
@@ -69,17 +74,46 @@ public class ProvidedDelegationConnectorItemProvider extends ProvidedDelegationC
 			protected Collection<?> getValueChoiceTyped(ProvidedDelegationConnector object,
 					List<OperationProvidedRole> typedList) {
 				AssemblyContext context = object.getAssemblyContext_ProvidedDelegationConnector();
-				//object.getParentStructure__Connector() // InterfaceProvidingEntity und das hat dann die Liste der ProvidedRoles
+				ComposedStructure parentStructure = object.getParentStructure__Connector();
+				ComposedProvidingRequiringEntity providingParentStructure;
+				if (parentStructure instanceof ComposedProvidingRequiringEntity) {
+					providingParentStructure = (ComposedProvidingRequiringEntity) parentStructure;
+				} else {
+					return new ArrayList<OperationProvidedRole>();
+				}
+				Collection<OperationProvidedRole> outerProvidedRoles = providingParentStructure.getProvidedRoles_InterfaceProvidingEntity()
+						.stream()
+						.filter(OperationProvidedRole.class::isInstance)
+						.map(OperationProvidedRole.class::cast)
+						.collect(Collectors.toList());
 				if (context != null) {
-					return context.getEncapsulatedComponent__AssemblyContext().getProvidedRoles_InterfaceProvidingEntity();
+					Collection<OperationProvidedRole> contextsRoles = context.getEncapsulatedComponent__AssemblyContext()
+            				.getProvidedRoles_InterfaceProvidingEntity()
+            				.stream()
+            				.filter(OperationProvidedRole.class::isInstance)
+            				.map(OperationProvidedRole.class::cast)
+            				.collect(Collectors.toList());
+					Collection<OperationInterface> contextsInterfaces = contextsRoles.stream()
+							.map(opr -> opr.getProvidedInterface__OperationProvidedRole())
+							.collect(Collectors.toList());
+					Set<OperationProvidedRole> filteredRoles = new HashSet<OperationProvidedRole>();
+            		for (OperationInterface oi : contextsInterfaces) {
+            			for (OperationProvidedRole role : outerProvidedRoles) {
+            				if (role.getProvidedInterface__OperationProvidedRole().isAssignableFrom(oi)) {
+            					filteredRoles.add(role);
+            				}
+            			}
+            		}
+            		outerProvidedRoles = filteredRoles;
 				}
-				if (object.getInnerProvidedRole_ProvidedDelegationConnector() == null) {
-					return typedList;
+				OperationProvidedRole innerRole = object.getInnerProvidedRole_ProvidedDelegationConnector();
+				if (innerRole != null) {
+					return outerProvidedRoles.stream()
+							.filter(opr -> opr.getProvidedInterface__OperationProvidedRole()
+									.isAssignableFrom(innerRole.getProvidedInterface__OperationProvidedRole()))
+							.collect(Collectors.toList());
 				}
-				Collection<AssemblyContext> contexts = object.getParentStructure__Connector().getAssemblyContexts__ComposedStructure();
-            	Collection<RepositoryComponent> components = contexts.stream().map(AssemblyContext::getEncapsulatedComponent__AssemblyContext).collect(Collectors.toList());
-            	return components.stream()
-            			.map(RepositoryComponent::getProvidedRoles_InterfaceProvidingEntity).flatMap(List::stream).collect(Collectors.toList());
+            	return outerProvidedRoles;
 			}
 		});
 	}
