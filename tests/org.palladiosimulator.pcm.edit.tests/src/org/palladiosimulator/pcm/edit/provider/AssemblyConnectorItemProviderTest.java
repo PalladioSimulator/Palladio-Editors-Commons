@@ -39,7 +39,7 @@ import org.palladiosimulator.pcm.repository.Repository;
 import tools.mdsd.junit5utils.extensions.PlatformStandaloneExtension;
 
 @ExtendWith(PlatformStandaloneExtension.class)
-public class ModelTest {
+public class AssemblyConnectorItemProviderTest {
 
 	@Test
 	public void assemblyConnectorItemProviderTest() {
