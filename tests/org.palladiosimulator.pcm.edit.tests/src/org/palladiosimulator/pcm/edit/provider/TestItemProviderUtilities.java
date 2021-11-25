@@ -1,5 +1,6 @@
 package org.palladiosimulator.pcm.edit.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -14,11 +15,17 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.Connector;
+import org.palladiosimulator.pcm.core.composition.DelegationConnector;
+import org.palladiosimulator.pcm.repository.BasicComponent;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
+import org.palladiosimulator.pcm.seff.AbstractAction;
+import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
+import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
 import org.palladiosimulator.pcm.system.System;
+
 
 public class TestItemProviderUtilities {
 
@@ -36,8 +43,6 @@ public class TestItemProviderUtilities {
         return testSystem;
 	}
 	
-	// Funktioniert nicht, NoClassDefFoundError org/apache/log4j/Logger.
-	//Bei loadSystem funktioniert iwie alles. KP...
 	protected static Repository loadRepository() {
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
         Map<String, Object> m = reg.getExtensionToFactoryMap();
@@ -59,6 +64,16 @@ public class TestItemProviderUtilities {
 		for (Connector c : connectors) {
 			if (c instanceof AssemblyConnector && c.getId().equals(id)) {
 				return (AssemblyConnector) c;
+			}
+		}
+		return null;
+	}
+	
+	protected static DelegationConnector getDelegationConnector(String id, System system) {
+		List<Connector> connectors = system.getConnectors__ComposedStructure();
+		for (Connector c : connectors) {
+			if (c instanceof DelegationConnector && c.getId().equals(id)) {
+				return (DelegationConnector) c;
 			}
 		}
 		return null;
@@ -100,6 +115,30 @@ public class TestItemProviderUtilities {
 		return null;
 	}
 	
+	protected static ResourceDemandingBehaviour getResourceDemandingBehaviour(String id, Repository repository) {
+		List<RepositoryComponent> components = repository.getComponents__Repository();
+		List<BasicComponent> basicComponents = components.stream().filter(BasicComponent.class::isInstance).map(BasicComponent.class::cast).collect(Collectors.toList());
+		List<ResourceDemandingBehaviour> behaviours = basicComponents.stream()
+				.map(BasicComponent::getServiceEffectSpecifications__BasicComponent)
+				.flatMap(List::stream).filter(ResourceDemandingBehaviour.class::isInstance).map(ResourceDemandingBehaviour.class::cast)
+				.collect(Collectors.toList());
+		for(ResourceDemandingBehaviour rdb : behaviours) {
+			if(rdb.getId().equals(id)) {
+				return rdb;
+			}
+		}
+		return null;
+	}
+	
+	protected static AbstractAction getAbstractAction(String id, ResourceDemandingBehaviour behaviour) {
+		List<AbstractAction> actions = behaviour.getSteps_Behaviour();
+		for(AbstractAction a : actions) {
+			if(a.getId().equals(id)) {
+				return a;
+			}
+		}
+		return null;
+	}
 	
 	
 }
