@@ -17,7 +17,6 @@ import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
 import org.palladiosimulator.pcm.seff.SeffPackage;
 import org.palladiosimulator.pcm.seff.StartAction;
-import org.palladiosimulator.pcm.seff.provider.AbstractActionItemProvider;
 import org.palladiosimulator.pcm.seff.provider.SeffItemProviderAdapterFactory;
 import org.palladiosimulator.pcm.seff.provider.StartActionItemProvider;
 
