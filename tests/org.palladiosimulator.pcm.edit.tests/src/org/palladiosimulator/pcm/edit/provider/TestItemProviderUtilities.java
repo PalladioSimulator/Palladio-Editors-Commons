@@ -1,6 +1,5 @@
 package org.palladiosimulator.pcm.edit.provider;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +22,11 @@ import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
-import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
 import org.palladiosimulator.pcm.system.System;
+import org.palladiosimulator.pcm.usagemodel.AbstractUserAction;
+import org.palladiosimulator.pcm.usagemodel.ScenarioBehaviour;
+import org.palladiosimulator.pcm.usagemodel.UsageModel;
+import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 
 public class TestItemProviderUtilities {
@@ -56,6 +58,18 @@ public class TestItemProviderUtilities {
         return testRepository;
 	}
 	
+	protected static UsageModel loadUsageModel() {
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+        Map<String, Object> m = reg.getExtensionToFactoryMap();
+        m.put("usagemodel", new XMIResourceFactoryImpl());
+        
+        ResourceSet resSet = new ResourceSetImpl();
+        Resource resource = resSet.getResource(URI
+                .createURI("testmodels/MediaStoreInstant-DownloadCache.usagemodel"), true);
+        
+        UsageModel testUsageModel = (UsageModel) resource.getContents().get(0);
+        return testUsageModel;
+	}
 	
 	
 	
@@ -140,5 +154,24 @@ public class TestItemProviderUtilities {
 		return null;
 	}
 	
+	protected static ScenarioBehaviour getScenarioBehaviour(String id, UsageModel model) {
+		List<UsageScenario> scenarios = model.getUsageScenario_UsageModel();
+		for (UsageScenario sc : scenarios) {
+			if(sc.getScenarioBehaviour_UsageScenario().getId().equals(id)) {
+				return sc.getScenarioBehaviour_UsageScenario();
+			}
+		}
+		return null;
+	}
+	
+	protected static AbstractUserAction getAbstractUserAction(String id, ScenarioBehaviour behaviour) {
+		List<AbstractUserAction> actions = behaviour.getActions_ScenarioBehaviour();
+		for(AbstractUserAction action : actions) {
+			if (action.getId().equals(id)) {
+				return action;
+			}
+		}
+		return null;
+	}
 	
 }
