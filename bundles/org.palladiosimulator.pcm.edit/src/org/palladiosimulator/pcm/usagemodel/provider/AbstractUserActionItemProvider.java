@@ -19,47 +19,48 @@ import tools.mdsd.library.emfeditutils.itempropertydescriptor.ValueChoiceCalcula
  * @author Nathan
  *
  */
-public class AbstractUserActionItemProvider extends AbstractUserActionItemProviderGen{
+public class AbstractUserActionItemProvider extends AbstractUserActionItemProviderGen {
 
-	public AbstractUserActionItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    public AbstractUserActionItemProvider(AdapterFactory adapterFactory) {
+        super(adapterFactory);
+    }
 
-	@Override
-	protected void addSuccessorPropertyDescriptor(Object object) {
-		super.addSuccessorPropertyDescriptor(object);
-		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(AbstractUserAction.class, AbstractUserAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
-                    List<AbstractUserAction> typedList) {
-            	ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
-            	EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
-            	return actionList.stream()
-            			.filter(Predicate.not(Start.class::isInstance))
-            			.filter(Predicate.not(object::equals))
-            			.collect(Collectors.toList());
-            }
-		});
-	}
+    @Override
+    protected void addSuccessorPropertyDescriptor(Object object) {
+        super.addSuccessorPropertyDescriptor(object);
+        var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
+        decorator.setValueChoiceCalculator(
+                new ValueChoiceCalculatorBase<>(AbstractUserAction.class, AbstractUserAction.class) {
+                    @Override
+                    protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
+                            List<AbstractUserAction> typedList) {
+                        ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
+                        EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
+                        return actionList.stream()
+                            .filter(Predicate.not(Start.class::isInstance))
+                            .filter(Predicate.not(object::equals))
+                            .collect(Collectors.toList());
+                    }
+                });
+    }
 
-	@Override
-	protected void addPredecessorPropertyDescriptor(Object object) {
-		super.addPredecessorPropertyDescriptor(object);
-		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(AbstractUserAction.class, AbstractUserAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
-                    List<AbstractUserAction> typedList) {
-            	ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
-            	EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
-            	return actionList.stream()
-            			.filter(Predicate.not(Stop.class::isInstance))
-            			.filter(a -> object != a)
-            			.collect(Collectors.toList());
-            }
-		});
-	}
+    @Override
+    protected void addPredecessorPropertyDescriptor(Object object) {
+        super.addPredecessorPropertyDescriptor(object);
+        var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
+        decorator.setValueChoiceCalculator(
+                new ValueChoiceCalculatorBase<>(AbstractUserAction.class, AbstractUserAction.class) {
+                    @Override
+                    protected Collection<?> getValueChoiceTyped(AbstractUserAction object,
+                            List<AbstractUserAction> typedList) {
+                        ScenarioBehaviour scenarioBehaviour = object.getScenarioBehaviour_AbstractUserAction();
+                        EList<AbstractUserAction> actionList = scenarioBehaviour.getActions_ScenarioBehaviour();
+                        return actionList.stream()
+                            .filter(Predicate.not(Stop.class::isInstance))
+                            .filter(a -> object != a)
+                            .collect(Collectors.toList());
+                    }
+                });
+    }
 
-	
 }
