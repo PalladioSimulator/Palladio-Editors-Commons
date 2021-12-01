@@ -21,12 +21,7 @@ public class StartActionItemProvider extends StartActionItemProviderGen {
     protected void addPredecessor_AbstractActionPropertyDescriptor(Object object) {
         super.addPredecessor_AbstractActionPropertyDescriptor(object);
         var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-        decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(StartAction.class, AbstractAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(StartAction object, List<AbstractAction> typedList) {
-                return new ArrayList<AbstractAction>();
-            }
-        });
+        decorator.setValueChoiceCalculator(SeffItemProviderUtilities.createEmptyValueChoiceCalculator());
     }
 
 }

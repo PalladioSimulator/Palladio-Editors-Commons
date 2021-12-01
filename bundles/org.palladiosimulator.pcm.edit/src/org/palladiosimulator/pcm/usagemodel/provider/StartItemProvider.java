@@ -21,13 +21,7 @@ public class StartItemProvider extends StartItemProviderGen {
 	protected void addPredecessorPropertyDescriptor(Object object) {
 		super.addPredecessorPropertyDescriptor(object);
 		var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-		decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(Start.class, AbstractUserAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(Start object,
-                    List<AbstractUserAction> typedList) {
-            	return new ArrayList<AbstractUserAction>();
-            }
-		});
+		decorator.setValueChoiceCalculator(UsageModelProviderUtilities.createEmptyValueChoiceCalculator());
 	}
 
 	

@@ -21,12 +21,7 @@ public class StopItemProvider extends StopItemProviderGen {
     protected void addSuccessorPropertyDescriptor(Object object) {
         super.addSuccessorPropertyDescriptor(object);
         var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-        decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(Stop.class, AbstractUserAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(Stop object, List<AbstractUserAction> typedList) {
-                return new ArrayList<AbstractUserAction>();
-            }
-        });
+        decorator.setValueChoiceCalculator(UsageModelProviderUtilities.createEmptyValueChoiceCalculator());
     }
 
 }

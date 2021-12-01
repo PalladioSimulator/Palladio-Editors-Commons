@@ -57,7 +57,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                     AssemblyContext providingContext = object.getProvidingAssemblyContext_AssemblyConnector();
                     List<OperationInterface> providingContextInterfaces;
                     if (providingContext != null) {
-                        contexts = removeContext(contexts, object, RequiringProviding.PROVIDING);
+                        contexts = getCopyWithoutContext(contexts, object, RequiringProviding.PROVIDING);
                         List<ProvidedRole> providingContextRoles = providingContext
                             .getEncapsulatedComponent__AssemblyContext()
                             .getProvidedRoles_InterfaceProvidingEntity()
@@ -112,15 +112,12 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             .setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(AssemblyConnector.class, AssemblyContext.class) {
                 @Override
                 protected Collection<?> getValueChoiceTyped(AssemblyConnector object, List<AssemblyContext> typedList) {
-                    // Für Filterschritte private Methoden bauen die predicates zurückggeben,
-                    // jenachdem welcher Filter bruacht.
-                    // Stream in Variable und pro gesetztem Wert die Filter hinzufügen.
                     ComposedStructure composedStructure = object.getParentStructure__Connector();
                     Collection<AssemblyContext> contexts = composedStructure.getAssemblyContexts__ComposedStructure();
                     AssemblyContext requiringContext = object.getRequiringAssemblyContext_AssemblyConnector();
                     List<OperationInterface> requiringContextInterfaces;
                     if (requiringContext != null) {
-                        contexts = removeContext(contexts, object, RequiringProviding.REQUIRING);
+                        contexts = getCopyWithoutContext(contexts, object, RequiringProviding.REQUIRING);
                         List<RequiredRole> requiringContextRoles = requiringContext
                             .getEncapsulatedComponent__AssemblyContext()
                             .getRequiredRoles_InterfaceRequiringEntity()
@@ -132,8 +129,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                             .map(OperationRequiredRole.class::cast)
                             .map(OperationRequiredRole::getRequiredInterface__OperationRequiredRole)
                             .collect(Collectors.toList());
-                        // Schmeiße alle Contexte raus, die keinen Match mit der
-                        // requiringContextInterfaces Liste haben:
+                        // Removve all contexts without match in the requiringContextInterfaces List
                         Set<AssemblyContext> contexts2 = new HashSet<AssemblyContext>();
                         for (OperationInterface oi : requiringContextInterfaces) {
                             for (AssemblyContext c : contexts) {
@@ -182,7 +178,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                         Collection<AssemblyContext> contexts = composedStructure
                             .getAssemblyContexts__ComposedStructure();
                         if (requiringContext != null) {
-                            removeContext(contexts, object, RequiringProviding.PROVIDING);
+                            getCopyWithoutContext(contexts, object, RequiringProviding.PROVIDING);
                         }
                         Collection<OperationProvidedRole> operationProvidedRoles = contexts.stream()
                             .map(AssemblyContext::getEncapsulatedComponent__AssemblyContext)
@@ -252,7 +248,7 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                         Collection<AssemblyContext> contexts = composedStructure
                             .getAssemblyContexts__ComposedStructure();
                         if (providingContext != null) {
-                            removeContext(contexts, object, RequiringProviding.REQUIRING);
+                            getCopyWithoutContext(contexts, object, RequiringProviding.REQUIRING);
                         }
                         Collection<OperationRequiredRole> operationRequiredRoles = contexts.stream()
                             .map(AssemblyContext::getEncapsulatedComponent__AssemblyContext)
@@ -306,7 +302,14 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
                 });
     }
 
-    private List<AssemblyContext> removeContext(Collection<AssemblyContext> contexts, AssemblyConnector connector,
+    /**
+     * This method returns a copy of the list without the AssemblyConnector's context.
+     * @param contexts list of contexts
+     * @param connector
+     * @param flag
+     * @return 
+     */
+    private List<AssemblyContext> getCopyWithoutContext(Collection<AssemblyContext> contexts, AssemblyConnector connector,
             RequiringProviding flag) {
         AssemblyContext myContext;
         if (flag == RequiringProviding.REQUIRING) {
@@ -319,6 +322,13 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
             .collect(Collectors.toList());
     }
 
+    /**
+     * This method returns a predicate, that allows all contexts which have a providing role,
+     * that matches the assemblyConnectors requiring or providing role, depending on the flag.
+     * @param connector
+     * @param flag
+     * @return
+     */
     private Predicate<AssemblyContext> contextProvidingRolesAssignableFromRole(AssemblyConnector connector,
             RequiringProviding flag) {
         if (flag == RequiringProviding.PROVIDING) {
@@ -344,6 +354,13 @@ public class AssemblyConnectorItemProvider extends AssemblyConnectorItemProvider
         }
     }
 
+    /**
+     * This method returns a predicate, that allows all contexts which have a requiring role,
+     * that matches the assemblyConnectors requiring or providing role, depending on the flag.
+     * @param connector
+     * @param flag
+     * @return 
+     */
     private Predicate<AssemblyContext> contextRequiringRolesAssignableFromRole(AssemblyConnector connector,
             RequiringProviding flag) {
         if (flag == RequiringProviding.PROVIDING) {
