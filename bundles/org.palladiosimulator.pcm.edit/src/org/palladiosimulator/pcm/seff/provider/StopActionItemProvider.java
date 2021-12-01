@@ -21,12 +21,7 @@ public class StopActionItemProvider extends StopActionItemProviderGen {
     protected void addSuccessor_AbstractActionPropertyDescriptor(Object object) {
         super.addSuccessor_AbstractActionPropertyDescriptor(object);
         var decorator = ItemPropertyDescriptorUtils.decorateLastDescriptor(this.itemPropertyDescriptors);
-        decorator.setValueChoiceCalculator(new ValueChoiceCalculatorBase<>(StopAction.class, AbstractAction.class) {
-            @Override
-            protected Collection<?> getValueChoiceTyped(StopAction object, List<AbstractAction> typedList) {
-                return new ArrayList<AbstractAction>();
-            }
-        });
+        decorator.setValueChoiceCalculator(SeffItemProviderUtilities.createEmptyValueChoiceCalculator());
     }
 
 }

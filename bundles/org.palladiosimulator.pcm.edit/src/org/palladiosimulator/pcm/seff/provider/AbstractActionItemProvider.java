@@ -32,7 +32,7 @@ public class AbstractActionItemProvider extends AbstractActionItemProviderGen {
                     .getResourceDemandingBehaviour_AbstractAction();
                 EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
                 return actionList.stream()
-                    .filter(Predicate.not(StartAction.class::isInstance)) // EMF Package verwenden.
+                    .filter(Predicate.not(StartAction.class::isInstance))
                     .filter(a -> object != a)
                     .collect(Collectors.toList());
             }
