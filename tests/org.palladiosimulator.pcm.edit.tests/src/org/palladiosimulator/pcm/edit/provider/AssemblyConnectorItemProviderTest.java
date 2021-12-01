@@ -1,4 +1,5 @@
 package org.palladiosimulator.pcm.edit.provider;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,7 +9,6 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.junit.Ignore;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,7 +21,6 @@ import org.palladiosimulator.pcm.core.composition.provider.CompositionItemProvid
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
-import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.system.System;
 import org.palladiosimulator.pcm.system.SystemFactory;
@@ -31,131 +30,143 @@ import tools.mdsd.junit5utils.extensions.PlatformStandaloneExtension;
 @ExtendWith(PlatformStandaloneExtension.class)
 public class AssemblyConnectorItemProviderTest {
 
-	@Test
-	public void assemblyConnectorItemProviderTest() {
-		// init EMF for standalone use
+    @Test
+    public void assemblyConnectorItemProviderTest() {
+        // init EMF for standalone use
 
-		//Retrieve default Factory Singleton
-		CompositionFactory compositionFactory = CompositionFactory.eINSTANCE;
-		RepositoryFactory repositoryFactory = RepositoryFactory.eINSTANCE;
-		SystemFactory systemFactory = SystemFactory.eINSTANCE;
-		
-		//create Content of our Model
-		System system = systemFactory.createSystem(); // parentStructure / RepositoryStructure
-		AssemblyConnector connector1 = compositionFactory.createAssemblyConnector();
-		connector1.setParentStructure__Connector(system);
-		AssemblyContext providingContext = compositionFactory.createAssemblyContext();
-		providingContext.setParentStructure__AssemblyContext(system);
-		AssemblyContext requiringContext = compositionFactory.createAssemblyContext();
-		requiringContext.setParentStructure__AssemblyContext(system);
-		OperationProvidedRole providingRole = repositoryFactory.createOperationProvidedRole();
-		providingRole.setProvidingEntity_ProvidedRole(providingContext.getEncapsulatedComponent__AssemblyContext());
-		OperationRequiredRole requiringRole = repositoryFactory.createOperationRequiredRole();
-		requiringRole.setRequiringEntity_RequiredRole(requiringContext.getEncapsulatedComponent__AssemblyContext());
-		//Create expected result list
-		Collection<AssemblyContext> expected = new ArrayList<AssemblyContext>();
-		expected.add(requiringContext);
-		expected.add(providingContext);
-		expected.add(null);
-		
-		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
-		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(connector1, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
-		
-		assertNotNull(descriptor);
+        // Retrieve default Factory Singleton
+        CompositionFactory compositionFactory = CompositionFactory.eINSTANCE;
+        RepositoryFactory repositoryFactory = RepositoryFactory.eINSTANCE;
+        SystemFactory systemFactory = SystemFactory.eINSTANCE;
+
+        // create Content of our Model
+        System system = systemFactory.createSystem(); // parentStructure / RepositoryStructure
+        AssemblyConnector connector1 = compositionFactory.createAssemblyConnector();
+        connector1.setParentStructure__Connector(system);
+        AssemblyContext providingContext = compositionFactory.createAssemblyContext();
+        providingContext.setParentStructure__AssemblyContext(system);
+        AssemblyContext requiringContext = compositionFactory.createAssemblyContext();
+        requiringContext.setParentStructure__AssemblyContext(system);
+        OperationProvidedRole providingRole = repositoryFactory.createOperationProvidedRole();
+        providingRole.setProvidingEntity_ProvidedRole(providingContext.getEncapsulatedComponent__AssemblyContext());
+        OperationRequiredRole requiringRole = repositoryFactory.createOperationRequiredRole();
+        requiringRole.setRequiringEntity_RequiredRole(requiringContext.getEncapsulatedComponent__AssemblyContext());
+        // Create expected result list
+        Collection<AssemblyContext> expected = new ArrayList<AssemblyContext>();
+        expected.add(requiringContext);
+        expected.add(providingContext);
+        expected.add(null);
+
+        CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
+        AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(connector1,
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
+
+        assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(connector1);
-        assertEquals(actual.size(), 3); //null is in the list always included. 2 AssemblyContexts + null = 3. null is put into list by mdsd-tools in most cases
+        assertEquals(actual.size(), 3); // null is in the list always included. 2 AssemblyContexts +
+                                        // null = 3. null is put into list by mdsd-tools in most
+                                        // cases
         assertTrue(expected.containsAll(actual));
-	}
+    }
 
-	
-	@Test
-	public void testAssemblyConnectorItemProvider__addProvidedRole_AssemblyConnectorPropertyDescriptor() {
-		System testSystem = TestItemProviderUtilities.loadSystem();
-		RepositoryFactory repositoryFactory = RepositoryFactory.eINSTANCE;
-		Repository testRepository = TestItemProviderUtilities.loadRepository();
-		AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_hWBckHD5EeSA4fySuX9I2Q", testSystem);
-		//Create expected result list
-		Collection<ProvidedRole> expected = new ArrayList<ProvidedRole>();
-		//Loading Repository somehow is not working => Create OPR with same ID and compare on ID.
-		ProvidedRole providingRole = TestItemProviderUtilities.getProvidedRole("_MtSiMHDyEeSqnN80MQ2uGw", testRepository);
-		ProvidedRole providingRole2 = TestItemProviderUtilities.getProvidedRole("_SLa9kk1UEey5av44boACtg", testRepository);
-		expected.add(null);
-		
-		//Get result
-		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
-		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_CONNECTOR);
-		
-		assertNotNull(descriptor);
+    @Test
+    public void testAssemblyConnectorItemProvideraddProvidedRoleAssemblyConnectorPropertyDescriptor() {
+        System testSystem = TestItemProviderUtilities.loadSystem();
+        // Repository testRepository = TestItemProviderUtilities.loadRepository();
+        AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_hWBckHD5EeSA4fySuX9I2Q",
+                testSystem);
+        // Create expected result list
+        Collection<ProvidedRole> expected = new ArrayList<ProvidedRole>();
+        // Loading Repository somehow is not working => Create OPR with same ID and compare on ID.
+        // ProvidedRole providingRole =
+        // TestItemProviderUtilities.getProvidedRole("_MtSiMHDyEeSqnN80MQ2uGw", testRepository);
+        // ProvidedRole providingRole2 =
+        // TestItemProviderUtilities.getProvidedRole("_SLa9kk1UEey5av44boACtg", testRepository);
+        expected.add(null);
+        // testSystem.eResource().getResourceSet().getResources()
+        // Get result
+        CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
+        AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector,
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDED_ROLE_ASSEMBLY_CONNECTOR);
+
+        assertNotNull(descriptor);
         Collection<?> actual = descriptor.getChoiceOfValues(testConnector);
-		assertTrue(expected.size() == actual.size());
-		assertTrue(expected.containsAll(actual));
-	}
-	
-	@Disabled
-	@Test
-	public void testAssemblyConnectorItemProvider__addRequiredRole_AssemblyConnectorPropertyDescriptor() {
-		System testSystem = TestItemProviderUtilities.loadSystem();
-		RepositoryFactory repositoryFactory = RepositoryFactory.eINSTANCE;
-		//Repository testRepository = TestItemProviderUtilities.loadRepository();
-		AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_hWBckHD5EeSA4fySuX9I2Q", testSystem);
-		
-		//Create expected result list
-		Collection<OperationRequiredRole> expected = new ArrayList<OperationRequiredRole>();
-		//Loading Repository somehow is not working => Create ORR with same ID and compare on ID.
-		OperationRequiredRole requiringRole = repositoryFactory.createOperationRequiredRole();
-		requiringRole.setId("_cljekHD2EeSA4fySuX9I2Q");
-		expected.add(null);
-		
-		//Get result
-		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
-		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_CONNECTOR);
-		
-		assertNotNull(descriptor);
-        var actual = descriptor.getChoiceOfValues(testConnector);
+        java.lang.System.out.println(actual.size());
         assertTrue(expected.size() == actual.size());
-		assertTrue(expected.containsAll(actual));
-	}
-	
-	@Test
-	public void testAssemblyConnectorItemProvider__addProvidingAssemblyContext_AssemblyConnectorPropertyDescriptor() {
-		System testSystem = TestItemProviderUtilities.loadSystem();
-		AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ", testSystem);
-		List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
+        assertTrue(expected.containsAll(actual));
+    }
 
-		expected.add(TestItemProviderUtilities.getAssemblyContext("_qxAiILg7EeSNPorBlo7x9g", testSystem));
-		
-		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
-		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
-		
-		assertNotNull(descriptor);
+    @Disabled
+    @Test
+    public void testAssemblyConnectorItemProvideraddRequiredRoleAssemblyConnectorPropertyDescriptor() {
+        System testSystem = TestItemProviderUtilities.loadSystem();
+        RepositoryFactory repositoryFactory = RepositoryFactory.eINSTANCE;
+        // Repository testRepository = TestItemProviderUtilities.loadRepository();
+        AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_hWBckHD5EeSA4fySuX9I2Q",
+                testSystem);
+
+        // Create expected result list
+        Collection<OperationRequiredRole> expected = new ArrayList<OperationRequiredRole>();
+        // Loading Repository somehow is not working => Create ORR with same ID and compare on ID.
+        OperationRequiredRole requiringRole = repositoryFactory.createOperationRequiredRole();
+        requiringRole.setId("_cljekHD2EeSA4fySuX9I2Q");
+        expected.add(null);
+
+        // Get result
+        CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
+        AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector,
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRED_ROLE_ASSEMBLY_CONNECTOR);
+
+        assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
         assertTrue(expected.size() == actual.size());
-		assertTrue(expected.containsAll(actual));
-	}
-	
-	@Test
-	public void testAssemblyConnectorItemProvider__addRequiringAssemblyContext_AssemblyConnectorPropertyDescriptor() {
-		System testSystem = TestItemProviderUtilities.loadSystem();
-		AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ", testSystem);
-		List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
-		expected.add(TestItemProviderUtilities.getAssemblyContext("_9eK7YHDrEeSqnN80MQ2uGw", testSystem));
-		
-		CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
-		AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector, CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
-		
-		assertNotNull(descriptor);
+        assertTrue(expected.containsAll(actual));
+    }
+
+    @Test
+    public void testAssemblyConnectorItemProvideraddProvidingAssemblyContextAssemblyConnectorPropertyDescriptor() {
+        System testSystem = TestItemProviderUtilities.loadSystem();
+        AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ",
+                testSystem);
+        List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
+
+        expected.add(TestItemProviderUtilities.getAssemblyContext("_qxAiILg7EeSNPorBlo7x9g", testSystem));
+
+        CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
+        AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector,
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
+
+        assertNotNull(descriptor);
         var actual = descriptor.getChoiceOfValues(testConnector);
         assertTrue(expected.size() == actual.size());
-		assertTrue(expected.containsAll(actual));
-	}
+        assertTrue(expected.containsAll(actual));
+    }
+
+    @Test
+    public void testAssemblyConnectorItemProvideraddRequiringAssemblyContextAssemblyConnectorPropertyDescriptor() {
+        System testSystem = TestItemProviderUtilities.loadSystem();
+        AssemblyConnector testConnector = TestItemProviderUtilities.getAssemblyConnector("_qmijsLYdEeapTpBxO5_ZIQ",
+                testSystem);
+        List<AssemblyContext> expected = new ArrayList<AssemblyContext>();
+        expected.add(TestItemProviderUtilities.getAssemblyContext("_9eK7YHDrEeSqnN80MQ2uGw", testSystem));
+
+        CompositionItemProviderAdapterFactory adapterFactory = new CompositionItemProviderAdapterFactory();
+        AssemblyConnectorItemProvider provider = new AssemblyConnectorItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testConnector,
+                CompositionPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRING_ASSEMBLY_CONTEXT_ASSEMBLY_CONNECTOR);
+
+        assertNotNull(descriptor);
+        var actual = descriptor.getChoiceOfValues(testConnector);
+        assertTrue(expected.size() == actual.size());
+        assertTrue(expected.containsAll(actual));
+    }
 }

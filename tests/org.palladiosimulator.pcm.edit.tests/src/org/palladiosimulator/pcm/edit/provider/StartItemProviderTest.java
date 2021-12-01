@@ -17,7 +17,6 @@ import org.palladiosimulator.pcm.usagemodel.ScenarioBehaviour;
 import org.palladiosimulator.pcm.usagemodel.Start;
 import org.palladiosimulator.pcm.usagemodel.UsageModel;
 import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
-import org.palladiosimulator.pcm.usagemodel.provider.AbstractUserActionItemProvider;
 import org.palladiosimulator.pcm.usagemodel.provider.StartItemProvider;
 import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
 
@@ -34,8 +33,9 @@ private UsageModel testUsageModel;
 	}
 	
 	@Test
-	public void addPredecessor_StartPropertyDescriptorTest() {
-		ScenarioBehaviour scenario = TestItemProviderUtilities.getScenarioBehaviour("__hrGYHD6EeSA4fySuX9I2Q", testUsageModel);
+	public void addPredecessorStartPropertyDescriptorTest() {
+		ScenarioBehaviour scenario = TestItemProviderUtilities
+		        .getScenarioBehaviour("__hrGYHD6EeSA4fySuX9I2Q", testUsageModel);
 		Start testAction = (Start) TestItemProviderUtilities.getAbstractUserAction("__hs7kHD6EeSA4fySuX9I2Q", scenario);
 		
 		//define expected result - only null, as Start has no predecessors.
@@ -47,7 +47,9 @@ private UsageModel testUsageModel;
 		StartItemProvider provider = new StartItemProvider(adapterFactory);
 		
 		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testAction, UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__PREDECESSOR);
+		IItemPropertyDescriptor descriptor = 
+		        provider.getPropertyDescriptor(testAction,
+		                UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__PREDECESSOR);
         Collection<?> actual = descriptor.getChoiceOfValues(testAction);
         
         assertNotNull(descriptor);

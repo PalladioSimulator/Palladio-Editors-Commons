@@ -24,33 +24,34 @@ import tools.mdsd.junit5utils.extensions.PlatformStandaloneExtension;
 
 @ExtendWith(PlatformStandaloneExtension.class)
 public class StopItemProviderTest {
-private UsageModel testUsageModel;
-	
-	@BeforeEach
-	public void setUp() {
-		testUsageModel = TestItemProviderUtilities.loadUsageModel();
-	}
-	
-	@Test
-	public void addSuccessor_StartPropertyDescriptorTest() {
-		ScenarioBehaviour scenario = TestItemProviderUtilities.getScenarioBehaviour("__hrGYHD6EeSA4fySuX9I2Q", testUsageModel);
-		Stop testAction = (Stop) TestItemProviderUtilities.getAbstractUserAction("__huJsHD6EeSA4fySuX9I2Q", scenario);
-		
-		//define expected result - only null, as Start has no predecessors.
-		List<AbstractUserAction> expected = new ArrayList<AbstractUserAction>();
-		expected.add(null);
-		
-		//get result
-		UsagemodelItemProviderAdapterFactory adapterFactory = new UsagemodelItemProviderAdapterFactory();
-		StopItemProvider provider = new StopItemProvider(adapterFactory);
-		
-		
-		IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testAction, UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__SUCCESSOR);
+    private UsageModel testUsageModel;
+
+    @BeforeEach
+    public void setUp() {
+        testUsageModel = TestItemProviderUtilities.loadUsageModel();
+    }
+
+    @Test
+    public void addSuccessorStartPropertyDescriptorTest() {
+        ScenarioBehaviour scenario = TestItemProviderUtilities.getScenarioBehaviour("__hrGYHD6EeSA4fySuX9I2Q",
+                testUsageModel);
+        Stop testAction = (Stop) TestItemProviderUtilities.getAbstractUserAction("__huJsHD6EeSA4fySuX9I2Q", scenario);
+
+        // define expected result - only null, as Start has no predecessors.
+        List<AbstractUserAction> expected = new ArrayList<AbstractUserAction>();
+        expected.add(null);
+
+        // get result
+        UsagemodelItemProviderAdapterFactory adapterFactory = new UsagemodelItemProviderAdapterFactory();
+        StopItemProvider provider = new StopItemProvider(adapterFactory);
+
+        IItemPropertyDescriptor descriptor = provider.getPropertyDescriptor(testAction,
+                UsagemodelPackage.Literals.ABSTRACT_USER_ACTION__SUCCESSOR);
         Collection<?> actual = descriptor.getChoiceOfValues(testAction);
-        
+
         assertNotNull(descriptor);
-		assertEquals(expected.size(), actual.size());
-		assertTrue(expected.containsAll(actual));
-	}
-	
+        assertEquals(expected.size(), actual.size());
+        assertTrue(expected.containsAll(actual));
+    }
+
 }

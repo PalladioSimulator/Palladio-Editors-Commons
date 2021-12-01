@@ -1,3 +1,9 @@
 #Folder
 target/
 src-gen/
+*.prefs
+*.checkstyle
+bundles/org.palladiosimulator.codeconventions/
+Palladio-Build-CodingConventions/
+*.settings
+*.project
