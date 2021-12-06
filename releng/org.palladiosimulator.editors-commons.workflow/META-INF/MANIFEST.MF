@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: PCM Edit Workflow
 Bundle-SymbolicName: org.palladiosimulator.editorscommons.workflow
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.editorscommons.workflow
 Require-Bundle: org.eclipse.xtext.generator,
  org.apache.commons.logging,
