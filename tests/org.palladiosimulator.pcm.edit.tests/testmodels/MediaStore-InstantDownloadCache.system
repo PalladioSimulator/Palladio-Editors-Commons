@@ -42,7 +42,13 @@
   <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="__J4YphlFEey63NluyJh1Sg">
     <providedRole_AssemblyConnector href="MediaStore.repository#_4wqPsGrUEeajAsHLADMRRw"/>
   </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_6AQ2YFliEeyJ8NxP0zEPRw" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_v2fKE1liEeyJ8NxP0zEPRw" assemblyContext_RequiredDelegationConnector="_IulGALW1EeapTpBxO5_ZIS">
+    <innerRequiredRole_RequiredDelegationConnector href="MediaStore.repository#_5VbJoGrUEeajAsHLADMRRw"/>
+  </connectors__ComposedStructure>
   <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_b9NvYHD6EeSA4fySuX9I2S" entityName="IWebGui">
     <providedInterface__OperationProvidedRole href="MediaStore.repository#_Nv-1oHDvEeSqnN80MQ2uGw"/>
   </providedRoles_InterfaceProvidingEntity>
+  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_v2fKE1liEeyJ8NxP0zEPRw" entityName="IOuterDownload">
+    <requiredInterface__OperationRequiredRole href="MediaStore.repository#_4QwQwHDqEeSqnN80MQ2uGw"/>
+  </requiredRoles_InterfaceRequiringEntity>
 </system:System>
