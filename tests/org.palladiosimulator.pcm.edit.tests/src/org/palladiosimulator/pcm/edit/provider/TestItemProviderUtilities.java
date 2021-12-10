@@ -1,5 +1,6 @@
 package org.palladiosimulator.pcm.edit.provider;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,7 @@ import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
+import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
 import org.palladiosimulator.pcm.system.System;
@@ -30,18 +32,18 @@ import org.palladiosimulator.pcm.usagemodel.UsageModel;
 import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 public class TestItemProviderUtilities {
+	
+	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCache.system";
+	private final static String mediaStoreRepository = "testmodels/MediaStore.repository";
 
-    protected static System loadSystem() {
-
+	protected static System loadSystem() {
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
         Map<String, Object> m = reg.getExtensionToFactoryMap();
         m.put("system", new XMIResourceFactoryImpl());
 
         ResourceSet resSet = new ResourceSetImpl();
-        Resource resource = resSet.getResource(URI.createURI(
-                "file:///C:/Users/Nathan/git/Palladio-Editors-Commons/tests/org.palladiosimulator.pcm.edit.tests/testmodels/MediaStore-InstantDownloadCache.system"),
-                true);
-        EcoreUtil.resolveAll(resSet);
+        // java nio Path als Klasse, aus eclipse und maven verify
+        Resource resource = resSet.getResource(URI.createFileURI(new File(mediaStoreInstantDownloadCacheSystem).getAbsolutePath()), true);
         System testSystem = (System) resource.getContents()
             .get(0);
         return testSystem;
@@ -53,8 +55,7 @@ public class TestItemProviderUtilities {
         m.put("repository", new XMIResourceFactoryImpl());
 
         ResourceSet resSet = new ResourceSetImpl();
-        Resource resource = resSet.getResource(URI.createURI("testmodels/MediaStore.repository"), true);
-
+        Resource resource = resSet.getResource(URI.createFileURI(new File(mediaStoreRepository).getAbsolutePath()), true);
         Repository testRepository = (Repository) resource.getContents()
             .get(0);
         return testRepository;
@@ -66,7 +67,7 @@ public class TestItemProviderUtilities {
         m.put("usagemodel", new XMIResourceFactoryImpl());
 
         ResourceSet resSet = new ResourceSetImpl();
-        Resource resource = resSet.getResource(URI.createURI("testmodels/MediaStoreInstant-DownloadCache.usagemodel"),
+        Resource resource = resSet.getResource(URI.createURI(mediaStoreInstantDownloadCacheSystem),
                 true);
 
         UsageModel testUsageModel = (UsageModel) resource.getContents()
@@ -114,6 +115,21 @@ public class TestItemProviderUtilities {
             .flatMap(List::stream)
             .collect(Collectors.toSet());
         for (ProvidedRole r : roles) {
+            if (r.getId()
+                .equals(id)) {
+                return r;
+            }
+        }
+        return null;
+    }
+    
+    protected static RequiredRole getRequiredRole(String id, Repository repo) {
+        List<RepositoryComponent> components = repo.getComponents__Repository();
+        Set<RequiredRole> roles = components.stream()
+            .map(RepositoryComponent::getRequiredRoles_InterfaceRequiringEntity)
+            .flatMap(List::stream)
+            .collect(Collectors.toSet());
+        for (RequiredRole r : roles) {
             if (r.getId()
                 .equals(id)) {
                 return r;
@@ -193,5 +209,6 @@ public class TestItemProviderUtilities {
         }
         return null;
     }
+
 
 }
