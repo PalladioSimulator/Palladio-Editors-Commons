@@ -10,6 +10,7 @@ Require-Bundle: org.junit,
  org.junit.jupiter.api,
  tools.mdsd.junit5utils;bundle-version="0.1.0"
 Import-Package: org.apache.log4j;version="1.2.15",
+ org.eclipse.emf.ecore.resource,
  org.junit.jupiter.api;version="5.7.0",
  org.junit.jupiter.api.function;version="5.7.0",
  tools.mdsd.library.standalone.initialization,
