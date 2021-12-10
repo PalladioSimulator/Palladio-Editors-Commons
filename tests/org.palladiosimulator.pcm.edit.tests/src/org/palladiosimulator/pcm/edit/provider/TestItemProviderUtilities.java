@@ -208,6 +208,28 @@ public class TestItemProviderUtilities {
         }
         return null;
     }
+    
+    protected static ProvidedRole getOuterProvidedRole(String id, System system) {
+    	List<ProvidedRole> roles = system.getProvidedRoles_InterfaceProvidingEntity();
+    	for (ProvidedRole r : roles) {
+            if (r.getId()
+                .equals(id)) {
+                return r;
+            }
+        }
+        return null;
+    }
+    
+    protected static RequiredRole getOuterRequiredRole(String id, System system) {
+    	List<RequiredRole> roles = system.getRequiredRoles_InterfaceRequiringEntity();
+    	for (RequiredRole r : roles) {
+            if (r.getId()
+                .equals(id)) {
+                return r;
+            }
+        }
+        return null;
+    }
 
 
 }
