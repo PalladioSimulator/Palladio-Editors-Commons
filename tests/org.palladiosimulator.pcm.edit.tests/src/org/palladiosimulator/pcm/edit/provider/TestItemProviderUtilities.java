@@ -35,6 +35,7 @@ public class TestItemProviderUtilities {
 	
 	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCache.system";
 	private final static String mediaStoreRepository = "testmodels/MediaStore.repository";
+	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCache.usagemodel";
 
 	protected static System loadSystem() {
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
@@ -67,9 +68,7 @@ public class TestItemProviderUtilities {
         m.put("usagemodel", new XMIResourceFactoryImpl());
 
         ResourceSet resSet = new ResourceSetImpl();
-        Resource resource = resSet.getResource(URI.createURI(mediaStoreInstantDownloadCacheSystem),
-                true);
-
+        Resource resource = resSet.getResource(URI.createFileURI(new File(mediaStoreInstantDownloadUsageModel).getAbsolutePath()), true);
         UsageModel testUsageModel = (UsageModel) resource.getContents()
             .get(0);
         return testUsageModel;
