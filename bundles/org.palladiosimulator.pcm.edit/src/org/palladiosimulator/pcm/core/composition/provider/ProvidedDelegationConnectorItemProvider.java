@@ -117,7 +117,7 @@ public class ProvidedDelegationConnectorItemProvider extends ProvidedDelegationC
                         }
                         OperationProvidedRole innerRole = object.getInnerProvidedRole_ProvidedDelegationConnector();
                         if (innerRole != null) {
-                            return outerProvidedRoles.stream()
+                        	outerProvidedRoles = outerProvidedRoles.stream()
                                 .filter(opr -> opr.getProvidedInterface__OperationProvidedRole()
                                     .isAssignableFrom(innerRole.getProvidedInterface__OperationProvidedRole()))
                                 .collect(Collectors.toList());

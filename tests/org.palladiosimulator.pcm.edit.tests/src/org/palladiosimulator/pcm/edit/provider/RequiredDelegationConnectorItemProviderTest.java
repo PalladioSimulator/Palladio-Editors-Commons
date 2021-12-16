@@ -8,18 +8,14 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.CompositionPackage;
 import org.palladiosimulator.pcm.core.composition.DelegationConnector;
-import org.palladiosimulator.pcm.core.composition.ProvidedDelegationConnector;
 import org.palladiosimulator.pcm.core.composition.RequiredDelegationConnector;
 import org.palladiosimulator.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
-import org.palladiosimulator.pcm.core.composition.provider.ProvidedDelegationConnectorItemProvider;
 import org.palladiosimulator.pcm.core.composition.provider.RequiredDelegationConnectorItemProvider;
-import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.repository.RequiredRole;
