@@ -33,7 +33,7 @@ import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 public class TestItemProviderUtilities {
 	
 	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCacheTest.system";
-	private final static String mediaStoreRepository = "testmodels/MediaStoreTest.repository";
+	private final static String mediaStoreRepository = "testmodels/MediaStore.repository";
 	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCacheTest.usagemodel";
 
 	protected static System loadSystem() {

@@ -78,8 +78,6 @@ public class ProvidedDelegationConnectorItemProviderTest {
 
         assertNotNull(descriptor);
         var actual = (List<Identifier>) descriptor.getChoiceOfValues(testConnector);
-        java.lang.System.out.print(expected.size());
-        java.lang.System.out.print(actual.size());
         assertTrue(expected.size() == actual.size());
         assertTrue(actual.get(1).getId().equals(providedRole.getId()));
     }
