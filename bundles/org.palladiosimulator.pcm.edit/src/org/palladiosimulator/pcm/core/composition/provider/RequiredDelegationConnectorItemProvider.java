@@ -119,7 +119,7 @@ public class RequiredDelegationConnectorItemProvider extends RequiredDelegationC
 
                         OperationRequiredRole innerRole = object.getInnerRequiredRole_RequiredDelegationConnector();
                         if (innerRole != null) {
-                            return outerRequiredRoles.stream()
+                        	outerRequiredRoles = outerRequiredRoles.stream()
                                 .filter(opr -> opr.getRequiredInterface__OperationRequiredRole()
                                     .isAssignableFrom(innerRole.getRequiredInterface__OperationRequiredRole()))
                                 .collect(Collectors.toList());

@@ -36,7 +36,7 @@ public class StopActionItemProviderTest {
         ResourceDemandingBehaviour rdb = TestItemProviderUtilities
             .getResourceDemandingBehaviour("_frGTMHD2EeSA4fySuX9I2Q", testRepository);
         StopAction testAction = (StopAction) TestItemProviderUtilities.getAbstractAction("_frG6QXD2EeSA4fySuX9I2Q",
-                rdb); // Is a StartAction
+                rdb); // Is a StopAction
         // define expected Result - No Succesors for stop so only list with null
         List<AbstractAction> expected = new ArrayList<AbstractAction>();
         expected.add(null);

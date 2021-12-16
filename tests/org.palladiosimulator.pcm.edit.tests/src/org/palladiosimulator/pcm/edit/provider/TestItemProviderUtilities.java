@@ -11,7 +11,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
@@ -33,9 +32,9 @@ import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 public class TestItemProviderUtilities {
 	
-	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCache.system";
-	private final static String mediaStoreRepository = "testmodels/MediaStore.repository";
-	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCache.usagemodel";
+	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCache_test.system";
+	private final static String mediaStoreRepository = "testmodels/MediaStore.repository_test";
+	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCache_test.usagemodel";
 
 	protected static System loadSystem() {
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
