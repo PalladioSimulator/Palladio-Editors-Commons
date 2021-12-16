@@ -32,9 +32,9 @@ import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 public class TestItemProviderUtilities {
 	
-	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCache_test.system";
-	private final static String mediaStoreRepository = "testmodels/MediaStore.repository_test";
-	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCache_test.usagemodel";
+	private final static String mediaStoreInstantDownloadCacheSystem = "testmodels/MediaStore-InstantDownloadCacheTest.system";
+	private final static String mediaStoreRepository = "testmodels/MediaStoreTest.repository";
+	private final static String mediaStoreInstantDownloadUsageModel = "testmodels/MediaStoreInstant-DownloadCacheTest.usagemodel";
 
 	protected static System loadSystem() {
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
