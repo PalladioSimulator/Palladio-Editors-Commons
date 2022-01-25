@@ -65,7 +65,7 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/0.3.0/"/>
+<repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/latest/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.mockito" version="0.0.0"/>
@@ -77,7 +77,7 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="tools.mdsd.library.standalone.initialization.core.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.mdsd.tools/library-standaloneinitialization/releases/0.2.0/"/>
+<repository location="https://updatesite.mdsd.tools/library-standaloneinitialization/releases/latest/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="tools.mdsd.license.epl2.feature.group" version="0.0.0"/>
