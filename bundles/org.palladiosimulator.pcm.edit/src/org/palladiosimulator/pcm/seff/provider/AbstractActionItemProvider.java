@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.ResourceDemandingBehaviour;
+import org.palladiosimulator.pcm.seff.SeffPackage;
 import org.palladiosimulator.pcm.seff.StartAction;
 import org.palladiosimulator.pcm.seff.StopAction;
 
@@ -32,7 +33,7 @@ public class AbstractActionItemProvider extends AbstractActionItemProviderGen {
                     .getResourceDemandingBehaviour_AbstractAction();
                 EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
                 return actionList.stream()
-                    .filter(Predicate.not(StartAction.class::isInstance))
+                    .filter(a -> !SeffPackage.Literals.START_ACTION.isInstance(a))
                     .filter(a -> object != a)
                     .collect(Collectors.toList());
             }
@@ -50,7 +51,7 @@ public class AbstractActionItemProvider extends AbstractActionItemProviderGen {
                     .getResourceDemandingBehaviour_AbstractAction();
                 EList<AbstractAction> actionList = resourceDemandingBehaviour.getSteps_Behaviour();
                 return actionList.stream()
-                    .filter(Predicate.not(StopAction.class::isInstance))
+                    .filter(a -> !SeffPackage.Literals.STOP_ACTION.isInstance(a))
                     .filter(a -> object != a)
                     .collect(Collectors.toList());
             }
