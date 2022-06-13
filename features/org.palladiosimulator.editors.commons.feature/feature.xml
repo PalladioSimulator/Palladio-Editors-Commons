@@ -53,6 +53,7 @@
       <import plugin="org.palladiosimulator.metricspec"/>
       <import plugin="org.palladiosimulator.metricspec.edit"/>
       <import plugin="org.palladiosimulator.branding"/>
+      <import plugin="tools.mdsd.library.emfeditutils"/>
    </requires>
 
    <plugin
