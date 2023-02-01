@@ -16,5 +16,5 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.106.1",
  org.palladiosimulator.editors.commons.dialogs;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.editors.commons.propertytabs
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.palladiosimulator.editors.commons.propertytabs

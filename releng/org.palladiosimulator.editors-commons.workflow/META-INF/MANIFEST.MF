@@ -25,4 +25,4 @@ Require-Bundle: org.eclipse.xtext.generator,
  de.uka.ipd.sdq.stoex;bundle-version="4.3.0",
  tools.mdsd.ecoreworkflow.umlecoregenerator;bundle-version="1.0.0",
  org.palladiosimulator.pcm;bundle-version="4.3.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17

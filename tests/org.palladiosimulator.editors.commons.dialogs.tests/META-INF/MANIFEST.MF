@@ -4,7 +4,7 @@ Bundle-Name: Palladio Component Model - Common Editor Tests
 Bundle-SymbolicName: org.palladiosimulator.editors.commons.dialogs.tests
 Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.palladiosimulator.editors.commons.dialogs.tests
 Fragment-Host: org.palladiosimulator.editors.commons.dialogs
 Import-Package: net.bytebuddy.dynamic.loading;version="1.9.0",
