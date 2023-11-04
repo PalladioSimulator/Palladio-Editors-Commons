@@ -56,14 +56,6 @@
 <repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/branches/testingDay5.2.0/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
-<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/releases/latest/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
-<unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/branches/testingDay5.2.0/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="0.0.0"/>
 <repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/latest/"/>
 </location>
