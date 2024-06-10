@@ -2,7 +2,7 @@
 Common plugins for developing editors for models of the Palladio Component Model (PCM).
 
 ## Documentation
-For comprehensive documentation, please visit our [wiki page](https://sdqweb.ipd.kit.edu/wiki/Palladio_Component_Model).
+For comprehensive documentation, please visit our [wiki page](https://github.com/PalladioSimulator/.github/wiki).
 
 ## Development Information
 We generate source code based on the metamodel during the build process and do not add generated artifacts to the repository. To generate the code, you have to either run the Maven build or the generation workflow (`generate.mwe2`).
