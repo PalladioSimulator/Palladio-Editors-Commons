@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio Component Model - Common Editor Tests
 Bundle-SymbolicName: org.palladiosimulator.editors.commons.dialogs.tests
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 5.2.1.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.palladiosimulator.editors.commons.dialogs.tests
