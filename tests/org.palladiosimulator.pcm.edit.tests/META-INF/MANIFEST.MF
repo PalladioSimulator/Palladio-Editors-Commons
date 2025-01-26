@@ -7,7 +7,7 @@ Fragment-Host: org.palladiosimulator.pcm.edit;bundle-version="5.0.0"
 Automatic-Module-Name: org.palladiosimulator.pcm.edit.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.junit,
- org.junit.jupiter.api,
+ junit-jupiter-api,
  tools.mdsd.junit5utils;bundle-version="0.1.0"
 Import-Package: org.apache.log4j;version="1.2.15",
  org.eclipse.emf.ecore.resource,
