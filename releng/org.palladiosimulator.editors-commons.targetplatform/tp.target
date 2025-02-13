@@ -21,7 +21,7 @@
 <unit id="org.palladiosimulator.pcm.feature.feature.group" version="0.0.0"/>
 <unit id="org.palladiosimulator.pcm.stoex.ui.feature.feature.group" version="0.0.0"/>
 <unit id="org.palladiosimulator.pcm.edp2.measuringpoint.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/nightly/"/>
+<repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/branches/no_ui-workflow"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="org.palladiosimulator.edp2.feature.feature.group" version="0.0.0"/>
@@ -29,7 +29,7 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
 <unit id="org.palladiosimulator.edp2.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-qual-edp2/nightly/"/>
+<repository location="https://updatesite.palladio-simulator.com/palladio-qual-edp2/branches/no_ui-workflow"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="org.palladiosimulator.thirdpartywrapper.feature.feature.group" version="0.0.0"/>
@@ -45,7 +45,7 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
 <unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/nightly/"/>
+<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/branches/no_ui-workflow"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
@@ -53,7 +53,7 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
 <unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
-<repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/nightly/"/>
+<repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/branches/no_ui-workflow"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
 <unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="0.0.0"/>
