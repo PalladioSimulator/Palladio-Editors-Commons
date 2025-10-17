@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Propertytabs Plug-in
 Bundle-SymbolicName: org.palladiosimulator.editors.commons.propertytabs
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-Activator: org.palladiosimulator.editors.commons.propertytabs.Activator
 Bundle-Vendor: sdq.ipd.uka.de
 Require-Bundle: org.eclipse.ui;bundle-version="3.106.1",
