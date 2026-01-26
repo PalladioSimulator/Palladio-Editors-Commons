@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.editors.commons.feature"
       label="Palladio Component Model - Commons for Editor Development"
-      version="5.2.2"
+      version="6.0.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -12,23 +12,23 @@
    </description>
 
    <requires>
-      <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.stoex.analyser" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.stoex"/>
+      <import plugin="de.uka.ipd.sdq.stoex.analyser"/>
       <import plugin="org.eclipse.ui"/>
-      <import plugin="org.palladiosimulator.pcm" version="4.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.pcm.stochasticexpressions" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.pcm"/>
+      <import plugin="de.uka.ipd.sdq.pcm.stochasticexpressions"/>
       <import plugin="org.eclipse.emf.transaction"/>
       <import plugin="org.eclipse.jface.text"/>
-      <import plugin="de.uka.ipd.sdq.dialogs" version="2.0.1" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.pcm.ui" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.dialogs"/>
+      <import plugin="org.palladiosimulator.pcm.edit"/>
+      <import plugin="org.palladiosimulator.pcm.ui"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
-      <import plugin="de.uka.ipd.sdq.errorhandling" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.errorhandling"/>
       <import plugin="org.eclipse.osgi.util"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
       <import plugin="org.eclipse.ui.editors" version="3.7.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime" version="3.10.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.editors.commons.dialogs" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.editors.commons.dialogs"/>
       <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
