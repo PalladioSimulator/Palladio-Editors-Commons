@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.palladiosimulator.pcm.edit.tests
 Bundle-Version: 1.0.0.qualifier
 Fragment-Host: org.palladiosimulator.pcm.edit
 Automatic-Module-Name: org.palladiosimulator.pcm.edit.tests
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.junit,
  junit-jupiter-api,
  tools.mdsd.junit5utils;bundle-version="0.1.0"
